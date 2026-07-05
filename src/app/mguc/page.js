@@ -36,7 +36,7 @@ export default function ConverterPage() {
         <main className="font-sans bg-gray-50 min-h-screen">
 
             {/* ── HERO ── */}
-            <section className="relative bg-white overflow-hidden min-h-[320px] flex items-center">
+            <section className="relative bg-white overflow-hidden min-h-[420px] flex items-center">
 
                 {/* Right — image, no dark overlay */}
                 <div className="absolute right-0 top-0 h-full w-[55%]">
@@ -55,19 +55,19 @@ export default function ConverterPage() {
                 {/* Left — text content */}
                 {/* <div className="relative z-10 max-w-5xl mx-auto px-4 py-14 w-full"> */}
                 {/* <div className="relative z-10 w-[1280px] px-8 py-14"> */}
-                <div className="relative z-10 max-w-5xl mx-auto pl-0 pr-4 py-14 w-full">
+                <div className="relative z-10 max-w-[1360px] mx-auto pl-0 pr-4 py-14 w-full">
                     <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-semibold tracking-wider mb-6 border border-[#e0ecf8]">
                         ENGINEERING TOOLS
                     </div>
-                    <h1 className="text-4xl font-bold text-[#0b477b] leading-tight mb-4">
+                    <h1 className="text-5xl font-bold text-[#0b477b] leading-tight mb-4">
                         Medical Gas Unit<br />Converters
                     </h1>
-                    <p className="text-sm text-gray-500 leading-relaxed mb-8 max-w-sm">
+                    <p className="text-md text-gray-500 leading-relaxed max-w-lg">
                         Hospital teams, consultants, and engineers routinely work across multiple units. Accurate conversion is critical for MGPS design, equipment sizing, and tender evaluation.
                     </p>
 
                     {/* 3 badges */}
-                    <div className="flex gap-6 flex-wrap">
+                    <div className="flex gap-8 flex-wrap mt-4">
                         {[
                             {
                                 icon: (
@@ -101,13 +101,13 @@ export default function ConverterPage() {
                                 title: "Trusted by", sub: "Professionals"
                             },
                         ].map((b) => (
-                            <div key={b.title} className="flex items-center gap-2">
+                            <div key={b.title} className="flex items-center gap-4">
                                 <div className="w-9 h-9 rounded-lg bg-[#eef5fc] flex items-center justify-center flex-shrink-0">
                                     {b.icon}
                                 </div>
                                 <div>
-                                    <div className="text-xs font-bold text-[#0b477b]">{b.title}</div>
-                                    <div className="text-xs font-bold text-[#0b477b]">{b.sub}</div>
+                                    <div className="text-xs font-semibold text-[#0b477b]">{b.title}</div>
+                                    <div className="text-xs font-semibold text-[#0b477b]">{b.sub}</div>
                                 </div>
                             </div>
                         ))}
@@ -115,13 +115,13 @@ export default function ConverterPage() {
                 </div>
             </section>
             {/* ── 3 CONVERTER CARDS ── */}
-            <section className="max-w-5xl mx-auto px-4 py-10">
+            <section className="max-w-[1360px] mx-auto px-4 py-10">
                 <div className="grid grid-cols-3 gap-5">
 
                     {/* Pressure */}
                     <div className="bg-[#0b477b] rounded-2xl p-5 shadow-lg">
                         <div className="flex items-center gap-2 mb-5">
-                            <div className="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
+                            <div className="w-10 h-10 bg-white/15 rounded-lg flex items-center justify-center">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="18" y1="20" x2="18" y2="10" />
                                     <line x1="12" y1="20" x2="12" y2="4" />
@@ -139,7 +139,7 @@ export default function ConverterPage() {
                                 </div>
                             ))}
                         </div>
-                        <button className="mt-2 text-xs text-blue-300 font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                        <button className="mt-2 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
                             View all conversions →
                         </button>
                     </div>
@@ -162,7 +162,7 @@ export default function ConverterPage() {
                                 </div>
                             ))}
                         </div>
-                        <button className="mt-2 text-xs text-blue-300 font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                        <button className="mt-2 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
                             View all conversions →
                         </button>
                     </div>
@@ -187,7 +187,7 @@ export default function ConverterPage() {
                                 </div>
                             ))}
                         </div>
-                        <button className="mt-2 text-xs text-blue-300 font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                        <button className="mt-2 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
                             View all conversions →
                         </button>
                     </div>
@@ -196,7 +196,7 @@ export default function ConverterPage() {
             </section>
 
             {/* ── MEDICAL OXYGEN CONVERSIONS ── */}
-            <section className="max-w-6xl mx-auto px-4 pb-10">
+            <section className="max-w-[1360px] mx-auto px-4 pb-10">
                 <div className="grid grid-cols-2 gap-5 items-start">
 
                     {/* Left */}
@@ -211,8 +211,8 @@ export default function ConverterPage() {
                                 {/* Row 1 */}
                                 <div className="bg-[#0b477b] rounded-xl px-5 py-4 flex justify-between items-center">
                                     <div>
-                                        <div className="text-sm  text-white/60">Liquid Consumption Estimate</div>
-                                        <div className="text-xs text-white/60 mt-0.5">Nm³/h to Liquid Litres/Day</div>
+                                        <div className="text-md  text-white/60">Liquid Consumption Estimate</div>
+                                        <div className="text-md text-white/60 mt-0.5">Nm³/h to Liquid Litres/Day</div>
                                     </div>
                                     <div className="text-white text-sm  font-mono">
                                         (Nm³/h × 24) × 1.251
@@ -248,7 +248,7 @@ export default function ConverterPage() {
             {/* ── CTA BANNER ── */}
             <section className="w-full bg-white">
                 <div className="w-full bg-white border border-gray-200 shadow-sm px-8 py-10 text-center">
-                    <h2 className="text-3xl  text-navy-400 mb-3">
+                    <h2 className="text-3xl font-semibold  text-navy-400 mb-3">
                         Need technical assistance with your MGPS design?
                     </h2>
                     <p className="text-sm text-gray-500 mb-6 max-w-lg mx-auto leading-relaxed">
@@ -256,7 +256,7 @@ export default function ConverterPage() {
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 bg-[#e65c00] hover:bg-orange-600 text-white font-bold px-7 py-3 rounded-full text-sm transition-colors"
+                        className="inline-flex items-center gap-2 bg-[#e65c00] hover:bg-orange-600 text-white font-semibold px-7 py-3 rounded-full text-sm transition-colors"
                     >
                         Get Quote →
                     </Link>

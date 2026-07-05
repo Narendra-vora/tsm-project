@@ -53,7 +53,7 @@ function BlogPage() {
                     ))}
                 </div>
 
-                <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 50, alignItems: "center", position: "relative", zIndex: 2 }}>
+                <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 50, alignItems: "center", position: "relative", zIndex: 2 }}>
 
                     {/* Left Column: Text Content */}
                     <div>
@@ -68,18 +68,17 @@ function BlogPage() {
                             EXPERTS IN MEDICAL GAS SYSTEMS
                         </div>
 
-                        <h1 style={{ fontSize: 46, fontWeight: 700, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.15 }}>
+                        <h1 style={{ fontSize: 52, fontWeight: 700, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.19 }}>
                             MEDICAL GAS<br />
                             <span style={{ color: "#0b477b" }}>BLOG & GUIDES</span>
                         </h1>
 
-                        <p style={{ fontSize: 14, color: "#414446", lineHeight: 1.85, margin: "0 0 12px", maxWidth: 500 }}>
+                        <p style={{ fontSize: 16, color: "#414446", lineHeight: 1.85, margin: "0 0 12px", maxWidth: 500 }}>
                             Welcome to the Technic Spirits Resource Hub. We publish practical articles, technical guides, and expert insights on Medical Gas Pipeline Systems (MGPS), with a focus on <span style={{ color: "#0b477b", fontWeight: 600 }}>the safe, compliant and efficient</span> delivery of medical gases in healthcare environments.
                         </p>
-                        <p style={{ fontSize: 14, color: "#414446", lineHeight: 1.85, margin: "0 0 32px", maxWidth: 500 }}>
+                        <p style={{ fontSize: 16, color: "#414446", lineHeight: 1.85, margin: "0 0 32px", maxWidth: 500 }}>
                             Whether you are planning a new project, upgrading an existing facility, or ensuring compliance, our resources are here to help.
                         </p>
-
                         {/* CTA Buttons */}
                         <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
                             <a href="#guides" style={{
@@ -163,7 +162,7 @@ function BlogPage() {
 
             {/* Floating Stats Bar */}
             <div style={{
-                maxWidth: 1100,
+                maxWidth: 1360,
                 margin: "-28px auto 40px",
                 background: C.white,
                 borderRadius: 24,
@@ -185,7 +184,7 @@ function BlogPage() {
                     }}>
                         <div style={{
                             width: 48,
-                            height: 48,
+                            height: 54,
                             borderRadius: "50%",
                             background: s.color,
                             display: "flex",

@@ -6,10 +6,10 @@ export default function PressMediaPage() {
         <main className="font-sans bg-gray-50 min-h-screen">
 
             {/* ── HERO ── */}
-            <section className="relative bg-white overflow-hidden min-h-[320px] flex items-center">
+            <section className="relative bg-white overflow-hidden min-h-[420px] flex items-center">
 
                 {/* Right — image with left fade */}
-                <div className="absolute right-0 top-0 h-full w-[60%]">
+                <div className="absolute right-0 top-0 h-full w-[75%]">
                     <div
                         className="absolute left-0 top-0 h-full w-48 z-10"
                         style={{ background: "linear-gradient(to right, white, transparent)" }}
@@ -22,14 +22,14 @@ export default function PressMediaPage() {
                 </div>
 
                 {/* Left — text */}
-                <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 w-full">
+                <div className="relative z-10 max-w-[1360px] mx-auto px-6 py-16 w-full">
                     <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-6 border border-[#e0ecf8]">
                         TECHNIK SPIRITS MEDIA RESOURCE
                     </div>
-                    <h1 className="text-4xl font-bold text-[#0b477b] leading-tight mb-4">
+                    <h1 className="text-5xl font-bold text-[#0b477b] leading-tight mb-4">
                         Press & Media Center
                     </h1>
-                    <p className="text-sm text-gray-500 leading-relaxed max-w-sm">
+                    <p className="text-md text-gray-500 leading-relaxed max-w-md">
                         Your central hub for official news, company background, and media resources for Technik Spirits MedTech's healthcare engineering innovations.
                     </p>
                 </div>
@@ -39,20 +39,20 @@ export default function PressMediaPage() {
 
 
             {/* ── ABOUT SECTION ── */}
-            <section className="max-w-5xl mx-auto px-6 py-14">
+            <section className="max-w-[1360px] mx-auto px-6 py-14">
                 <div className="grid grid-cols-2 gap-12 items-start">
 
                     {/* Left */}
                     <div>
-                        <h2 className="text-3xl font-bold text-[#0b477b] mb-2">About Technik Spirits MedTech</h2>
+                        <h2 className="text-3xl font-semibold text-[#0b477b] mb-2">About Technik Spirits MedTech</h2>
                         <div className="w-20 h-1 bg-[#0b477b] rounded mb-5" />
-                        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                        <p className="text-sm text-gray-700 leading-relaxed mb-4">
                             Technik Spirits MedTech Private Limited (formerly Technik Spirits Inc.) is a premier healthcare engineering and manufacturing company with an exclusive focus on hospital medical gas plant-room systems.
                         </p>
-                        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                        <p className="text-sm text-gray-700 leading-relaxed mb-4">
                             Our portfolio includes advanced medical air compressors, medical vacuum pump systems, oxygen generators, and anaesthetic gas scavenging systems (AGSS), all engineered to exceed ISO 13485 standards.
                         </p>
-                        <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                        <p className="text-sm text-gray-700 leading-relaxed mb-6">
                             Our work is driven by clinical understanding, engineering rigor, and long-term operational performance in life-critical environments. Media coverage and industry recognition reflect our commitment to quiet, efficient, and purpose-built medical gas solutions designed for modern hospitals.
                         </p>
                     </div>
@@ -89,10 +89,10 @@ export default function PressMediaPage() {
             </section>
 
             {/* ── IN THE NEWS ── */}
-            <section className="max-w-5xl mx-auto px-6 pb-14">
-                <div className="flex items-center justify-between mb-6">
+            <section className="max-w-[1360px] mx-auto px-6 pb-14">
+                <div className="flex items-center justify-between mb-9">
                     <div>
-                        <h2 className="text-2xl font-bold text-[#0b477b]">In the News</h2>
+                        <h2 className="text-3xl font-semibold text-[#0b477b]">In the News</h2>
                         <p className="text-sm text-gray-500 mt-1">
                             Stay updated with our latest technical breakthroughs and corporate announcements.
                         </p>
@@ -102,7 +102,7 @@ export default function PressMediaPage() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-4 gap-5">
+                <div className="grid grid-cols-4 h-[380px] gap-5">
 
                     {/* Card 1 — with image, red tag */}
                     <div className="rounded-xl border border-gray-100 shadow-sm overflow-hidden flex flex-col bg-white">
@@ -118,13 +118,13 @@ export default function PressMediaPage() {
                         </div>
                         <div className="p-4 flex flex-col flex-1">
                             <div className="text-[10px] text-blue-500 font-semibold mb-1.5">ANI News</div>
-                            <h3 className="text-sm font-bold text-gray-900 leading-snug mb-2">
+                            <h3 className="text-xl font-semibold text-gray-900 leading-snug mb-3">
                                 Securing Patent for Oxygen Concentrator Valve
                             </h3>
-                            <p className="text-xs text-gray-500 leading-relaxed mb-3 flex-1">
+                            <p className="text-md text-gray-500 leading-relaxed mb-3 flex-1">
                                 Technik Spirits Inc. secures global patent for their modular high-pressure valve system,...
                             </p>
-                            <Link href="#" className="text-xs font-bold text-[#0b477b] flex items-center gap-1" style={{ textDecoration: "none" }}>
+                            <Link href="#" className="text-md font-bold text-[#0b477b] flex items-center gap-1" style={{ textDecoration: "none" }}>
                                 Read More <span className="text-[10px]">↗</span>
                             </Link>
                         </div>
@@ -144,10 +144,10 @@ export default function PressMediaPage() {
                         </div>
                         <div className="p-4 flex flex-col flex-1">
                             <div className="text-[10px] text-blue-500 font-semibold mb-1.5">Medical Buyer</div>
-                            <h3 className="text-sm font-bold text-gray-900 leading-snug mb-2">
+                            <h3 className="text-xl font-semibold text-gray-900 leading-snug mb-2">
                                 Revolutionizing Medical Gas Infrastructure
                             </h3>
-                            <p className="text-xs text-gray-500 leading-relaxed mb-3 flex-1">
+                            <p className="text-md text-gray-500 leading-relaxed mb-3 flex-1">
                                 Technik Spirits' innovative gas systems are now the standard for three major hospital chains in...
                             </p>
                             <Link href="#" className="text-xs font-bold text-[#0b477b] flex items-center gap-1" style={{ textDecoration: "none" }}>
@@ -162,10 +162,10 @@ export default function PressMediaPage() {
                             <span className="inline-block text-[9px] font-bold text-gray-500 border border-gray-200 px-2 py-1 rounded mb-3 uppercase tracking-wide w-fit">
                                 PRESS RELEASE
                             </span>
-                            <h3 className="text-sm font-bold text-gray-900 leading-snug mb-2">
+                            <h3 className="text-xl font-semibold text-gray-900 leading-snug mb-2">
                                 Scaling Operations: Expansion into MENA Markets
                             </h3>
-                            <p className="text-xs text-gray-500 leading-relaxed mb-4 flex-1">
+                            <p className="text-md text-gray-500 leading-relaxed mb-4 flex-1">
                                 Building on domestic success, we are proud to announce our strategic roadmap for distribution centers across the MENA region
                             </p>
                             <Link href="#" className="text-xs font-bold text-[#0b477b] flex items-center gap-1" style={{ textDecoration: "none" }}>
@@ -180,10 +180,10 @@ export default function PressMediaPage() {
                             <span className="inline-block text-[9px] font-bold text-gray-500 border border-gray-200 px-2 py-1 rounded mb-3 uppercase tracking-wide w-fit">
                                 FACTORY NEWS
                             </span>
-                            <h3 className="text-sm font-bold text-gray-900 leading-snug mb-2">
+                            <h3 className="text-xl font-semibold text-gray-900 leading-snug mb-2">
                                 Ahmedabad Facility Production Capacity Doubled
                             </h3>
-                            <p className="text-xs text-gray-500 leading-relaxed mb-4 flex-1">
+                            <p className="text-md text-gray-500 leading-relaxed mb-4 flex-1">
                                 To support the increasing number of hospital projects, our manufacturing unit has integrated AI-driven supply chain
                             </p>
                             <Link href="#" className="text-xs font-bold text-[#0b477b] flex items-center gap-1" style={{ textDecoration: "none" }}>
@@ -196,12 +196,12 @@ export default function PressMediaPage() {
             </section>
 
             {/* ── MEDIA CONTACT ── */}
-            <section className="max-w-5xl mx-auto px-6 pb-14">
+            <section className="max-w-[1360px] mx-auto px-6 pb-14">
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                     {/* Header */}
                     <div className="bg-gray-50 border-b border-gray-100 px-8 py-5 text-center">
-                        <h2 className="text-2xl font-semibold text-[#0b477b]">Media Contact</h2>
-                        <p className="text-sm text-gray-500 mt-1">
+                        <h2 className="text-3xl font-semibold text-[#0b477b]">Media Contact</h2>
+                        <p className="text-md text-gray-500 mt-2">
                             For press enquiries, interviews, or additional information, please contact our <br />dedicated relations team.
                         </p>
                     </div>

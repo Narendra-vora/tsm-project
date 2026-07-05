@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Left — text */}
-                <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8">
+                <div className="relative z-10 w-full max-w-[1360px] mx-auto px-6 sm:px-8">
                     <div className="max-w-sm">
                         <h1 className="text-5xl sm:text-4xl md:text-[44px] font-semibold text-[#0b477b] tracking-tight mb-4">
                             Contact Us
@@ -63,7 +63,7 @@ export default function ContactPage() {
             </div>
 
             {/* Main Content */}
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+            <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
                 <div className="grid grid-cols-1 md:grid-cols-[360px_1fr] gap-6">
 
                     {/* LEFT - Column containing the contact cards */}

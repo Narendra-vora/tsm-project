@@ -1,882 +1,574 @@
-import { Minus, Plus } from "lucide-react";
+'use client'
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
-import { ArrowDownToLine, ArrowRight, BadgeCheck, Cpu, Gauge, HardHat, Leaf, Power, ShieldCheck, Sparkles, Users2 } from "lucide-react";
-import { CalendarDays, CirclePlus } from "lucide-react";
-import {
-    BriefcaseBusiness,
-    Grid2x2,
-    VolumeX,
-    Zap,
-    Wrench,
-    SlidersHorizontal,
-    Network,
-    Headset,
-} from "lucide-react";
-import {
-    Server,
-    Wind,
-    Filter,
-    Check,
-    Briefcase,
-    Monitor,
-    Microchip,
-} from "lucide-react";
 
-
-// import FAQAccordion from "./faq-accordion";
-
-
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-});
-
-
-export const metadata = {
-    title: "integrex™ Medical Air Compressor System",
-    description: "Premium medical air compressor system designed for hospitals and critical-care environments.",
-};
-
-const performanceItems = [
-    { value: "Up to 80%", label: "Less Audible" },
-    { value: "Up to 80%", label: "Less Vibration" },
-    { value: "Up to 80%", label: "Less Space" },
-    { value: "Up to 70%", label: "Lower Electricity" },
-];
-
-
-
-const steps = [
-    {
-        icon: "/icons/generation.svg",
-        isSvg: true,
-        title: "1. Generation",
-        text: "Oil-free compression via scroll or tooth-tech starts the clean air cycle.",
-    },
-    {
-        icon: Server,
-        isSvg: false,
-        title: "2. Storage",
-        text: "Internal receivers store reserve air and smooth the response.",
-    },
-    {
-        icon: Wind,
-        isSvg: false,
-        title: "3. Drying",
-        text: "Twin-tower desiccant dryers reduce moisture.",
-    },
-    {
-        icon: Filter,
-        isSvg: false,
-        title: "4. Filtration",
-        text: "Removing oil, particles and bacteria.",
-    },
-    {
-        icon: SlidersHorizontal,
-        isSvg: false,
-        title: "5. Regulation",
-        text: "Dual-stage regulation maintains pressure.",
-    },
-    {
-        icon: "/icons/plc-control.svg",
-        isSvg: true,
-        title: "6. PLC-Control",
-        text: "Master controller balances system load.",
-    },
-];
-
-const philosophyCards = [
-    {
-        icon: ShieldCheck,
-        title: "Smart redundancy",
-        description:
-            "The engineering approach uses a scalable redundant architecture to support high-demand medical use.",
-        bullets: ["Seamless standby behavior", "Automatic load balance"],
-    },
-    {
-        icon: Briefcase,
-        title: "Easy scalability",
-        description:
-            "Plug-and-play expansion lets hospitals scale capacity without disrupting an existing layout.",
-        bullets: ["Flexible expansion", "Phased capacity growth"],
-    },
-    {
-        icon: Monitor,
-        title: "Capacity control",
-        description:
-            "Variable-speed and monitoring logic maintain performance while reducing energy waste.",
-        bullets: ["Real-time demand matching", "Predictive maintenance alerts"],
-    },
-];
-
-const purityBullets = [
-    {
-        icon: "/icons/oil-free.svg",
-        title: "100% Oil-Free",
-        text: "Guaranteed dry compression ensures zero hydrocarbon contamination.",
-    },
-    {
-        icon: "/icons/precision-dry.svg",
-        title: "Precision Dry",
-        text: "Maintains consistent -40°C pressure dew point for zero moisture.",
-    },
-    {
-        icon: "/icons/clinical-clean.svg",
-        title: "Clinical Clean",
-        text: "Multi-stage HEPA and activated carbon filtration for air clarity.",
-    },
-];
-
-
-
-
-const featureTiles = [
-    {
-        icon: BriefcaseBusiness,
-        title: "Purpose-Built",
-        text: "...",
-    },
-    {
-        icon: Grid2x2,
-        title: "Modular Architecture",
-        text: "...",
-    },
-    {
-        icon: VolumeX,
-        title: "Ultra-Quiet",
-        text: "...",
-    },
-    {
-        icon: Zap,
-        title: "Energy Savings",
-        text: "...",
-    },
-    {
-        icon: Wrench,
-        title: "Skid-Mounted Package",
-        text: "...",
-    },
-    {
-        icon: SlidersHorizontal,
-        title: "Advanced Control",
-        text: "...",
-    },
-    {
-        icon: Network,
-        title: "Unified Ecosystem",
-        text: "...",
-    },
-    {
-        icon: Headset,
-        title: "24/7 Support",
-        text: "...",
-    },
-];
-
-const specs = [
-    ["Design", "Oil-free"],
-    ["Pressure Output", "4 bar (= 60 psi) & 7 bar (= 100 psi)"],
-    ["Flow Capacity", "300 LPM (~10 CFM) to virtually unlimited capacity"],
-    ["Dryer", "Integrated"],
-    ["Filtration", "Integrated four-stage filtration, down to 0.01 micron"],
-    ["Air Receiver Capacity", "300 to 5000+ litres"],
-    ["Power Supply", "415 V, 50 Hz, 3 Phase"],
-];
-
-const supplyIncluded = [
-    "Oil-free air compressor module",
-    "Air receiver with auto drain valve",
-    "Integrated dryer for moisture removal",
-    "Multi-stage filtration assembly",
-    "Pressure regulation and instrumentation",
-    "PLC-based monitoring and controls",
-    "Heavy-duty enclosure for low-noise operation",
-];
-
-const supplyOptional = [
-    "Duplex / multi-dryer and filtration assemblies",
-    "Dew point analyzer for dryer monitoring",
-    "CO, CO2, and other gas analyzers for air quality monitoring",
-    "Duplex / multi air receiver packages",
-];
-
-
-const faqItems = [
-    {
-        question: "What is the integrex™ Modular Medical Air Compressor System?",
-        answer:
-            "The integrex™ is a patent-granted, centralized medical air system designed to deliver high-quality, oil-free, and contaminant-free air to a hospital's MGPS network. It is purpose-built for critical care, supplying medical-grade air for ventilators, anesthesia workstations, and other respiratory equipment.",
-    },
-    {
-        question: "What makes integrex different from traditional duplex compressors?",
-        answer:
-            "Unlike traditional duplex systems, the integrex™ features a patent modular design that integrates compressors, dryers, filters, and controls into a single, sleek package. It offers up to 80% less noise and vibration, a 70% reduction in space, and significantly higher energy efficiency through demand-based control.",
-    },
-    {
-        question: "Does the system meet ISO 8573-1 Class 0 oil-free standards?",
-        answer:
-            "Yes. The system is strictly oil-free and delivers ultra-high-quality medical air that is dry and contaminant-free. It includes high-performance dryers and integrated four-stage filtration down to 0.01 micron.",
-    },
-    {
-        question: "How quiet is integrex medical air compressor system compared to conventional systems?",
-        answer:
-            "The integrex™ operates with up to 80% less noise than traditional oil-free medical compressors. Its vibration-control mechanism and acoustic enclosure make it ideal for hospitals.",
-    },
-    {
-        question: "How compact is integrex™ and how does it save space?",
-        answer:
-            "Integrex™ combines compressors, dryers, filtration, controls and receivers into one engineered skid, reducing plant-room space by up to 80%.",
-    },
-];
-
-function SectionTitle({ eyebrow, title, description, center = false }) {
+export default function AirCompressorPage() {
+    const [openFaq, setOpenFaq] = useState(null);
     return (
-        <div className={`space-y-3 ${center ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}`}>
-            {eyebrow ? <p className="text-xs font-semibold uppercase tracking-[0.32em] text-slate-500">{eyebrow}</p> : null}
-            <h2 className="text-2xl font-semibold tracking-tight text-[#1f5d8c] sm:text-3xl">{title}</h2>
-            {description ? <p className="text-sm leading-7 text-slate-600 sm:text-base">{description}</p> : null}
-        </div>
-    );
-}
+        <main className="bg-white">
 
-function LightCard({ children, className = "" }) {
-    return <div className={`rounded-[18px] border border-slate-200 bg-white shadow-[0_12px_28px_rgba(31,93,140,0.08)] ${className}`}>{children}</div>;
-}
-
-function FeatureTile({ icon: Icon, title, text }) {
-    return (
-        <LightCard className="h-full p-5">
-            <Icon className="h-5 w-5 text-[#1f5d8c]" />
-            <div className="mt-4 text-sm font-semibold text-[#1f5d8c]">{title}</div>
-            <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
-        </LightCard>
-    );
-}
-
-function CheckList({ items }) {
-    return (
-        <div className="space-y-3">
-            {items.map((item) => (
-                <div key={item.title} className="flex gap-3 text-sm text-slate-600">
-                    <div className="mt-1.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#1f5d8c]/10 bg-[#1f5d8c]/10 text-[11px] font-semibold leading-none text-[#1f5d8c]">•</div>
-                    <div>
-                        <div className="font-semibold text-slate-800">{item.title}</div>
-                        <div className="mt-1 leading-6">{item.text}</div>
-                    </div>
-                </div>
-            ))}
-        </div>
-    );
-}
-
-function ConceptDiagram() {
-    return (
-        <div className="rounded-[20px] bg-[#f3562b] p-5 text-white shadow-[0_18px_40px_rgba(243,86,43,0.25)]">
-            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-white/85">The Concept</div>
-            <div className="mt-5 grid gap-5 sm:grid-cols-[120px_1fr]">
-                <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-md border-4 border-white bg-[#60d17c]" />
-                        <span className="text-xs font-semibold">100% Operational</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-md border-4 border-white bg-white" />
-                        <span className="text-xs font-semibold">100% Redundancy</span>
-                    </div>
-                </div>
-                <div className="flex items-center justify-center">
-                    <div className="grid grid-cols-4 gap-2 rounded-[18px] bg-white/10 p-4">
-                        {Array.from({ length: 20 }).map((_, index) => (
-                            <div key={index} className={`h-5 w-5 rounded-full border-2 ${index % 2 === 0 ? "border-[#1f5d8c] bg-[#60d17c]" : "border-white bg-white"}`} />
-                        ))}
-                    </div>
-                </div>
-            </div>
-            <div className="mt-4 grid grid-cols-2 gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/90">
-                <div className="rounded-lg bg-white/10 px-3 py-2 text-center">Traditional Systems</div>
-                <div className="rounded-lg bg-white/10 px-3 py-2 text-center">Integrex</div>
-            </div>
-        </div>
-    );
-}
-
-
-function FAQCard({ number, question, answer }) {
-    return (
-        <LightCard className="w-[82%] mx-auto rounded-xl py-3 px-4">
-            <div className="pt-1 text-sm font-semibold text-[#1f5d8c]">
-                {number}. {question}
-            </div>
-            <p className="mt-3 text-sm leading-7 text-slate-600">
-                {answer}
-            </p>
-        </LightCard>
-    );
-}
-
-
-export default function AirPage() {
-    return (
-        <div className={`${poppins.className} bg-[#eef4fb] text-slate-800`}>
-            <section className="border-b border-slate-200/80 bg-[linear-gradient(180deg,#f8fbff_0%,#eef4fb_100%)]">
-                <div className="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-10">
-                    <div className="max-w-2xl pt-2 lg:pt-8">
-                        <div className="inline-flex rounded-full border border-[#1f5d8c]/15 bg-white px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#1f5d8c] shadow-sm">
-                            Patented medical technology
-                        </div>
-                        <h1 className="mt-5 max-w-xl text-[40px] font-semibold leading-[0.98] tracking-[-0.04em] text-[#1f5d8c] sm:text-[54px] lg:text-[60px]">
-                            <span className="block">integrex™ Medical</span>
-                            <span className="block">Air</span>
-                            <span className="block">Compressor System</span>
-                        </h1>
-                        <p className="mt-4 max-w-xl text-sm leading-6 text-slate-600 sm:text-[15px]">
-                            Advanced centralized medical air compressor system for modern hospitals - silent, compact, oil-free, and engineered for maximum reliability and patient safety.
-                        </p>
-                        <div className="mt-7 flex flex-wrap gap-3">
-                            <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-[#1f5d8c] px-5 py-2.5 text-xs font-semibold text-white shadow-[0_14px_32px_rgba(31,93,140,0.25)] transition hover:-translate-y-0.5 hover:bg-[#18486c] sm:text-sm">
-                                Talk to Our Engineers
-                                <ArrowRight className="h-4 w-4" />
-                            </Link>
-                            <Link href="#specs" className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 transition hover:border-[#1f5d8c]/30 hover:text-[#1f5d8c] sm:text-sm">
-                                Download Brochure (PDF)
-                                <ArrowDownToLine className="h-4 w-4" />
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="relative">
-                        <div className="absolute inset-x-12 bottom-3 top-8 rounded-[36px] bg-[radial-gradient(circle_at_30%_20%,rgba(138,194,247,0.35),transparent_40%),radial-gradient(circle_at_70%_80%,rgba(31,93,140,0.15),transparent_42%)] blur-2xl" />
-                        <div className="relative aspect-[1.15] overflow-hidden rounded-[26px] ">
-                            <Image
-                                src="/product-Air.png"
-                                alt="integrex medical air compressor system"
-                                fill
-                                priority
-                                className="object-cover"
-                                sizes="(max-width: 1024px) 100vw, 52vw"
-                            />
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section className="border-b border-slate-200 bg-[#f4f8fd]">
-                <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-                    <SectionTitle
-                        center
-                        title="Performance that benefits"
-
+            {/* ══════════════════════ HERO ══════════════════════ */}
+            <section className="relative overflow-hidden py-14 px-4">
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/air-hero-bg.jpg"
+                        alt=""
+                        className="w-full h-full object-cover object-center"
                     />
-                    <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                        {performanceItems.map((item) => (
-                            <LightCard key={item.label} className="px-6 py-4 text-center">
-                                <div className="text-[24px] font-semibold leading-none text-[#1f5d8c]">{item.value}</div>
-                                <div className="mt-2 text-xs text-slate-500">{item.label}</div>
-                            </LightCard>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-
-            <section className="border-b border-slate-200 bg-white">
-                <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
-
-                    {/* Heading */}
-                    <div className="text-center">
-                        <h2 className="text-[34px] font-bold text-[#154b7d]">
-                            How the System Works?
-                        </h2>
-
-                        <div className="mx-auto mt-3 h-[4px] w-[85px] rounded-full bg-[#1b5d90]" />
-
-                        <p className="mx-auto mt-6 max-w-3xl text-[15px] leading-7 text-slate-500">
-                            A seamless six-stage technical flow ensuring the highest medical air
-                            purity and reliability.
-                        </p>
-                    </div>
-
-                    {/* Steps */}
-                    <div className="mt-14 grid grid-cols-2 gap-y-10 md:grid-cols-3 lg:grid-cols-6">
-
-                        {steps.map((step, index) => {
-
-                            const Icon = step.isSvg ? null : step.icon;
-
-                            return (
-
-                                <div
-                                    key={step.title}
-                                    className="relative flex flex-col items-center text-center"
-                                >
-
-                                    {index !== steps.length - 1 && (
-                                        <div className="absolute left-[88%] top-[24px] hidden lg:block">
-                                            <span className="text-[22px] font-light text-[#c3c8d1]">
-                                                →
-                                            </span>
-                                        </div>
-                                    )}
-                                    <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-[#d2d7df] bg-[#f7f8fa] shadow-sm">
-
-                                        {step.isSvg ? (
-
-                                            <img
-                                                src={step.icon}
-                                                alt={step.title}
-                                                className="h-6 w-6 object-contain"
-                                            />
-
-                                        ) : (
-
-                                            <Icon
-                                                className="h-6 w-6 text-[#165483]"
-                                                strokeWidth={1.8}
-                                            />
-
-                                        )}
-
-                                    </div>
-
-                                    <h3
-                                        className="mt-4 text-[15px] font-semibold text-[#1b5b8f]"
-                                    >
-                                        {step.title}
-                                    </h3>
-
-                                    <p className="mt-2 max-w-[150px] text-[12px] font-normal leading-[20px] text-[#4E5B69]">
-                                        {step.text}
-                                    </p>
-
-                                </div>
-
-                            );
-
-                        })}
-
-                    </div>
-
-                </div>
-            </section>
-
-            <section className="border-b border-slate-200 bg-[#f3f7fc]">
-                <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8 lg:py-16">
-                    <div className="max-w-2xl">
-                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
-                            Our approach
-                        </p>
-
-                        <h2 className="mt-3 max-w-xl text-[38px] font-semibold tracking-tight text-[#1f5d8c] sm:text-[50px]">
-                            Modular Design Philosophy
-                        </h2>
-
-                        <div className="mt-4 h-[4px] w-16 rounded-full bg-[#1f5d8c]" />
-
-                        <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
-                            Our engineering approach moves beyond traditional hard-capacity systems
-                            by offering a modular architecture, redundant control, and a highly
-                            efficient medical air solution that grows with your facility.
-                        </p>
-
-                        <Link
-                            href="/products"
-                            className="mt-6 inline-flex items-center gap-2 rounded-xl border border-[#d9e3ec] bg-white px-5 py-3 text-sm font-semibold text-[#184d7d] shadow-sm transition hover:border-[#1f5d8c]"
-                        >
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#184d7d]">
-                                <ShieldCheck size={16} className="text-white" />
-                            </div>
-
-                            <span>The Integrex Advantage</span>
-
-                            <ArrowRight size={16} />
-                        </Link>
-                    </div>
-
-                    <div className="w-full max-w-[360px] lg:mt-10">
-                        <img src="/concept-diagram.png" alt="" /> // this section me image add karna baki hai
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-white/15" />
                 </div>
 
-                <div className="mx-auto grid max-w-7xl gap-5 px-4 pb-14 sm:px-6 lg:grid-cols-3 lg:px-8">
-                    {philosophyCards.map((card) => {
-                        const Icon = card.icon;
+                <div className="relative z-10 max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <div className="inline-flex items-center gap-2 bg-[#eef5fc] text-[#0d4c82] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 border border-[#e0ecf8]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#0d4c82]" />
+                            Patented Medical Technology
+                        </div>
 
-                        return (
-                            <LightCard
-                                key={card.title}
-                                className="flex h-full flex-col rounded-[18px] border border-[#dbe5ef] bg-white p-5 transition-shadow duration-300 hover:shadow-[0_16px_40px_rgba(31,93,140,0.12)]"
+                        <h1 className="text-4xl lg:text-6xl font-semibold text-[#0b477b] mb-5 leading-[1.2]">
+                            Integrex™ Medical<br />Air<br /> Compressor System
+                        </h1>
+
+                        <p className="text-md text-[#0b477b] leading-relaxed mb-7 max-w-lg">
+                            Advanced centralized medical air compressor system for modern hospitals: silent, compact & oil-free. Engineered for maximum reliability and patient safety.
+                        </p>
+                        <div className="flex gap-3.5 flex-wrap">
+
+                            <a
+                                href="#guides"
+                                className="inline-flex items-center gap-2 bg-[#0b477b] text-white text-sm font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#0d3d68] transition-colors"
+                                style={{ textDecoration: "none" }}
                             >
-                                {/* Top Icon */}
+                                Talk to Our Engineers
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
 
-                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eef5fd]">
-                                    <Icon
-                                        size={18}
-                                        strokeWidth={1.8}
-                                        className="text-[#184d7d]"
-                                    />
+                            </a>
+
+                            <a
+                                href="/contact-us"
+                                className="inline-flex items-center gap-2 bg-white text-[#0b2d4e] text-sm font-semibold px-6 py-3 rounded-full border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors"
+                                style={{ textDecoration: "none" }}
+                            >
+                                Download Brochure (PDF)
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#0b2d4e"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16" />
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <div className="relative w-full max-w-[460px] h-[420px]">
+                            <img
+                                src="/product-Air.png"
+                                alt="Integrex Medical Air Compressor System"
+                                className="w-full h-full object-contain drop-shadow-2xl"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section >
+
+            {/* ══════════════════ PERFORMANCE THAT BENEFITS ══════════════════ */}
+            < section className="bg-[#f4f7fb] px-6 py-12" >
+                <div className="max-w-[1360px] mx-auto">
+                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center tracking-wide mb-8">
+                        PERFORMANCE THAT BENEFITS
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
+                        {[
+                            { value: "Up to 80%", label: "Less Noise" },
+                            { value: "Up to 80%", label: "Less Vibration" },
+                            { value: "Up to 80%", label: "Less Space" },
+                            { value: "Up to 70%", label: "Lower Electricity" },
+                        ].map((stat) => (
+                            <div
+                                key={stat.label}
+                                className="bg-white border border-gray-200 rounded-2xl py-6 px-4 text-center shadow-sm"
+                            >
+                                <div className="text-4xl font-semibold text-[#0b477b] mb-1">{stat.value}</div>
+                                <div className="text-sm  text-[#0b477b]">{stat.label}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section >
+
+            {/* ══════════════════ HOW THE SYSTEM WORKS ══════════════════ */}
+            <section className="bg-white px-6 py-16">
+                <div className="max-w-[1360px] mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">How the System Works?</h2>
+                        <div className="w-16 h-[3px] bg-[#0b477b] rounded-full mb-6 mx-auto" />
+                        <p className="text-md text-gray-800 max-w-2xl mx-auto leading-relaxed">
+                            A seamless six-stage technical flow ensuring the highest medical air purity and reliability.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-10 gap-x-2">
+                        {[
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M12 3v6" /><path d="M12 15v6" /><path d="M5 9l7 6 7-6" />
+                                    </svg>
+                                ),
+                                num: "1", title: "Generation", desc: "Oil-free compression."
+                            },
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="4" y="4" width="16" height="16" rx="2" /><path d="M8 9h8" /><path d="M8 13h8" /><path d="M8 17h5" />
+                                    </svg>
+                                ),
+                                num: "2", title: "Storage", desc: "Coated air receivers."
+                            },
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M6 3h12l-4 6v6l-4 2v-8z" />
+                                    </svg>
+                                ),
+                                num: "3", title: "Drying", desc: "Twin-tower desiccant units."
+                            },
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M4 5h16l-6 8v6l-4 2v-8z" />
+                                    </svg>
+                                ),
+                                num: "4", title: "Filtration", desc: "Removes oil & particles."
+                            },
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
+                                    </svg>
+                                ),
+                                num: "5", title: "Regulation", desc: "Precision pressure control."
+                            },
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" />
+                                    </svg>
+                                ),
+                                num: "6", title: "PLC Control", desc: "Master load balancing."
+                            },
+                        ].map((step, i, arr) => (
+                            <div key={step.num} className="relative flex items-center">
+                                <div className="flex flex-col items-center text-center px-2">
+                                    <div className="w-12 h-12 rounded-full bg-[#eef5fc] border-2 border-[#0b477b]/20 flex items-center justify-center mb-4">
+                                        {step.icon}
+                                    </div>
+                                    <h3 className="text-sm font-bold text-[#0b477b] mb-1 whitespace-nowrap">
+                                        {step.num}. {step.title}
+                                    </h3>
+                                    <p className="text-xs text-gray-500 leading-relaxed whitespace-nowrap">{step.desc}</p>
                                 </div>
 
-                                {/* Title */}
-
-                                <h3 className="mt-3 text-[16px] font-bold uppercase tracking-[0.02em] text-[#184d7d]">
-                                    {card.title}
-                                </h3>
-
-                                {/* Blue Line */}
-
-                                <div className="mt-2 h-[3px] w-10 rounded-full bg-[#1f5d8c]" />
-
-                                {/* Description */}
-
-                                <p className="mt-3 text-[13px] leading-6 text-[#616c7a]">
-                                    {card.description}
-                                </p>
-
-                                {/* Bullet */}
-
-                                <ul className="mt-4 space-y-2">
-                                    {card.bullets.map((bullet) => (
-                                        <li
-                                            key={bullet}
-                                            className="flex items-center gap-2.5 text-[13px] text-[#4b5563]"
-                                        >
-                                            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#2b6b9b]">
-                                                <Check
-                                                    size={11}
-                                                    strokeWidth={3}
-                                                    className="text-[#2b6b9b]"
-                                                />
-                                            </span>
-
-                                            <span>{bullet}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </LightCard>
-                        );
-                    })}
-                </div>
-            </section>
-
-
-
-
-
-
-            <section className="border-b border-[#e6edf5] bg-white">
-                <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
-
-                    {/* Left Content */}
-                    <div className="max-w-xl">
-
-                        <h2 className="text-[32px] font-bold leading-tight text-[#184d7d]">
-                            Ultra-High Purity Medical Air
-                        </h2>
-
-                        <div className="mt-3 h-[4px] w-16 rounded-full bg-[#1b5d90]" />
-
-                        <p className="mt-5 text-[14px] leading-7 text-[#616c7a]">
-                            Patient safety starts with the quality of the air they breathe. The
-                            integrex™ system delivers medical air purity that complies with
-                            stringent healthcare standards for reliability and performance.
-                        </p>
-
-                        <div className="mt-10 space-y-7">
-
-                            {(() => {
-                                const iconMap = {
-                                    "100% Oil-Free": Sparkles,
-                                    "Precision Dry": Wind,
-                                    "Clinical Clean": ShieldCheck,
-                                };
-
-                                return purityBullets.map((item) => {
-                                    const Icon = iconMap[item.title];
-
-                                    return (
-                                        <div
-                                            key={item.title}
-                                            className="flex items-start gap-4"
-                                        >
-                                            {/* Icon */}
-
-                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#edf5fc]">
-
-                                                <Icon
-                                                    size={20}
-                                                    strokeWidth={1.8}
-                                                    className="text-[#184d7d]"
-                                                />
-
-                                            </div>
-
-                                            {/* Text */}
-
-                                            <div>
-
-                                                <h4 className="text-[15px] font-semibold text-[#184d7d]">
-                                                    {item.title}
-                                                </h4>
-
-                                                <p className="mt-1 text-[13px] leading-6 text-[#616c7a]">
-                                                    {item.text}
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                    );
-                                });
-                            })()}
-
-                        </div>
-
-                    </div>
-
-                    {/* Right Image */}
-
-                    <div className="flex items-center justify-center">
-
-                        <div className="relative h-[480px] w-full max-w-[500px]">
-
-                            <Image
-                                src="/product-Air.png"
-                                alt="Medical Air Purity System"
-                                fill
-                                priority
-                                className="object-contain"
-                                sizes="(max-width:1024px)100vw,50vw"
-                            />
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <section className="border-b border-slate-200 bg-[#f4f8fd]">
-                <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
-                    <SectionTitle center title="Features & Critical Benefits" description="A focused set of cards that highlight the qualities most important to a medical air installation." />
-                    <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                        {featureTiles.map((tile) => (
-                            <FeatureTile key={tile.title} {...tile} />
+                                {i !== arr.length - 1 && (
+                                    <svg className="hidden lg:block absolute -right-3 top-6 text-[#0b477b]/40" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M5 12h14" /><path d="M13 6l6 6-6 6" />
+                                    </svg>
+                                )}
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
+            {/* ══════════════════ MODULAR DESIGN PHILOSOPHY ══════════════════ */}
+            <section className="bg-[#f4f7fb] px-6 py-16">
+                <div className="max-w-[1360px] mx-auto">
 
-
-            <section id="specs" className="border-b border-slate-200 bg-white">
-                <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
-                    <SectionTitle center title="Technical Specifications" />
-
-                    <div className="mt-8 overflow-hidden rounded-[18px] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(31,93,140,0.08)]">
-
-                        {/* Table Header */}
-                        <div className="bg-[#1f5d8c] px-6 py-4 text-sm font-semibold text-white">
-                            <div className="grid grid-cols-[1.05fr_1.95fr]">
-                                <div>Parameter</div>
-                                <div>integrex™ Standard Configuration</div>
+                    {/* Top row — text left, image right */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-14">
+                        <div>
+                            <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-12 border border-[#e0ecf8]">
+                                Our Approach
                             </div>
+                            <h2 className="text-5xl font-semibold text-[#0b477b] mb-8 leading-tight">
+                                Modular Design<br />Philosophy
+                            </h2>
+                            <div className="w-10 h-[3px] bg-[#0b477b] rounded-full mb-5" />
+                            <p className="text-md text-gray-500 leading-relaxed max-w-md">
+                                Our engineering approach moves beyond traditional fixed-capacity systems. By utilizing a modular architecture, we provide a scalable, redundant, and highly efficient medical air solution that grows with your facility.
+                            </p>
                         </div>
 
-                        {/* Table Body */}
-                        <div className="divide-y divide-slate-200">
-                            {specs.map(([label, value]) => (
-                                <div
-                                    key={label}
-                                    className="grid grid-cols-[1.05fr_1.95fr] text-sm"
-                                >
-                                    {/* Left Column (Off White) */}
-                                    <div className="bg-stone-50 border-r border-slate-200 px-6 py-4 font-semibold text-slate-700">
-                                        {label}
-                                    </div>
+                        {/* Right — image placeholder (fixed height/width) */}
+                        <div className="relative w-full max-w-[500px] h-[380px] mx-auto lg:mx-0 rounded-2xl overflow-hidden">
+                            <Image
+                                src="/air_page.jpg"
+                                alt="Modular design concept — traditional vs Integrex"
+                                fill
+                                sizes="420px"
+                                className="object-cover object-center rounded-2xl"
+                            />
+                        </div>
+                    </div>
 
-                                    {/* Right Column (White) */}
-                                    <div className="bg-white px-6 py-4 text-slate-600">
-                                        {value}
+                    {/* Bottom 3 cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {[
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z" />
+                                        <path d="m9 12 2 2 4-4" />
+                                    </svg>
+                                ),
+                                title: "Smart Redundancy",
+                                desc: "True N+1 approach. If one module requires service, others automatically ramp up to maintain 100% demand without intervention.",
+                                points: ["Hot-swappable modules", "Autonomous load failover"],
+                            },
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="4" y="8" width="16" height="12" rx="2" />
+                                        <path d="M8 8V6a4 4 0 0 1 8 0v2" />
+                                    </svg>
+                                ),
+                                title: "Easy Scalability",
+                                desc: "Start with current needs. Our 'Plug-and-Expand' architecture allows for phased capacity expansion as your hospital grows.",
+                                points: ["Zero downtime expansion", "Phased capital investment"],
+                            },
+                            {
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="2" y="6" width="20" height="12" rx="2" />
+                                        <path d="M9 10v4" /><path d="M13 10v4" /><path d="M17 10v4" />
+                                    </svg>
+                                ),
+                                title: "Capacity Control",
+                                desc: "VRV/VRF-style matching. Only necessary modules run, drastically reducing wear-and-tear and energy waste.",
+                                points: ["Real-time demand matching", "Predictive maintenance alerts"],
+                            },
+                        ].map((card) => (
+                            <div key={card.title} className="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm">
+                                <div className="w-11 h-11 rounded-xl bg-[#eef5fc] border border-[#d0e4f5] flex items-center justify-center mb-5">
+                                    {card.icon}
+                                </div>
+                                <h3 className="text-md font-bold text-[#0b477b] uppercase tracking-wide mb-2">{card.title}</h3>
+                                <div className="w-8 h-[2px] bg-[#0b477b] rounded-full mb-4" />
+                                <p className="text-md text-gray-500 leading-relaxed mb-5">{card.desc}</p>
+                                <div className="flex flex-col gap-2.5">
+                                    {card.points.map((point) => (
+                                        <div key={point} className="flex items-center gap-3">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0">
+                                                <circle cx="12" cy="12" r="10" /><path d="M8 12.5l2.5 2.5L16 9.5" />
+                                            </svg>
+                                            <span className="text-sm font-semibold text-gray-700 ">{point}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            {/* ══════════════════ ULTRA-HIGH PURITY MEDICAL AIR ══════════════════ */}
+            <section className="bg-white px-6 py-16">
+                <div className="max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-6">Ultra-High Purity Medical Air</h2>
+                        <p className="text-md text-gray-500 leading-relaxed mb-7 max-w-md">
+                            Patient safety starts with the quality of the air they breathe. Integrex™ system exceeds HTM 02-01 and ISO 7396-1 standards for breathing air quality.
+                        </p>
+                        <div className="flex flex-col gap-5">
+                            {[
+                                {
+                                    icon: (
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z" />
+                                        </svg>
+                                    ),
+                                    title: "100% Oil-Free",
+                                    desc: "Guaranteed dry-compression ensures zero hydrocarbon contamination.",
+                                },
+                                {
+                                    icon: (
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12z" />
+                                        </svg>
+                                    ),
+                                    title: "Precision Dry",
+                                    desc: "Maintains a consistent -40°C pressure dew point for zero moisture.",
+                                },
+                                {
+                                    icon: (
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                            <circle cx="12" cy="8" r="4" /><path d="M4 21v-1a8 8 0 0 1 16 0v1" />
+                                        </svg>
+                                    ),
+                                    title: "Clinical Clean",
+                                    desc: "Multi-stage HEPA and activated carbon filtration for air clarity.",
+                                },
+                            ].map((item) => (
+                                <div key={item.title} className="flex items-start gap-6">
+                                    <div className="w-10 h-10 rounded-lg bg-[#eef5fc] border border-[#d0e4f5] flex items-center justify-center flex-shrink-0">
+                                        {item.icon}
+                                    </div>
+                                    <div>
+                                        <h4 className="text-md font-bold text-[#0b477b] mb-1">{item.title}</h4>
+                                        <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-
-
-            <section className="border-b border-slate-200 bg-[#f4f8fd]">
-                <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-                    <SectionTitle title="Standard Scope of Supply" />
-
-                    <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        {/* Included */}
-                        <LightCard className="rounded-2xl border border-[#d9dde3] bg-white p-6 shadow-none min-h-[230px]">
-                            <div className="flex items-center gap-2">
-
-                                <CalendarDays
-                                    size={15}
-                                    strokeWidth={1.8}
-                                    className="text-[#F15A29] flex-shrink-0"
-                                />
-
-                                <h3 className="text-sm font-semibold text-[#1f5d8c]">
-                                    Included Components
-                                </h3>
-                            </div>
-
-                            <ul className="mt-4 space-y-1 text-[13px] leading-5 text-slate-600">
-                                {supplyIncluded.map((item) => (
-                                    <li key={item} className="flex gap-2">
-                                        <span className="mt-[9px] h-1.5 w-1.5 rounded-full bg-[#1f5d8c]" />
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </LightCard>
-
-                        {/* Optional */}
-                        <LightCard className="rounded-2xl border border-[#d9dde3] bg-white p-6 shadow-none min-h-[230px]">
-                            <div className="flex items-center gap-2">
-
-                                <CirclePlus
-                                    size={15}
-                                    strokeWidth={1.8}
-                                    className="text-[#F15A29] flex-shrink-0"
-                                />
-                                <h3 className="text-sm font-semibold text-[#1f5d8c]">
-                                    Optional Accessories
-                                </h3>
-                            </div>
-
-                            <ul className="mt-4 space-y-1 text-[13px] leading-5 text-slate-600">
-                                {supplyOptional.map((item) => (
-                                    <li key={item} className="flex gap-2">
-                                        <span className="mt-[9px] h-1.5 w-1.5 rounded-full bg-[#f3562b]" />
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </LightCard>
-                    </div>
-                </div>
-            </section>
-
-
-
-            {/* <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
-          <SectionTitle center title="Technical FAQ" />
-          <div className="mt-8 grid gap-4">
-            {faqItems.map((item, index) => (
-              <FAQCard key={item.question} number={index + 1} {...item} />
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-
-            <section className="border-b border-[#e6edf5] bg-[#f8fbfe]">
-                <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-
-                    {/* Heading */}
-
-                    <div className="text-center">
-                        <h2 className="text-[34px] font-bold text-[#184d7d]">
-                            Technical FAQ
-                        </h2>
-
-                        <div className="mx-auto mt-3 h-[4px] w-[82px] rounded-full bg-[#1b5d90]" />
                     </div>
 
-                    {/* FAQ */}
-
-                    <div className="mt-12 space-y-5">
-
-                        {faqItems.map((item, index) => (
-
-                            <div
-                                key={index}
-                                className="group overflow-hidden rounded-2xl border border-[#dfe7ef] bg-white transition-all duration-300 hover:shadow-xl"
-                            >
-
-                                {/* Question */}
-
-                                <div className="flex items-center justify-between px-7 py-6 cursor-pointer">
-
-                                    <h3 className="text-[15px] font-semibold text-[#1d1d1d]">
-                                        {index + 1}. {item.question}
-                                    </h3>
-
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#d7e3ef] text-[20px] font-light text-[#1b5d90] transition-all duration-300 group-hover:rotate-45 group-hover:bg-[#1b5d90] group-hover:text-white">
-                                        +
-                                    </div>
-
-                                </div>
-
-                                {/* Answer */}
-
-                                <div
-                                    className="
-              grid
-              grid-rows-[0fr]
-              transition-all
-              duration-500
-              ease-in-out
-              group-hover:grid-rows-[1fr]
-            "
-                                >
-
-                                    <div className="overflow-hidden">
-
-                                        <div className="px-7 pb-6">
-
-                                            <div className="mb-5 h-px bg-[#edf2f7]" />
-
-                                            <p className="text-[13px] leading-7 text-[#5c6776]">
-                                                {item.answer}
-                                            </p>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        ))}
-
-                    </div>
-
-                </div>
-            </section>
-
-
-            <section className=" pb-14">
-                <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-                    <div className="rounded-[24px]  px-6 py-10 text-center sm:px-10 sm:py-12">
-                        <h2 className="text-3xl font-semibold tracking-tight text-[#1f5d8c] sm:text-4xl">Ready to upgrade your medical air?</h2>
-                        <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-                            Let’s find the right integrex medical air compressor system configuration for your hospital project. Our engineering team is ready to assist with sizing and custom layouts.
-                        </p>
-                        <div className="mt-8 flex flex-wrap justify-center gap-3">
-                            <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-[#f3562b] px-5 py-3 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(243,86,43,0.28)] transition hover:-translate-y-0.5 hover:bg-[#e24d20]">
-                                Request a Custom Proposal
-                            </Link>
-                            <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-[#1f5d8c] px-5 py-3 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(31,93,140,0.25)] transition hover:-translate-y-0.5 hover:bg-[#18486c]">
-                                Schedule a Technical Call
-                            </Link>
+                    <div className="flex justify-center">
+                        <div className="relative w-full max-w-[460px] h-[420px]">
+                            <img
+                                src="/product-Air.png"
+                                alt="Integrex Medical Air Compressor"
+                                className="w-full h-full object-contain drop-shadow-xl"
+                            />
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
+
+            {/* ══════════════════ FEATURES & CRITICAL BENEFITS ══════════════════ */}
+            <section className="bg-[#eef5fc] px-6 py-16">
+                <div className="max-w-[1360px] mx-auto">
+                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-12">Features & Critical Benefits</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[
+                            {
+                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
+                                title: "Purpose-Built",
+                                desc: "Built solely for clinical medical gas applications, not industrial.",
+                            },
+                            {
+                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>,
+                                title: "Modular Architecture",
+                                desc: "Easily add capacity or maintain without system shutdown.",
+                            },
+                            {
+                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z" /><line x1="17" y1="9" x2="21" y2="15" /><line x1="21" y1="9" x2="17" y2="15" /></svg>,
+                                title: "Ultra-Quiet",
+                                desc: "Silent operation allows placement near patient wards.",
+                            },
+                            {
+                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
+                                title: "Energy Savings",
+                                desc: "Intelligent sequencing reduces power up to 70% off-peak.",
+                            },
+                            {
+                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="16" height="12" rx="2" /><path d="M8 8V6a4 4 0 0 1 8 0v2" /></svg>,
+                                title: "Skid-Mounted Package",
+                                desc: "Pre-piped and pre-wired for rapid, error-free installation.",
+                            },
+                            {
+                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 21V14" /><path d="M4 10V3" /><path d="M12 21V12" /><path d="M12 8V3" /><path d="M20 21V16" /><path d="M20 12V3" /><path d="M2 14h4" /><path d="M10 8h4" /><path d="M18 16h4" /></svg>,
+                                title: "Advanced Control",
+                                desc: "Touchscreen HMI with remote monitoring and BMS support.",
+                            },
+                            {
+                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><circle cx="12" cy="12" r="3" /></svg>,
+                                title: "Unified Ecosystem",
+                                desc: "Single interface for compressors, dryers, and filtration.",
+                            },
+                            {
+                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.04z" /></svg>,
+                                title: "24/7 Support",
+                                desc: "Backed by Technik Spirits' expert global service teams.",
+                            },
+                        ].map((f) => (
+                            <div key={f.title} className="bg-white border border-gray-200 rounded-xl p-4">
+                                <div className="w-14 h-14  flex items-center justify-center mb-1">
+                                    {f.icon}
+                                </div>
+                                <h4 className="text-lg font-semibold text-navy-800 mb-1.5">{f.title}</h4>
+                                <p className="text-[15px] text-gray-700 leading-relaxed">{f.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ══════════════════ TECHNICAL SPECIFICATIONS ══════════════════ */}
+            <section className="max-w-[1360px] mx-auto px-6 py-16">
+                <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-8">Technical Specifications</h2>
+                <div className="border border-gray-200 rounded-2xl overflow-hidden">
+                    <table className="w-full">
+                        <thead>
+                            <tr className="bg-[#0b477b]">
+                                <th className="text-left text-md font-bold text-white px-6 py-4">Parameter</th>
+                                <th className="text-left text-md font-bold text-white px-6 py-4">Specifications</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {[
+                                ["Design", "Oil-free"],
+                                ["Pressure Output", "4 bar (60 psi) & 7 bar (≈ 100 psi)"],
+                                ["Flow Capacity", "300 LPM (≈ 10 CFM) to virtually unlimited capacity"],
+                                ["Dryer", "Integrated"],
+                                ["Filtration", "Integrated four-stage filtration; down to 0.01 micron"],
+                                ["Air Receiver Capacity", "300 to 5000+ Litres"],
+                                ["Power Supply", "415 V, 50 Hz, 3 Phase"],
+
+                            ].map(([param, spec], i) => (
+                                <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                                    <td className="text-md font-semibold text-[#0b477b] px-6 py-5">{param}</td>
+                                    <td className="text-md text-gray-500 px-6 py-5">{spec}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+
+                {/* ══════════════════ STANDARD SCOPE OF SUPPLY ══════════════════ */}
+                <section className="bg-white px-6 py-16">
+                    <div className="max-w-[1360px] mx-auto">
+                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-10">Standard Scope of Supply</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                            {/* Included Components */}
+                            <div className="bg-[#fdf3f0] border border-gray-200 rounded-2xl p-7">
+                                <div className="flex items-center gap-2 mb-4">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="8" y="2" width="8" height="4" rx="1" />
+                                        <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2" />
+                                        <path d="M9 12l2 2 4-4" />
+                                    </svg>
+                                    <h3 className="text-md font-semibold text-[#1a2a3a]">Included Components</h3>
+                                </div>
+                                <ul className="flex flex-col gap-2.5">
+                                    {[
+                                        "Oil-free air compressor modules",
+                                        "Air receiver(s) with auto drain valve",
+                                        "Integrated dryer(s) for moisture removal",
+                                        "Multi-stage filtration assembly",
+                                        "Pressure regulation assembly for 4 bar or 7 bar MGPS delivery",
+                                        "PLC-based, BMS-ready, control system",
+                                        "All necessary accessories and ancillaries for complete system integration",
+                                    ].map((item) => (
+                                        <li key={item} className="text-sm text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Optional Accessories */}
+                            <div className="bg-[#fdf3f0] border border-gray-200 rounded-2xl p-7">
+                                <div className="flex items-center gap-2 mb-4">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 8v8M8 12h8" />
+                                    </svg>
+                                    <h3 className="text-md font-semibold text-[#1a2a3a]">Optional Accessories</h3>
+                                </div>
+                                <ul className="flex flex-col gap-2.5">
+                                    {[
+                                        "Duplex / multi dryer and filtration assemblies for enhanced reliability",
+                                        "Dew point analyzer for dryer switching and moisture monitoring",
+                                        "CO, CO2, and other gas analyzer for Medical air quality monitoring",
+                                        "Duplex / multi air receivers (parallel)",
+                                    ].map((item) => (
+                                        <li key={item} className="text-sm text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            {/* ══════════════════ TECHNICAL FAQ ══════════════════ */}
+            <section className="bg-[#eceef0] px-6 py-16">
+                <div className="max-w-[850px] mx-auto">
+                    <h2 className="text-3xl font-bold text-[#0b477b] text-center mb-10">Technical FAQ</h2>
+                    <div className="flex flex-col gap-4">
+                        {[
+                            {
+                                q: "What is the Integrex™ Modular Medical Air Compressor System?",
+                                a: "It is a scalable, oil-free medical air compressor system engineered for hospitals, combining compression, drying, filtration, and control into a single modular skid-mounted package.",
+                            },
+                            {
+                                q: "What makes Integrex different from traditional duplex compressors?",
+                                a: "Unlike fixed duplex systems, Integrex uses independent modules that can be added, serviced, or replaced without shutting down the entire supply, ensuring true N+1 redundancy.",
+                            },
+                            {
+                                q: "Does the system meet ISO 8573-1 Class 0 oil-free standards?",
+                                a: "Yes, Integrex is certified oil-free and meets ISO 8573-1 Class 0, guaranteeing zero hydrocarbon contamination in the medical air supply.",
+                            },
+                            {
+                                q: "How quiet is Integrex medical air compressor system compared to conventional systems?",
+                                a: "Integrex operates significantly quieter than conventional industrial compressors, allowing installation closer to patient wards without additional acoustic enclosures.",
+                            },
+                            {
+                                q: "How compact is Integrex™, and how does it save space?",
+                                a: "Its modular skid-mounted design reduces the plant room footprint substantially compared to traditional systems of equivalent capacity, freeing up valuable hospital space.",
+                            },
+                        ].map((faq, i) => (
+                            <div key={i} className="bg-white border border-gray-200 rounded-full overflow-hidden">
+                                <button
+                                    className="w-full flex items-center justify-between gap-4 px-7 py-5 text-left"
+                                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                >
+                                    <span className="text-sm font-semibold text-[#1a2a3a]">
+                                        {i + 1}. {faq.q}
+                                    </span>
+                                    <svg
+                                        className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${openFaq === i ? "rotate-180" : ""}`}
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                {faq === i && (
+                                    <div className="px-7 pb-5">
+                                        <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── FINAL CTA ── */}
+            <section className="bg-white px-6 py-14">
+                <div className="max-w-[1360px] mx-auto text-center">
+                    <h2 className="text-5xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Ready to upgrade your medical air?</h2>
+                    <p className="text-lg text-gray-700 mb-8 max-w-[650px] mx-auto">
+                        Let's find the right integrex medical air compressor system configuration for your hospital project. Our engineering team is ready to assist with sizing and custom layouts
+                    </p>
+                    <div className="flex justify-center gap-4 flex-wrap">
+                        <Link href="/contact" className="inline-block bg-[#0b2d4e] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
+                            Talk to Our Engineers
+                        </Link>
+                        <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors">
+                            Download Brochure
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+        </main >
     );
 }

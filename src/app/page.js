@@ -26,16 +26,16 @@ export default function HomePage() {
       <Hero />
 
       {/* ── 1. TRADITIONAL vs PURPOSE BUILT ── */}
-       <section style={{ background: C.offWhite, padding: "0 16px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0 }}>
+      <section style={{ background: C.offWhite, padding: "48px 24px" }}>
+        <div style={{ maxWidth: 1300, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
 
           {/* LEFT SIDE */}
-          <div style={{ padding: "48px 40px 48px 0", borderRight: `1px solid ${C.cardBorder}` }}>
+          <div style={{ padding: "0 40px 0 0", borderRight: `1px solid ${C.cardBorder}` }}>
             <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-6 border border-[#e0ecf8]">
-              SPECIALISTS IN MGPS PLANT ROOM EQUIPMENT
+              WHY HOSPITAL NEED BETTER MGPS SOLUTIONS
             </div>
-            <h2 style={{ fontSize: 34, fontWeight: 700, color: "#0b477b", lineHeight: 1.3, margin: "0 0 16px" }}>
-              Traditional MGPS <br />Systems Are Costing <br />Hospitals More Than <br />They Should
+            <h2 style={{ fontSize: 42, fontWeight: 700, color: "#0b477b", lineHeight: 1.3, margin: "0 0 16px" }}>
+              Traditional MGPS Systems<br /> Are Costing <br />Hospitals More Than <br />They Should
             </h2>
             <div style={{
               width: 68, height: 3,
@@ -43,54 +43,54 @@ export default function HomePage() {
               borderRadius: 2,
               margin: "10px 0 12px"
             }} />
-            <p style={{ fontSize: 17, color: "#494a4bff", lineHeight: 1.8, margin: 0 }}>
-              For decades, hospitals have accepted medical<br /> gas equipment that is noisy, bulky, and energy-<br />intensive. It does not have to be this way.
+            <p style={{ fontSize: 19, color: "#494a4bff", lineHeight: 1.8, margin: 0 }}>
+              For decades, hospitals have accepted medical gas equipment<br /> that is noisy, bulky, and energy-intensive. It does not have to<br /> be this way.
             </p>
           </div>
 
           {/* RIGHT SIDE */}
           <div style={{
-            padding: "40px 38px 40px 38px",
+            padding: "44px 40px 44px 40px",
             background: "#0b477b",
             borderRadius: 20,
           }}>
-            <h2 style={{ fontSize: 32, fontWeight: 600, color: C.white, lineHeight: 1.3, margin: "0 0 14px" }}>
+            <h2 style={{ fontSize: 40, fontWeight: 600, color: C.white, lineHeight: 1.3, margin: "0 0 14px" }}>
               Purpose-Built for Hospital<br /> Operations
             </h2>
-            <p style={{ fontSize: 14.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.8, margin: "0 0 28px" }}>
-              Every component and architecture is selected with a <br /> deep understanding of clinical applications and how<br/> hospital plant rooms actually operate.
+            <p style={{ fontSize: 18, color: "rgba(255,255,255,0.85)", lineHeight: 1.8, margin: "0 0 28px" }}>
+              Every component and architecture is selected with a deep<br /> understanding of clinical applications and how<br /> hospital plant rooms actually operate.
             </p>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px 24px" }}>
               {[
                 {
                   icon: (
-                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                  </svg>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
                   ),
                   title: "Energy Efficient",
                   desc: "Lower electricity consumption over years of operation"
                 },
                 {
                   icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  </svg>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                    </svg>
                   ),
                   title: "Quiet Operation",
                   desc: "Engineered to run quietly with minimal vibration"
                 },
                 {
                   icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="7" height="7" rx="1" />
-                    <rect x="14" y="3" width="7" height="7" rx="1" />
-                    <rect x="3" y="14" width="7" height="7" rx="1" />
-                    <rect x="14" y="14" width="7" height="7" rx="1" />
-                  </svg>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="7" height="7" rx="1" />
+                      <rect x="14" y="3" width="7" height="7" rx="1" />
+                      <rect x="3" y="14" width="7" height="7" rx="1" />
+                      <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg>
                   ),
                   title: "Modular & Scalable",
                   desc: "Flexible architecture designed to grow with your hospital"
@@ -98,10 +98,10 @@ export default function HomePage() {
                 {
                   icon: (
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <ellipse cx="12" cy="5" rx="9" ry="3" />
-                    <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
-                    <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6" />
-                  </svg>
+                      <ellipse cx="12" cy="5" rx="9" ry="3" />
+                      <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+                      <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6" />
+                    </svg>
                   ),
                   title: "Compact Footprint",
                   desc: "Modular designs that free up valuable plant room space"
@@ -126,8 +126,8 @@ export default function HomePage() {
                   </div>
 
                   {/* Text */}
-                  <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-                    <div style={{ fontSize: 14, fontWeight: 600, color: C.white, lineHeight: 1.3, marginBottom: 5 }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                    <div style={{ fontSize: 15, fontWeight: 600, color: C.white, lineHeight: 1.3, marginBottom: 5 }}>
                       {f.title}
                     </div>
                     <div style={{
@@ -136,7 +136,7 @@ export default function HomePage() {
                       borderRadius: 4,
                       marginBottom: 6,
                     }} />
-                    <div style={{ fontSize: 12, color: "rgba(255,255,255,0.70)", lineHeight: 1.55 }}>
+                    <div style={{ fontSize: 13, color: "rgba(255,255,255,0.70)", lineHeight: 1.55 }}>
                       {f.desc}
                     </div>
                   </div>
@@ -149,21 +149,22 @@ export default function HomePage() {
       </section>
 
       {/* ── 2. OUR MEDICAL GAS SYSTEMS ── */}
-      <section style={{ background: C.white, padding: "60px 16px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: C.white, padding: "60px 0" }}>
+        <div style={{ maxWidth: 1300, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 32 }}>
             <div>
-              <div style={{ fontSize: 26, fontWeight: 700, color: "#0b477b", letterSpacing: 1, marginBottom: 6 }}>Our Medical Gas Systems</div>
-              <h2 style={{ fontSize: 16, fontWeight: 500, color: "#565758ff", margin: 0 }}>Smart solutions for systems of every size and speciality</h2>
+              <div style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", letterSpacing: 1, marginBottom: 6 }}>Our Medical Gas Systems</div>
+              <h2 style={{ fontSize: 19, fontWeight: 500, color: "#565758ff", margin: 0 }}>Smart solutions for systems of every size and speciality</h2>
             </div>
             <Link href="/products" style={{ fontSize: 13, color: C.blue, fontWeight: 600, textDecoration: "none" }}>
               View all products →
             </Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28 }}>
             {[
               {
-                name: "Medical Air Compressor System",
+                name: "Medical Air\nCompressor System",
                 image: "/product-Air.png",
                 topIcon: Wind,
                 features: [
@@ -174,7 +175,7 @@ export default function HomePage() {
                 slug: "medical-air-compressor"
               },
               {
-                name: "Medical Vacuum Pum System",
+                name: "Medical Vacuum\nPum System",
                 image: "/product_vacuum_pump.png",
                 topIcon: ArrowDownUp,
                 features: [
@@ -185,7 +186,7 @@ export default function HomePage() {
                 slug: "medical-vacuum-pump"
               },
               {
-                name: "Anaesthetic Gas Scavenging System",
+                name: "Anaesthetic Gas\nScavenging System",
                 image: "/product-agss.png",
                 topIcon: Syringe,
                 features: [
@@ -197,6 +198,8 @@ export default function HomePage() {
               },
             ].map((p) => (
               <div key={p.name} style={{
+
+                height: "100%",
                 borderRadius: 20,
                 overflow: "hidden",
                 border: `1px solid ${C.cardBorder}`,
@@ -208,27 +211,28 @@ export default function HomePage() {
                 {/* Top white curved section */}
                 <div style={{
                   background: C.white,
-                  padding: "24px 24px 32px",
+                  padding: "28px 28px 36px",
                   borderRadius: "0 0 60px 0",
                 }}>
                   {/* Icon */}
                   <div style={{
-                    width: 40, height: 40,
+                    width: 46, height: 46,
                     background: "#eef5fc",
                     border: "1px solid #d0e4f5",
                     borderRadius: 10,
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    marginBottom: 14
+                    marginBottom: 16
                   }}>
-                    <p.topIcon size={20} color="#0b477b" strokeWidth={2} />
+                    <p.topIcon size={24} color="#0b477b" strokeWidth={2} />
                   </div>
                   {/* Title */}
                   <h3 style={{
-                    fontSize: 22,
-                    fontWeight: 700,
+                    fontSize: 32,
+                    fontWeight: 750,
                     color: "#0b477b",
                     margin: 0,
-                    lineHeight: 1.2
+                    lineHeight: 1.2,
+                    whiteSpace: "pre-line"
                   }}>{p.name}</h3>
                 </div>
 
@@ -237,28 +241,30 @@ export default function HomePage() {
                   display: "flex",
                   alignItems: "center",
                   gap: 12,
-                  padding: "20px 20px",
+                  padding: "24px 22px",
                   flex: 1
                 }}>
                   {/* Features */}
-                  <div style={{ display: "flex", flexDirection: "column", gap: 14, flex: 1 }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 16, flex: 1 }}>
                     {p.features.map((f, i) => (
-                      <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <div key={i} style={{ display: "flex", alignItems: "center", gap: 12 }}>
                         <div style={{
-                          width: 34, height: 34,
+                          width: 38, height: 38,
                           borderRadius: "50%",
                           border: "1px solid rgba(255,255,255,0.2)",
                           background: C.white,
                           display: "flex", alignItems: "center", justifyContent: "center",
                           flexShrink: 0
                         }}>
-                          <f.icon size={20} color="#0b477b" strokeWidth={2} />
+                          <f.icon size={22} color="#0b477b" strokeWidth={2} />
                         </div>
                         <span style={{
-                          fontSize: 12,
+                          fontSize: 13,
                           fontWeight: 600,
                           color: C.white,
-                          lineHeight: 1.3
+                          lineHeight: 1.3,
+                          maxWidth: 100,
+                          display: "inline-block"
                         }}>{f.label}</span>
                       </div>
                     ))}
@@ -266,7 +272,7 @@ export default function HomePage() {
 
                   {/* Product Image */}
                   <div style={{
-                    width: 130, height: 160,
+                    width: 160, height: 210,
                     flexShrink: 0,
                     position: "relative"
                   }}>
@@ -284,7 +290,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Bottom — Learn More button */}
-                <div style={{ padding: "0 20px 20px" }}>
+                <div style={{ padding: "0 22px 22px" }}>
                   <Link href={`/products/${p.slug}`} style={{
                     display: "flex",
                     alignItems: "center",
@@ -293,8 +299,8 @@ export default function HomePage() {
                     width: "100%",
                     border: "2px solid rgba(255,255,255,0.3)",
                     borderRadius: 14,
-                    padding: "14px",
-                    fontSize: 14,
+                    padding: "16px",
+                    fontSize: 15,
                     fontWeight: 400,
                     color: C.white,
                     textDecoration: "none",
@@ -306,9 +312,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
           {/* Also in our Portfolio strip */}
           <div style={{
-            maxWidth: 1100,
+            maxWidth: 1300,
             margin: "38px auto 0",
             marginTop: 32,
             border: `1px solid ${C.cardBorder}`,
@@ -318,7 +325,7 @@ export default function HomePage() {
             alignItems: "center",
             gap: 32,
             flexWrap: "wrap",
-            flex: 1,                        
+            flex: 1,
             justifyContent: "center",
             background: C.white,
             boxShadow: "0 1px 6px rgba(0,0,0,0.05)"
@@ -339,7 +346,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <div>
-                <div style={{ fontSize: 10, color: C.grey600, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase" }}>ALSO IN OUR</div>
+                <div style={{ fontSize: 10, color: C.grey600, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", }}>ALSO IN OUR</div>
                 <div style={{ fontSize: 20, fontWeight: 500, color: C.navy, lineHeight: 1 }}>PORTFOLIO</div>
                 <div style={{ width: 28, height: 3, background: "#0b477b", borderRadius: 2, marginTop: 4 }} />
               </div>
@@ -365,25 +372,25 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          
+
         </div>
       </section>
 
       {/* ── 3. WHY HOSPITALS CHOOSE US ── */}
 
-       <section style={{ padding: "60px 16px" }}>
-        <div style={{ maxWidth: 960, margin: "0 auto" }}>
+      <section style={{ padding: "60px 24px" }}>
+        <div style={{ maxWidth: 1300, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <h2 style={{ fontSize: 36, fontWeight: 700, color: C.black, margin: "0 0 10px" }}>
               Built for the way <em style={{ color: "#0b477b", fontStyle: "italic" }}>hospitals actually run</em>
             </h2>
-            <p style={{ fontSize: 17, color: C.navy, margin: 0 }}>
+            <p style={{ fontSize: 18, color: C.navy, margin: 0 }}>
               Lower noise, smaller footprint, and higher energy efficiency -
               <br /> engineered for 24/7 reliability
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 22 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 26 }}>
             {[
               {
                 icon: (
@@ -470,7 +477,7 @@ export default function HomePage() {
                 </div>
 
                 <div style={{ fontSize: 16, fontWeight: 600, color: "#F3F3FA", marginBottom: 8 }}>{f.title}</div>
-                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.80)", lineHeight: 1.8 }}>{f.desc}</div>
+                <div style={{ fontSize: 15, color: "rgba(255,255,255,0.80)", lineHeight: 1.8 }}>{f.desc}</div>
 
                 {/* Divider */}
                 <div style={{
@@ -486,10 +493,10 @@ export default function HomePage() {
       </section>
 
       {/* ── 4. WHO WE WORK WITH ── */}
-      <section style={{ background: C.white, padding: "60px 16px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0b477b", margin: "0 0 16px", textAlign: "center" }}>Who we work with</h2>
-          <p style={{ fontSize: 16, color: "#0b477b", margin: "0 0 48px", textAlign: "center" }}>
+      <section style={{ background: C.white, padding: "60px 24px" }}>
+        <div style={{ maxWidth: 1300, margin: "0 auto" }}>
+          <h2 style={{ fontSize: 27, fontWeight: 700, color: "#0b477b", margin: "0 0 22px", textAlign: "center" }}>Who we work with</h2>
+          <p style={{ fontSize: 16, fontWeight: 400, color: "#0b477b", margin: "0 0 48px", textAlign: "center" }}>
             From hospital promoters to plant room operators, every Technik Spirits system is designed<br /> around the needs of the people who plan, specify, operate, and maintain hospital <br />infrastructure.
           </p>
 
@@ -546,7 +553,7 @@ export default function HomePage() {
 
                 {/* Title */}
                 <div style={{
-                  fontSize: 14,
+                  fontSize: 15.5,
                   fontWeight: 600,
                   color: "#0b477b",
                   marginBottom: 10,
@@ -555,7 +562,7 @@ export default function HomePage() {
 
                 {/* Desc */}
                 <div style={{
-                  fontSize: 12.5,
+                  fontSize: 13,
                   color: C.grey,
                   lineHeight: 1.7
                 }}>{w.desc}</div>
@@ -567,8 +574,8 @@ export default function HomePage() {
 
       {/* ── 5. CERTIFICATIONS ── */}
 
-        <section style={{ background: C.offWhite, padding: "60px 16px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
+      <section style={{ background: C.offWhite, padding: "60px 24px" }}>
+        <div style={{ maxWidth: 1300, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 8px" }}>Certifications &</h2>
           <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 48px" }}>Recognized Standards</h2>
 
@@ -634,7 +641,7 @@ export default function HomePage() {
                   fontWeight: 700,
                   color: "#0b477b",
                   letterSpacing: 0.5,
-                  
+
                 }}>{cert.title}</div>
               </div>
             ))}
@@ -673,7 +680,7 @@ export default function HomePage() {
                     </svg>
                   ),
                   title: "HTM 02-01",
-                  sub: "UK STANDARD"
+                  sub: "UK standard for Medical gas pipeline system in healthcare facilities "
                 },
                 {
                   icon: (
@@ -684,7 +691,7 @@ export default function HomePage() {
                     </svg>
                   ),
                   title: "ISO 7396",
-                  sub: "INTERNATIONAL"
+                  sub: "International standard on Medical gas pipeline systems in healthcare facilities"
                 },
                 {
                   icon: (
@@ -693,7 +700,7 @@ export default function HomePage() {
                     </svg>
                   ),
                   title: "ISO 80601",
-                  sub: "WORKSTATION"
+                  sub: "Anesthetic workstation and related applications"
                 },
               ].map((std, i) => (
                 <React.Fragment key={std.title}>
@@ -710,7 +717,7 @@ export default function HomePage() {
                     }}>{std.icon}</div>
                     <div style={{ textAlign: "left" }}>
                       <div style={{ fontSize: 15, fontWeight: 500, color: C.white }}>{std.title}</div>
-                      <div style={{ fontSize: 11, fontWeight:300, color: C.white, letterSpacing: 0.8, marginTop: 2 }}>{std.sub}</div>
+                      <div style={{ fontSize: 12, fontWeight: 300, color: C.white, letterSpacing: 0.8, marginTop: 2 }}>{std.sub}</div>
                     </div>
                   </div>
                   {i < 2 && (
@@ -725,8 +732,8 @@ export default function HomePage() {
       </section>
 
       {/* ── 6. TESTIMONIALS ── */}
-      <section style={{ background: C.white, padding: "60px 16px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: C.white, padding: "60px 24px" }}>
+        <div style={{ maxWidth: 1300, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 36 }}>
             <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: 0, letterSpacing: 1 }}>WHAT OUR CLIENTS SAY</h2>
           </div>
@@ -782,7 +789,7 @@ export default function HomePage() {
                     fontFamily: "Georgia, serif",
                     userSelect: "none",
                   }}>
-                  99
+                    99
                   </div>
                 </div>
 
@@ -825,8 +832,8 @@ export default function HomePage() {
 
 
       {/* ── 7. HAVE A QUESTION ── */}
-      <section style={{ background: C.offWhite, padding: "60px 16px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 40, alignItems: "start" }}>
+      <section style={{ background: C.offWhite, padding: "60px 24px" }}>
+        <div style={{ maxWidth: 1300, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 40, alignItems: "start" }}>
 
           {/* LEFT */}
           <div style={{ paddingTop: 8 }}>
@@ -841,7 +848,7 @@ export default function HomePage() {
             </p>
 
             {/* Contact Items */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               {[
                 {
                   icon: (
@@ -901,7 +908,7 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            </div>
+          </div>
 
           {/* RIGHT — Form */}
           <div style={{
@@ -950,7 +957,7 @@ export default function HomePage() {
             {/* Submit */}
             <button style={{
               width: "100%",
-              background: "#0b477b",
+              background: "#E05A36",
               color: C.white,
               border: "none",
               borderRadius: 10,

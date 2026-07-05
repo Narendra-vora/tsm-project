@@ -7,19 +7,19 @@ export default function CPSage() {
     <main className="bg-white min-h-screen">
 
       {/* ── HERO ── */}
-      <section className="bg-[#0b2d4e] px-6 py-14">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 gap-10 items-center">
+      <section className="relative bg-white overflow-hidden min-h-[420px] flex items-center">
+        <div className="max-w-[1360px] mx-auto grid grid-cols-2 gap-10 items-center">
           <div>
             <span className="inline-block text-[10px] font-bold bg-[#E05A36] text-white px-3 py-1 rounded-full uppercase tracking-widest mb-5">
               Engineering Excellence
             </span>
-            <h1 className="text-3xl  text-white mb-4 leading-tight">
-              Compressors, Pumps & Spares
+            <h1 className="text-5xl font-semibold text-[#0b477b] mb-4 leading-tight">
+              Compressors, Pumps & <br /> Spares
             </h1>
-            <p className="text-sm text-blue-200 leading-relaxed mb-7">
-              Genuine Thomas & Gast compressors, vacuum pumps, spare parts, and maintenance services. Technical precision meets industrial reliability for medical and laboratory applications.
+            <p className="text-sm text-[#0b477b] leading-relaxed mb-7 w-[650px]">
+              Genuine Thomas & Gast compressors, vacuum pumps, spare parts, and <br /> maintenance services. Technical precision meets industrial reliability for<br /> medical and laboratory applications.
             </p>
-            <Link href="/contact" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-6 py-3 rounded-lg hover:bg-[#c94d2c] transition-colors">
+            <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-semibold px-6 py-3 rounded-3xl hover:bg-[#0b477b] transition-colors">
               Get in Touch
             </Link>
           </div>
@@ -33,8 +33,8 @@ export default function CPSage() {
       </section>
 
       {/* ── SUPPLY OF COMPRESSORS ── */}
-      <section className="max-w-5xl mx-auto px-6 py-14">
-        <h2 className="text-xl font-bold text-[#0b477b] mb-1">Supply of Compressors and Pumps</h2>
+      <section className="max-w-[1360px] mx-auto px-6 py-14">
+        <h2 className="text-xl font-semibold text-[#0b477b] mb-1">Supply of Compressors and Pumps</h2>
         <div className="w-16 h-0.5 bg-[#0b477b] mb-8" />
 
         <div className="grid grid-cols-3 gap-5">
@@ -46,8 +46,8 @@ export default function CPSage() {
                 <line x1="6" y1="20" x2="6" y2="14" /><line x1="2" y1="20" x2="22" y2="20" />
               </svg>
             </div>
-            <h3 className="text-base font-bold text-navy mb-2">Complete Units & Custom Systems</h3>
-            <p className="text-xs text-gray-500 leading-relaxed mb-5">
+            <h3 className="text-lg font-semibold text-navy mb-2">Complete Units & Custom Systems</h3>
+            <p className="text-md text-gray-500 leading-relaxed mb-6  w-[660px]">
               Direct supply of genuine Thomas and Gast compressors and pumps for new installations or replacement of aging equipment. Fully engineered systems configured to your application, available with desiccant or refrigeration dryers, filtration, and integrated automation controls.
             </p>
             <div className="grid grid-cols-2 gap-3">
@@ -56,8 +56,8 @@ export default function CPSage() {
                 { name: "Gast 87R" },
               ].map((p) => (
                 <div key={p.name} className="border border-gray-200 rounded-xl p-3">
-                  <div className="text-sm font-semibold text-[#0b477b] mb-1">{p.name}</div>
-                  <a href="#" className="text-[11px] text-[#0b477b] font-semibold flex items-center gap-1 hover:underline">
+                  <div className="text-md font-semibold text-[#0b477b] mb-1">{p.name}</div>
+                  <a href="#" className="text-[12px] text-[#0b477b] font-semibold flex items-center gap-1 hover:underline">
                     ↓ Download Datasheet
                   </a>
                 </div>
@@ -67,17 +67,17 @@ export default function CPSage() {
 
           {/* Right card — navy */}
           <div className="bg-[#0b477b] rounded-2xl p-6 flex flex-col">
-            <div className="w-10 h-10 bg-[#E05A36] rounded-lg flex items-center justify-center mb-4">
+            <div className="w-10 h-10 bg-[#E05A36] rounded-lg flex items-center justify-center mb-8">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
               </svg>
             </div>
-            <h3 className="text-base font-bold text-white mb-2">Stock Availability</h3>
-            <p className="text-xs text-blue-200 leading-relaxed mb-6 flex-1">
+            <h3 className="text-lg font-semibold text-white mb-4">Stock Availability</h3>
+            <p className="text-md text-blue-200 leading-relaxed mb-10 flex-1">
               Fast-moving Thomas and Gast models are held<br /> in local inventory for quick turnaround on new and replacement requirements.
             </p>
-            <button className="bg-[#E05A36] text-white text-xs font-bold py-3 rounded-xl hover:bg-[#c94d2c] transition-colors">
+            <button className="bg-[#E05A36] text-white text-md font-semibold px-2 py-3 rounded-3xl hover:bg-[#c94d2c] transition-colors ">
               Check Inventory
             </button>
           </div>
@@ -85,14 +85,13 @@ export default function CPSage() {
       </section>
 
       {/* ── SPARE PARTS ── */}
-      <section className="max-w-5xl mx-auto px-6 pb-14">
-        <h2 className="text-xl font-bold text-[#0b477b] mb-1">Spare Parts and Service Kits</h2>
-        <div className="w-16 h-0.5 bg-[#0b477b] mb-8" />
+      <section className="max-w-[1360px] mx-auto px-6 pb-14">
+        <h2 className="text-xl font-semibold text-[#0b477b] mb-3">Spare Parts and Service Kits</h2>
 
         <div className="grid grid-cols-3 gap-5">
           {/* Left */}
           <div className="flex flex-col gap-4">
-            <p className="text-xs text-gray-500 leading-relaxed">
+            <p className="text-md text-gray-500 leading-relaxed">
               We stock genuine Thomas and Gast spare parts to maintain the long-term performance and reliability of your vacuum and pressure systems.
             </p>
             <div className="border border-gray-200 rounded-2xl p-4 mt-2 bg-gray-100">
@@ -101,8 +100,8 @@ export default function CPSage() {
                   <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
                 </svg>
               </div>
-              <div className="text-xs font-bold text-[#0b477b] mb-1">Need a specific part?</div>
-              <p className="text-[11px] text-gray-400 leading-relaxed">
+              <div className="text-md font-bold text-[#0b477b] mb-1">Need a specific part?</div>
+              <p className="text-[15px] text-gray-500 leading-relaxed">
                 Provide your model number and serial for an immediate availability quote.
               </p>
             </div>
@@ -126,12 +125,12 @@ export default function CPSage() {
             ].map((item) => (
               <div key={item.num} className="border border-gray-200 rounded-2xl p-4">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-black text-[#0b477b] bg-[#eef5fc] px-2.5 py-1 rounded-lg">{item.num}</span>
-                  <span className="text-sm font-bold text-navy-100">{item.title}</span>
+                  <span className="text-md font-semibold text-[#0b477b] bg-[#eef5fc] px-2 py-1 rounded-2xl">{item.num}</span>
+                  <span className="text-md font-semibold text-[#0b477b]">{item.title}</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {item.tags.map((tag) => (
-                    <span key={tag} className="text-[10px] text-gray-500 bg-gray-100 border border-gray-100 px-2 py-1 rounded-lg">
+                    <span key={tag} className="text-[12px] text-gray-700 bg-[#eef5fc] border border-[#eef5fc] px-5 py-1 rounded-xl">
                       {tag}
                     </span>
                   ))}
@@ -144,10 +143,10 @@ export default function CPSage() {
 
       {/* ── REPAIRING & OVERHAULING ── */}
       <section className="bg-gray-50 px-6 py-14">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-[1360px] mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-xl font-bold text-[#0b477b] mb-2">Repairing and Overhauling Services</h2>
-            <p className="text-xs text-gray-500 max-w-md mx-auto leading-relaxed">
+            <h2 className="text-2xl font-semibold text-[#0b477b] mb-4">Repairing and Overhauling Services</h2>
+            <p className="text-sm text-gray-500 max-w-[550px] mx-auto leading-relaxed ">
               Restoring your Thomas & Gast equipment to reliable operating conditions with manufacturer-approved precision.
             </p>
           </div>
@@ -188,8 +187,8 @@ export default function CPSage() {
                 <div className="w-9 h-9 bg-[#eef5fc] rounded-lg flex items-center justify-center mb-4">
                   {card.icon}
                 </div>
-                <h3 className="text-sm font-bold text-navy-100 mb-2">{card.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{card.desc}</p>
+                <h3 className="text-lg font-semibold text-navy-100 mb-2">{card.title}</h3>
+                <p className="text-md text-gray-500 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>

@@ -20,14 +20,14 @@ export default function Navbar() {
 
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2.5 group pl-1 sm:pl-2">
-           
-          <img
-           src="/Technik Spirit Medtech_logo.png"
-           alt="Technik Spirits MedTech"
-           style={{ height: 40, width: "auto" }}
-           />
+
+            <img
+              src="/Technik Spirit Medtech_logo.png"
+              alt="Technik Spirits MedTech"
+              style={{ height: 40, width: "auto" }}
+            />
           </Link>
-          
+
 
           {/* Center Navigation Links (Desktop) */}
           <nav className="hidden md:flex items-center gap-8">
@@ -39,54 +39,53 @@ export default function Navbar() {
               About Us
             </Link>
 
-           <div className="relative group">
-  <div className="flex items-center">
-    {/* Click → /products page */}
-    <Link
-      href="/products"
-      className={`font-semibold text-[15px] transition-colors py-2 border-b-2 flex items-center gap-1 ${
-        ['/products', '/products/medical-air-compressor', '/products/oxygen', '/products/agss', '/products/cps', '/products/mgps-design'].includes(pathname)
-          ? 'text-[#0b477b] border-[#0b477b]'
-          : 'text-gray-600 border-transparent hover:text-[#0b477b]'
-      }`}
-    >
-      Products
-    </Link>
+            <div className="relative group">
+              <div className="flex items-center">
+                {/* Click → /products page */}
+                <Link
+                  href="/products"
+                  className={`font-semibold text-[15px] transition-colors py-2 border-b-2 flex items-center gap-1 ${['/products', '/products/medical-air-compressor', '/products/oxygen', '/products/agss', '/products/cps', '/products/mgps-design'].includes(pathname)
+                      ? 'text-[#0b477b] border-[#0b477b]'
+                      : 'text-gray-600 border-transparent hover:text-[#0b477b]'
+                    }`}
+                >
+                  Products
+                </Link>
 
-    {/* Arrow — hover trigger for dropdown */}
-    <button className="p-1 ml-0.5 text-gray-600 hover:text-[#0b477b]">
-      <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-      </svg>
-    </button>
-  </div>
+                {/* Arrow — hover trigger for dropdown */}
+                <button className="p-1 ml-0.5 text-gray-600 hover:text-[#0b477b]">
+                  <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
 
-  {/* Dropdown Menu */}
-  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0">
-    <div className="py-2">
-      <Link href="/products/Air" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/Air' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
-        <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
-        Air
-      </Link>
-      <Link href="/products/oxygen" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/oxygen' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
-        <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
-        Oxygen
-      </Link>
-      <Link href="/products/AGSS" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/AGSS' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
-        <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
-        AGSS
-      </Link>
-      <Link href="/products/cps" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/cps' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
-        <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
-        CPS
-      </Link>
-      <Link href="/products/mgps-design" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/mgps-design' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
-        <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
-        MGPS Design
-      </Link>
-    </div>
-  </div>
-</div>
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0">
+                <div className="py-2">
+                  <Link href="/products/Air" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/Air' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
+                    <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
+                    Air
+                  </Link>
+                  <Link href="/products/oxygen" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/oxygen' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
+                    <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
+                    Oxygen
+                  </Link>
+                  <Link href="/products/AGSS" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/AGSS' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
+                    <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
+                    AGSS
+                  </Link>
+                  <Link href="/products/cps" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/cps' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
+                    <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
+                    CPS
+                  </Link>
+                  <Link href="/products/mgps-design" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/mgps-design' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
+                    <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
+                    MGPS Design
+                  </Link>
+                </div>
+              </div>
+            </div>
             {/* Resources Dropdown */}
             <div className="relative group">
               <button

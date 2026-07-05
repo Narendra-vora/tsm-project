@@ -9,41 +9,41 @@ const stats = [
     {
         icon: (
             <svg className="w-8 h-8" fill="none" stroke="#ffffff" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="3" />
-            <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
-        </svg>
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
+            </svg>
         ),
         value: '50+',
         label: 'YEARS EXPERIENCE',
     },
     {
         icon: (
-             <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-            <circle cx="9" cy="7" r="4" />
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-        </svg>
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
         ),
         value: '3',
         label: 'GENERATIONS OF FAMILY',
     },
     {
         icon: (
-              <svg className="w-8 h-8" fill="none" stroke="#ffffff" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="3" />
-            <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
-        </svg>
+            <svg className="w-8 h-8" fill="none" stroke="#ffffff" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
+            </svg>
         ),
         value: 'ISO 13485',
         label: '  EUALITY CERTIFIED',
     },
     {
         icon: (
-           <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="8" r="6" />
-            <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
-        </svg>
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
+            </svg>
         ),
         value: 'PATENTED',
         label: 'HITSREW TECHNOLOGY',
@@ -110,7 +110,7 @@ function AboutPage() {
                 {/* Dark overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/20" />
 
-                <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
+                <div className="relative z-10 max-w-[1360px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
                     {/* Breadcrumb */}
                     <p className="text-[#0b477b] text-xs font-semibold tracking-widest uppercase mb-5 flex items-center gap-2">
                         <span className="w-6 h-[2px] bg-[#0b477b] inline-block" />
@@ -152,7 +152,7 @@ function AboutPage() {
 
             {/* ═══════════════════════════════ STATS BAR ═══════════════════════════════ */}
             <section className="bg-[#0b477b] text-white py-8">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-white/20">
                         {stats.map((s, i) => (
                             <div key={i} className="flex flex-col sm:flex-row items-start sm:items-center gap-3 lg:px-8 first:pl-0">
@@ -171,157 +171,157 @@ function AboutPage() {
 
             {/* ═══════════════════════════════ EVOLUTION ═══════════════════════════════ */}
             <section id="evolution" className="py-20 lg:py-28 bg-white">
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a2a3a]">
-                The Evolution of{' '}
-                <span className="relative inline-block text-[#0b477b]">
-                    Excellence
-                </span>
-            </h2>
-            <p className="text-gray-500 mt-5 text-sm sm:text-base max-w-xl mx-auto">
-                Over five decades of specialized medical sector focus and in-depth engineering mastery.
-            </p>
-        </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-
-            {/* ── Left Column ── */}
-            <div className="lg:col-span-7 flex flex-col gap-0 border border-gray-200 rounded-2xl overflow-hidden">
-                {/* 1971 Card */}
-                <div className="p-7 bg-white relative overflow-hidden flex-1">
-                    {/* large faded year watermark */}
-                    <span className="absolute -top-3 right-4 text-[120px] font-black text-gray-100 select-none leading-none pointer-events-none">
-                        1971
-                    </span>
-                    <div className="relative z-10">
-                        <p className="text-2xl font-black text-[#1a2a3a] mb-1">1971</p>
-                        <h3 className="text-lg font-bold text-[#1a2a3a] mb-4">Our Modest Beginnings</h3>
-                        <p className="text-gray-500 text-sm leading-relaxed max-w-lg">
-                            Founded with a vision to revolutionize air compression, we began as specialized manufacturers.
-                            That core engineering DNA still drives every product we build today, from the smallest manifold
-                            to the largest oxygen generator.
+                <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* Section header */}
+                    <div className="text-center mb-14">
+                        <h2 className="text-4xl sm:text-4xl font-semibold text-[#1a2a3a]">
+                            The Evolution of{' '}
+                            <span className="relative inline-block text-[#0b477b]">
+                                Excellence
+                            </span>
+                        </h2>
+                        <p className="text-gray-500 mt-5 text-sm sm:text-base max-w-2xl mx-auto">
+                            Over five decades of specialized medical sector focus and in-depth engineering mastery.
                         </p>
                     </div>
-                </div>
 
-                {/* Factory image */}
-                <div className="relative overflow-hidden h-52 group">
-                    <Image
-                        src="/mgps_plant.png"
-                        alt="MGPS plant room equipment"
-                        fill
-                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b2d4e]/50 to-transparent" />
-                </div>
+                    {/* Grid */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-                {/* Metrics Row */}
-                <div className="flex items-center gap-0 bg-white border-t border-gray-100 px-6 py-4">
-                    {/* 1st */}
-                    <div className="flex items-center gap-3 flex-1">
-                        <div className="w-9 h-9 rounded-lg bg-[#eef5fc] flex items-center justify-center flex-shrink-0">
-                            <svg className="w-5 h-5 text-[#0b477b]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                                <rect x="3" y="3" width="7" height="7" rx="1" />
-                                <rect x="14" y="3" width="7" height="7" rx="1" />
-                                <rect x="3" y="14" width="7" height="7" rx="1" />
-                                <rect x="14" y="14" width="7" height="7" rx="1" />
-                            </svg>
+                        {/* ── Left Column ── */}
+                        <div className="lg:col-span-7 flex flex-col gap-0 border border-gray-200 rounded-2xl overflow-hidden">
+                            {/* 1971 Card */}
+                            <div className="p-7 bg-white relative overflow-hidden flex-1">
+                                {/* large faded year watermark */}
+                                <span className="absolute -top-3 right-4  font-black text-[#0b477b] opacity-15 select-none leading-none pointer-events-none">
+                                    1971
+                                </span>
+                                <div className="relative z-10">
+                                    <p className="text-3xl font-semibold text-[#0b477b] mb-2">1971</p>
+                                    <h3 className="text-2xl font-semibold text-navy-800 mb-4">Our Modest Beginnings</h3>
+                                    <p className="text-gray-500 text-sm leading-relaxed max-w-lg">
+                                        Founded with a vision to revolutionize air compression, we began as specialized manufacturers.
+                                        That core engineering DNA still drives every product we build today, from the smallest manifold
+                                        to the largest oxygen generator.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Factory image */}
+                            <div className="relative overflow-hidden h-52 group">
+                                <Image
+                                    src="/mgps_plant.png"
+                                    alt="MGPS plant room equipment"
+                                    fill
+                                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0b2d4e]/50 to-transparent" />
+                            </div>
+
+                            {/* Metrics Row */}
+                            <div className="flex items-center gap-0 bg-white border-t border-gray-100 px-6 py-4">
+                                {/* 1st */}
+                                <div className="flex items-center gap-3 flex-1">
+                                    <div className="w-9 h-9 rounded-lg bg-[#eef5fc] flex items-center justify-center flex-shrink-0">
+                                        <svg className="w-5 h-5 text-[#0b477b]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect x="3" y="3" width="7" height="7" rx="1" />
+                                            <rect x="14" y="3" width="7" height="7" rx="1" />
+                                            <rect x="3" y="14" width="7" height="7" rx="1" />
+                                            <rect x="14" y="14" width="7" height="7" rx="1" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p className="text-lg font-extrabold text-[#0b477b]">1<span className="text-xs font-semibold">st</span></p>
+                                        <p className="text-[11px] text-gray-400 font-medium">Factory in India</p>
+                                    </div>
+                                </div>
+
+                                {/* 100% */}
+                                <div className="flex items-center gap-3 flex-1 border-l border-gray-100 pl-6">
+                                    <div>
+                                        <p className="text-lg font-extrabold text-[#0b477b]">100%</p>
+                                        <p className="text-[11px] text-gray-400 font-medium">Quality Focus</p>
+                                    </div>
+                                </div>
+
+                                {/* Circle check */}
+                                <div className="flex items-center justify-end">
+                                    <div className="w-9 h-9 rounded-lg bg-[#eef5fc] flex items-center justify-center">
+                                        <svg className="w-5 h-5 text-[#0b477b]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <p className="text-lg font-extrabold text-[#0b477b]">1<span className="text-xs font-semibold">st</span></p>
-                            <p className="text-[11px] text-gray-400 font-medium">Factory in India</p>
-                        </div>
-                    </div>
 
-                    {/* 100% */}
-                    <div className="flex items-center gap-3 flex-1 border-l border-gray-100 pl-6">
-                        <div>
-                            <p className="text-lg font-extrabold text-[#0b477b]">100%</p>
-                            <p className="text-[11px] text-gray-400 font-medium">Quality Focus</p>
-                        </div>
-                    </div>
+                        {/* ── Right Column: 2 separate boxes ── */}
+                        <div className="lg:col-span-5 flex flex-col gap-6">
 
-                    {/* Circle check */}
-                    <div className="flex items-center justify-end">
-                        <div className="w-9 h-9 rounded-lg bg-[#eef5fc] flex items-center justify-center">
-                            <svg className="w-5 h-5 text-[#0b477b]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
+                            {/* Box 1 — Medical Specialist (dark navy) */}
+                            <div className="bg-[#0b477b] text-white rounded-2xl p-7 relative overflow-hidden">
+                                {/* decorative circles */}
+                                <div className="absolute -top-8 -right-10 w-34  h-36 rounded-full bg-white/5" />
+                                <div className="absolute top-16 -right-5 w-20 h-20 rounded-full bg-white/5" />
+                                <div className="relative z-10">
+                                    {/* Icon */}
+                                    <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-5">
+                                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="1.6" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                                            <line x1="12" y1="12" x2="12" y2="16" />
+                                            <line x1="10" y1="14" x2="14" y2="14" />
+                                        </svg>
+                                    </div>
+
+                                    {/* Title + underline */}
+                                    <h3 className="text-2xl fontsemi-bold text-white mb-2">Medical Specialist</h3>
+                                    <div className="w-15 h-0.5 bg-[#90caf9] mb-4" />
+
+                                    <p className="text-navy-100 text-md leading-relaxed">
+                                        Exclusive focus on Medical Gas Pipeline Systems <br />(MGPS) and mission-critical hospital infrastructure.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Box 2 — Integrex (white) */}
+                            <div className="border border-gray-200 rounded-2xl p-7 bg-white relative overflow-hidden">
+                                {/* Large faded checkmark watermark */}
+                                <div className="absolute -bottom-4 -right-4 opacity-[0.07]">
+                                    <svg width="130" height="130" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                </div>
+
+                                <div className="relative z-10">
+                                    {/* Title + underline */}
+                                    <h3 className="text-2xl font-semibold text-[#1a2a3a] mb-2">Integrex™</h3>
+                                    <div className="w-10 h-1 bg-[#0b477b] mb-4 rounded-md" />
+
+                                    <p className="text-gray-500 text-md leading-relaxed mb-6">
+                                        Our much-acclaimed brainchild based on a patented modular technology for maximum reliability.
+                                    </p>
+
+                                    <Link
+                                        href="#"
+                                        className="inline-flex items-center gap-1.5 text-[#0b477b] text-md font-semibold hover:underline group"
+                                    >
+                                        Discover the Patent
+                                        <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </Link>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
-
-            {/* ── Right Column: 2 separate boxes ── */}
-            <div className="lg:col-span-5 flex flex-col gap-6">
-
-                {/* Box 1 — Medical Specialist (dark navy) */}
-                <div className="bg-[#0b477b] text-white rounded-2xl p-7 relative overflow-hidden">
-                    {/* decorative circles */}
-                    <div className="absolute -top-8 -right-10 w-34  h-36 rounded-full bg-white/5" />
-                    <div className="absolute top-16 -right-5 w-20 h-20 rounded-full bg-white/5" />
-                    <div className="relative z-10">
-                        {/* Icon */}
-                        <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-5">
-                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="1.6" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                                <rect x="2" y="7" width="20" height="14" rx="2" />
-                                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-                                <line x1="12" y1="12" x2="12" y2="16" />
-                                <line x1="10" y1="14" x2="14" y2="14" />
-                            </svg>
-                        </div>
-
-                        {/* Title + underline */}
-                        <h3 className="text-xl font-bold text-white mb-2">Medical Specialist</h3>
-                        <div className="w-10 h-0.5 bg-[#90caf9] mb-4" />
-
-                        <p className="text-[#93c5e9] text-sm leading-relaxed">
-                            Exclusive focus on Medical Gas Pipeline Systems <br />(MGPS) and mission-critical hospital infrastructure.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Box 2 — Integrex (white) */}
-                <div className="border border-gray-200 rounded-2xl p-7 bg-white relative overflow-hidden">
-                    {/* Large faded checkmark watermark */}
-                    <div className="absolute -bottom-4 -right-4 opacity-[0.07]">
-                        <svg width="130" height="130" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M20 6L9 17l-5-5" />
-                        </svg>
-                    </div>
-
-                    <div className="relative z-10">
-                        {/* Title + underline */}
-                        <h3 className="text-xl font-bold text-[#1a2a3a] mb-2">Integrex™</h3>
-                        <div className="w-10 h-0.5 bg-[#0b477b] mb-4" />
-
-                        <p className="text-gray-500 text-sm leading-relaxed mb-5">
-                            Our much-acclaimed brainchild based on a patented modular technology for maximum reliability.
-                        </p>
-
-                        <Link
-                            href="#"
-                            className="inline-flex items-center gap-1.5 text-[#0b477b] text-sm font-semibold hover:underline group"
-                        >
-                            Discover the Patent
-                            <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </Link>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
             {/* ═══════════════════════════ CONTACT SECTION ═══════════════════════════ */}
             <section id="contact" className="py-20 lg:py-28 bg-[#f0f6fc]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
                         {/* Left: Contact info */}
@@ -376,7 +376,7 @@ function AboutPage() {
                                             {c.icon}
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-0.5">{c.label}</p>
+                                            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-600 mb-0.5">{c.label}</p>
                                             <a href={c.href} className="text-sm font-semibold text-[#0b477b] hover:text-[#0b477b] transition-colors">
                                                 {c.value}
                                             </a>
@@ -486,7 +486,7 @@ function AboutPage() {
                                     <button
                                         type="submit"
                                         id="about-send-inquiry"
-                                        className="w-full bg-[#0b477b] hover:bg-[#0d599b] text-white py-3.5 rounded-xl text-sm font-bold tracking-wide transition-all duration-200 hover:shadow-lg hover:scale-[1.01] flex items-center justify-center gap-2 group"
+                                        className="w-full bg-[#E05A36] hover:bg-[#0d599b] text-white py-3.5 rounded-xl text-sm font-bold tracking-wide transition-all duration-200 hover:shadow-lg hover:scale-[1.01] flex items-center justify-center gap-2 group"
                                     >
                                         Send Inquiry
                                         <svg
