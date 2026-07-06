@@ -30,7 +30,7 @@ export default function HomePage() {
         <div style={{ maxWidth: 1300, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
 
           {/* LEFT SIDE */}
-          <div style={{ padding: "0 40px 0 0", borderRight: `1px solid ${C.cardBorder}` }}>
+          <div style={{ padding: "0 40px 0 0" }}>
             <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-6 border border-[#e0ecf8]">
               WHY HOSPITAL NEED BETTER MGPS SOLUTIONS
             </div>
@@ -61,7 +61,7 @@ export default function HomePage() {
               Every component and architecture is selected with a deep<br /> understanding of clinical applications and how<br /> hospital plant rooms actually operate.
             </p>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px 24px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px 24px" }}>
               {[
                 {
                   icon: (
@@ -495,16 +495,15 @@ export default function HomePage() {
       {/* ── 4. WHO WE WORK WITH ── */}
       <section style={{ background: C.white, padding: "60px 24px" }}>
         <div style={{ maxWidth: 1300, margin: "0 auto" }}>
-          <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 22px", textAlign: "center" }}>Who we work with</h2>
+          <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 36px", textAlign: "center" }}>Who we work with</h2>
           <p style={{ fontSize: 18, fontWeight: 400, color: "#0b477b", margin: "0 0 48px", textAlign: "center" }}>
             From hospital promoters to plant room operators, every Technik Spirits system is designed<br /> around the needs of the people who plan, specify, operate, and maintain hospital <br />infrastructure.
           </p>
-
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
             {[
               {
                 icon: (
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="3" y="3" width="7" height="7" rx="1" />
                     <rect x="14" y="3" width="7" height="7" rx="1" />
                     <rect x="3" y="14" width="7" height="7" rx="1" />
@@ -516,7 +515,7 @@ export default function HomePage() {
               },
               {
                 icon: (
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 20h9" />
                     <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
                   </svg>
@@ -526,7 +525,7 @@ export default function HomePage() {
               },
               {
                 icon: (
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="3" />
                     <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
                   </svg>
@@ -536,7 +535,7 @@ export default function HomePage() {
               },
               {
                 icon: (
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
                     <line x1="7" y1="7" x2="7.01" y2="7" strokeWidth="2.5" strokeLinecap="round" />
                   </svg>
@@ -546,8 +545,17 @@ export default function HomePage() {
               },
             ].map((w) => (
               <div key={w.title}>
-                {/* Orange icon — no circle, no box */}
-                <div style={{ marginBottom: 16 }}>
+                {/* Orange icon with rounded background */}
+                <div style={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: 14,
+                  background: "#fdeee9",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: 16
+                }}>
                   {w.icon}
                 </div>
 
@@ -556,7 +564,7 @@ export default function HomePage() {
                   fontSize: 17.5,
                   fontWeight: 600,
                   color: "#0b477b",
-                  marginBottom: 10,
+                  marginBottom: 14,
                   lineHeight: 1.4
                 }}>{w.title}</div>
 
@@ -569,6 +577,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -580,7 +589,7 @@ export default function HomePage() {
           {/* <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 48px" }}>Recognized Standards</h2> */}
 
           {/* 4 Circle Icons */}
-          <div style={{ display: "flex", justifyContent: "center", gap: 60, flexWrap: "wrap", marginBottom: 48 }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: 60, flexWrap: "wrap", marginBottom: 58 }}>
             {[
               {
                 icon: (
@@ -717,7 +726,7 @@ export default function HomePage() {
                     }}>{std.icon}</div>
                     <div style={{ textAlign: "left" }}>
                       <div style={{ fontSize: 17, fontWeight: 500, color: C.white }}>{std.title}</div>
-                      <div style={{ fontSize: 14, fontWeight: 300, color: C.white, letterSpacing: 0.8, marginTop: 2 }}>{std.sub}</div>
+                      <div style={{ fontSize: 14, fontWeight: 300, color: C.white, letterSpacing: 0.8, marginTop: 2, marginBottom: 24 }}>{std.sub}</div>
                     </div>
                   </div>
                   {i < 2 && (
@@ -979,7 +988,7 @@ export default function HomePage() {
         </div>
       </section>
 
-    </main>
+    </main >
 
   );
 }

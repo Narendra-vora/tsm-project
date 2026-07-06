@@ -14,9 +14,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50 border-b border-gray-100">
+    <header className="w-full bg-white sticky top-0 z-69 border-b border-gray-100">
       <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-18">
+        <div className="flex justify-between items-center h-18 sm:h-22">
 
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2.5 group pl-1 sm:pl-2">
@@ -24,7 +24,7 @@ export default function Navbar() {
             <img
               src="/Technik Spirit Medtech_logo.png"
               alt="Technik Spirits MedTech"
-              style={{ height: 40, width: "auto" }}
+              style={{ height: 56, width: "auto" }}
             />
           </Link>
 
@@ -45,8 +45,8 @@ export default function Navbar() {
                 <Link
                   href="/products"
                   className={`font-semibold text-[15px] transition-colors py-2 border-b-2 flex items-center gap-1 ${['/products', '/products/medical-air-compressor', '/products/oxygen', '/products/agss', '/products/cps', '/products/mgps-design'].includes(pathname)
-                      ? 'text-[#0b477b] border-[#0b477b]'
-                      : 'text-gray-600 border-transparent hover:text-[#0b477b]'
+                    ? 'text-[#0b477b] border-[#0b477b]'
+                    : 'text-gray-600 border-transparent hover:text-[#0b477b]'
                     }`}
                 >
                   Products
@@ -132,10 +132,10 @@ export default function Navbar() {
 
           {/* Right Action Section (Desktop) */}
           <div className="hidden md:flex items-center gap-6">
-            <a href="mailto:sales@ts11.in" className="text-[#0d4c82] hover:text-[#E05A36] font-semibold text-sm transition-colors decoration-1 underline-offset-4 hover:underline">
+            <a href="mailto:sales@ts11.in" className="text-[#0d4c82] hover:text-[#E05A36] font-semibold text-base transition-colors decoration-1 underline-offset-4 hover:underline">
               sales@ts11.in
             </a>
-            <Link href="#" className="bg-[#0b477b] hover:bg-[#0d599b] text-white px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide shadow-sm hover:shadow transition-all duration-200">
+            <Link href="#" className="bg-[#0b477b] hover:bg-[#0d599b] text-white px-8 py-3.5 rounded-full text-base font-semibold tracking-wide shadow-sm hover:shadow transition-all duration-200">
               Discuss Your Project
             </Link>
           </div>
