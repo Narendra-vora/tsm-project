@@ -157,7 +157,7 @@ export default function ProductsPageClient() {
             MEDICAL GAS SOLUTIONS
           </p> */}
           <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-6 border border-[#e0ecf8]">
-            SPECIALISTS IN MGPS PLANT ROOM EQUIPMENT
+            MEDICAL GAS SOLUTIONS
           </div>
           <h1 className="text-3sxl sm:text-5xl lg:text-[58px] font-semibold text-[#1a2a3a] leading-[1.05] tracking-tight mb-5">
             Our <span className="text-[#0b477b]">Products</span>
@@ -190,7 +190,7 @@ export default function ProductsPageClient() {
       <section id="products" className="py-14 lg:py-20 bg-white">
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0b477b]">
               Comprehensive Product Range
             </h2>
@@ -250,33 +250,70 @@ export default function ProductsPageClient() {
       <section id="contact" className="py-20 lg:py-28 bg-[#f0f6fc]">
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            {/* Left: Contact info */}
             <div>
-              <h2 className="text-3xl sm:text-4xl font-semibold uppercase text-[#0b477b] leading-tight mb-3">HAVE A QUESTION?</h2>
-              <p className="text-2xl  text-[#0b477b] uppercase tracking-wider mb-4">WE ARE HERE TO HELP!</p>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-sm mb-10">
+              <h2 className="text-4xl sm:text-4xl font-semibold text-[#0b477b] leading-tight mb-3 ">
+                HAVE A QUESTION?
+              </h2>
+              <p className="text-3xl  text-[#0b477b] uppercase tracking-wider mb-7">
+                WE ARE HERE TO HELP!
+              </p>
+              <p className="text-gray-600 text-md leading-relaxed max-w-xl mb-10">
                 Reach out to us to know what solution fits your needs the best. We are available 24×7 for support.
               </p>
+
+              {/* Contact details */}
               <div className="space-y-6">
                 {[
-                  { icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', label: 'EMAIL US', value: 'sales@ts11.in', href: 'mailto:sales@ts11.in' },
-                  { icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z', label: 'CALL OR WHATSAPP', value: '+91 90330 03328', href: 'tel:+919033003328' },
-                  { icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z', label: 'LOCATION', value: 'Ahmedabad, Gujarat, India', href: 'https://maps.google.com/?q=Ahmedabad,Gujarat,India' },
+                  {
+                    icon: (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    ),
+                    label: 'EMAIL US',
+                    value: 'sales@ts11.in',
+                    href: 'mailto:sales@ts11.in',
+                  },
+                  {
+                    icon: (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    ),
+                    label: 'CALL OR WHATSAPP',
+                    value: '+91 90330 09328',
+                    href: 'tel:+919033003328',
+                  },
+                  {
+                    icon: (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    ),
+                    label: 'LOCATION',
+                    value: 'Ahmedabad, Gujarat, India',
+                    // href: 'https://maps.google.com/?q=Ahmedabad,Gujarat,India',// add the location link
+                  },
                 ].map((c, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#0b477b] shadow-sm shrink-0">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d={c.icon} />
-                      </svg>
+                      {c.icon}
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold tracking-widest uppercase text-gray mb-0.5">{c.label}</p>
-                      <a href={c.href} className="text-sm font-semibold text-[#0b477b] hover:text-[#0b477b] transition-colors" style={{ textDecoration: "none" }}>{c.value}</a>
+                      <p className="text-[14px] font-bold tracking-widest uppercase text-gray-600 mb-0.5">{c.label}</p>
+                      <a href={c.href} className="text-md font-semibold text-[#0b477b] hover:text-[#0b477b] transition-colors">
+                        {c.value}
+                      </a>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
+            {/* Right: Inquiry form */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center h-full py-16 text-center">
@@ -286,48 +323,110 @@ export default function ProductsPageClient() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-[#1a2a3a] mb-2">Inquiry Sent!</h3>
-                  <p className="text-gray-500 text-sm">We will get back to you shortly.</p>
+                  <p className="text-gray-500 text-sm">We'll get back to you shortly.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  {/* Full Name + Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Full Name</label>
-                      <input name="fullName" type="text" value={form.fullName} onChange={handleChange} placeholder="John Doe" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all" />
+                      <input
+                        id="about-fullname"
+                        name="fullName"
+                        type="text"
+                        value={form.fullName}
+                        onChange={handleChange}
+                        placeholder="John Doe"
+                        required
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all"
+                      />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Phone</label>
-                      <input name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder="+91 90000 00000" className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all" />
+                      <input
+                        id="about-phone"
+                        name="phone"
+                        type="tel"
+                        value={form.phone}
+                        onChange={handleChange}
+                        placeholder="+91 90000 00000"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all"
+                      />
                     </div>
                   </div>
+
+                  {/* Email */}
                   <div>
                     <label className="block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Email Address</label>
-                    <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="john@hospital.com" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all" />
+                    <input
+                      id="about-email"
+                      name="email"
+                      type="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="john@hospital.com"
+                      required
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all"
+                    />
                   </div>
+
+                  {/* Subject dropdown */}
                   <div>
                     <label className="block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Subject</label>
                     <div className="relative">
-                      <select name="subject" value={form.subject} onChange={handleChange} className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all appearance-none">
-                        {subjectOptions.map(o => <option key={o}>{o}</option>)}
+                      <select
+                        id="about-subject"
+                        name="subject"
+                        value={form.subject}
+                        onChange={handleChange}
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all appearance-none"
+                      >
+                        {subjectOptions.map((o) => (
+                          <option key={o}>{o}</option>
+                        ))}
                       </select>
-                      <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <svg
+                        className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+                        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
                   </div>
+
+                  {/* Message */}
                   <div>
                     <label className="block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wider">Message</label>
-                    <textarea name="message" rows={4} value={form.message} onChange={handleChange} placeholder="How can we assist you?" className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all resize-none" />
+                    <textarea
+                      id="about-message"
+                      name="message"
+                      rows={4}
+                      value={form.message}
+                      onChange={handleChange}
+                      placeholder="How can we assist you?"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0b477b]/30 focus:border-[#0b477b] transition-all resize-none"
+                    />
                   </div>
-                  <button type="submit" className="w-full bg-[#0b477b] hover:bg-[#0d599b] text-white py-3.5 rounded-xl text-sm font-bold tracking-wide transition-all duration-200 hover:shadow-lg hover:scale-[1.01] flex items-center justify-center gap-2 group">
+
+                  {/* Submit */}
+                  <button
+                    type="submit"
+                    id="about-send-inquiry"
+                    className="w-full bg-[#E05A36] hover:bg-[#0d599b] text-white py-3.5 rounded-xl text-sm font-bold tracking-wide transition-all duration-200 hover:shadow-lg hover:scale-[1.01] flex items-center justify-center gap-2 group"
+                  >
                     Send Inquiry
-                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <svg
+                      className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                      fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </button>
                 </form>
               )}
             </div>
+
           </div>
         </div>
       </section>
@@ -362,7 +461,7 @@ function ProductCard({ product }) {
                   <path strokeLinecap="round" strokeLinejoin="round" d={f.icon} />
                 </svg>
               </div>
-              <span className="text-white text-xs font-semibold  leading-tight flex mt-2 w-20">
+              <span className="text-white text-xs font-semibold  leading-tight flex mt-1 w-22">
                 {f.label}
               </span>
             </div>
@@ -370,7 +469,7 @@ function ProductCard({ product }) {
           }
 
         </div>
-        <div className="relative w-42 h-46 shrink-0">
+        <div className="relative w-46 h-50 shrink-0">
           <Image
             src={product.image}
             alt={product.name}

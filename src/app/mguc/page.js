@@ -62,12 +62,12 @@ export default function ConverterPage() {
                     <h1 className="text-5xl font-bold text-[#0b477b] leading-tight mb-4">
                         Medical Gas Unit<br />Converters
                     </h1>
-                    <p className="text-md text-gray-500 leading-relaxed max-w-lg">
+                    <p className="text-md text-gray-500 leading-relaxed max-w-lg mb-10">
                         Hospital teams, consultants, and engineers routinely work across multiple units. Accurate conversion is critical for MGPS design, equipment sizing, and tender evaluation.
                     </p>
 
                     {/* 3 badges */}
-                    <div className="flex gap-8 flex-wrap mt-4">
+                    <div className="flex gap-10 flex-wrap mt-4">
                         {[
                             {
                                 icon: (
@@ -116,7 +116,7 @@ export default function ConverterPage() {
             </section>
             {/* ── 3 CONVERTER CARDS ── */}
             <section className="max-w-[1360px] mx-auto px-4 py-10">
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid grid-cols-3 gap-13">
 
                     {/* Pressure */}
                     <div className="bg-[#0b477b] rounded-2xl p-5 shadow-lg">
@@ -139,7 +139,7 @@ export default function ConverterPage() {
                                 </div>
                             ))}
                         </div>
-                        <button className="mt-2 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                        <button className="mt-6 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors mb-4">
                             View all conversions →
                         </button>
                     </div>
@@ -162,7 +162,7 @@ export default function ConverterPage() {
                                 </div>
                             ))}
                         </div>
-                        <button className="mt-2 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                        <button className="mt-6 mb-4 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
                             View all conversions →
                         </button>
                     </div>
@@ -187,7 +187,7 @@ export default function ConverterPage() {
                                 </div>
                             ))}
                         </div>
-                        <button className="mt-2 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                        <button className="mt-6 mt-4 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
                             View all conversions →
                         </button>
                     </div>

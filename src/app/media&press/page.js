@@ -26,10 +26,10 @@ export default function PressMediaPage() {
                     <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-6 border border-[#e0ecf8]">
                         TECHNIK SPIRITS MEDIA RESOURCE
                     </div>
-                    <h1 className="text-5xl font-bold text-[#0b477b] leading-tight mb-4">
+                    <h1 className="text-4xl font-bold text-[#0b477b] leading-tight mb-4">
                         Press & Media Center
                     </h1>
-                    <p className="text-md text-gray-500 leading-relaxed max-w-md">
+                    <p className="text-md text-gray-500 leading-relaxed max-w-lg">
                         Your central hub for official news, company background, and media resources for Technik Spirits MedTech's healthcare engineering innovations.
                     </p>
                 </div>
@@ -44,8 +44,8 @@ export default function PressMediaPage() {
 
                     {/* Left */}
                     <div>
-                        <h2 className="text-3xl font-semibold text-[#0b477b] mb-2">About Technik Spirits MedTech</h2>
-                        <div className="w-20 h-1 bg-[#0b477b] rounded mb-5" />
+                        <h2 className="text-3xl font-semibold text-[#0b477b] mb-6">About Technik Spirits MedTech</h2>
+                        <div className="w-12 h-1 bg-[#0b477b] rounded mb-7" />
                         <p className="text-sm text-gray-700 leading-relaxed mb-4">
                             Technik Spirits MedTech Private Limited (formerly Technik Spirits Inc.) is a premier healthcare engineering and manufacturing company with an exclusive focus on hospital medical gas plant-room systems.
                         </p>
@@ -93,11 +93,11 @@ export default function PressMediaPage() {
                 <div className="flex items-center justify-between mb-9">
                     <div>
                         <h2 className="text-3xl font-semibold text-[#0b477b]">In the News</h2>
-                        <p className="text-sm text-gray-500 mt-1">
+                        <p className="text-md text-gray-500 mt-1">
                             Stay updated with our latest technical breakthroughs and corporate announcements.
                         </p>
                     </div>
-                    <Link href="#" className="text-sm text-[#0b477b] font-semibold flex items-center gap-1" style={{ textDecoration: "none" }}>
+                    <Link href="#" className="text-md text-[#0b477b] font-semibold flex items-center gap-1" style={{ textDecoration: "none" }}>
                         View Archive →
                     </Link>
                 </div>
@@ -200,7 +200,7 @@ export default function PressMediaPage() {
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                     {/* Header */}
                     <div className="bg-gray-50 border-b border-gray-100 px-8 py-5 text-center">
-                        <h2 className="text-3xl font-semibold text-[#0b477b]">Media Contact</h2>
+                        <h2 className="text-3xl font-semibold text-[#0b477b] mt-4]">Media Contact</h2>
                         <p className="text-md text-gray-500 mt-2">
                             For press enquiries, interviews, or additional information, please contact our <br />dedicated relations team.
                         </p>
@@ -214,12 +214,15 @@ export default function PressMediaPage() {
 
                         <div className="space-y-4">
                             <div className="flex items-center gap-4 bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
-                                <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-[#0b477b] text-base flex-shrink-0">
-                                    ✉️
+                                <div className="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                                        <path d="M22 6l-10 7L2 6" />
+                                    </svg>
                                 </div>
                                 <div>
                                     <div className="text-[10px] text-gray-400 uppercase tracking-wide font-semibold">Email Address</div>
-                                    <a href="mailto:portals@ts11.in" className="text-sm underline text-[#0b477b]" style={{ textDecoration: "none" }}>
+                                    <a href="mailto:portals@ts11.in" className="text-sm text-[#0b477b]" style={{ textDecoration: "none" }}>
                                         portals@ts11.in
                                     </a>
                                 </div>
@@ -227,12 +230,16 @@ export default function PressMediaPage() {
 
                             {/* Press Portal */}
                             <div className="flex items-center gap-4 bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
-                                <div className="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 text-base flex-shrink-0">
-                                    🌐
+                                <div className="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="2" y1="12" x2="22" y2="12" />
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                    </svg>
                                 </div>
                                 <div>
                                     <div className="text-[10px] text-gray-400 uppercase tracking-wide font-semibold">Official Press Portal</div>
-                                    <a href="https://www.technikspirits.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0b477b]" style={{ textDecoration: "none" }}>
+                                    <a href="https://www.technikspirits.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0b477b] underline">
                                         www.technikspirits.com
                                     </a>
                                 </div>
@@ -270,9 +277,9 @@ export default function PressMediaPage() {
                                     {
                                         icon: (
                                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                                                <rect x="2" y="3" width="15" height="15" rx="2" />
-                                                <polyline points="17 8 22 8 22 22 8 22 8 17" />
-                                                <polygon points="10 7 15 10 10 13 10 7" fill="#0b477b" stroke="none" />
+                                                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                                                <polyline points="2 17 12 22 22 17" />
+                                                <polyline points="2 12 12 17 22 12" />
                                             </svg>
                                         ),
                                         href: ""
@@ -293,6 +300,7 @@ export default function PressMediaPage() {
                     </div>
                 </div>
             </section>
+
 
         </main>
     );

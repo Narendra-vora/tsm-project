@@ -112,17 +112,17 @@ function AboutPage() {
 
                 <div className="relative z-10 max-w-[1360px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
                     {/* Breadcrumb */}
-                    <p className="text-[#0b477b] text-xs font-semibold tracking-widest uppercase mb-5 flex items-center gap-2">
+                    <p className="text-[#0b477b] text-sm font-bold tracking-widest uppercase mb-5 flex items-center gap-2">
                         <span className="w-6 h-[2px] bg-[#0b477b] inline-block" />
                         Since 1971
                     </p>
 
                     {/* Main Heading */}
-                    <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-[#1a2a3a] leading-[1.1] tracking-tight max-w-2xl mb-6 ">
+                    <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-[#1a2a3a] leading-[1.1] tracking-tight max-w-3xl mb-10 ">
                         Company – A{' '}
-                        <span className="text-[#0b477b]">Powerhouse</span>
+                        <span className="text-[#0b477b]">Powerhouse </span> of
                         <br />
-                        of Innovation
+                        Innovation
                     </h1>
 
                     {/* Subtitle */}
@@ -134,7 +134,7 @@ function AboutPage() {
                     {/* CTA Button */}
                     <Link
                         href="#evolution"
-                        className="inline-flex items-center gap-2 bg-[#0b477b] hover:bg-[#0d599b] text-white px-8 py-3.5 rounded-full text-sm font-semibold shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-xl group"
+                        className="inline-flex items-center gap-2 bg-[#0b477b] hover:bg-[#0d599b] text-white px-8 py-3.5 rounded-full text-sm font-semibold shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-xl group mb-8"
                     >
                         Our Heritage
                         <svg
@@ -158,7 +158,7 @@ function AboutPage() {
                             <div key={i} className="flex flex-col sm:flex-row items-start sm:items-center gap-3 lg:px-8 first:pl-0">
                                 <div className="text-#0b477b shrink-0 rounded-2xl">{s.icon}</div>
                                 <div>
-                                    <p className="text-lg  tracking-tight">{s.value}</p>
+                                    <p className="text-2xl font-semibold  tracking-tight">{s.value}</p>
                                     <p className="text-[10px]  tracking-[0.12em] text-white uppercase leading-tight mt-0.5">
                                         {s.label}
                                     </p>
@@ -171,6 +171,7 @@ function AboutPage() {
 
             {/* ═══════════════════════════════ EVOLUTION ═══════════════════════════════ */}
             <section id="evolution" className="py-20 lg:py-28 bg-white">
+                <div className="w-14 h-1 bg-[#0b477b] mx-auto rounded mb-4 " />
                 <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section header */}
                     <div className="text-center mb-14">
@@ -199,7 +200,7 @@ function AboutPage() {
                                 <div className="relative z-10">
                                     <p className="text-3xl font-semibold text-[#0b477b] mb-2">1971</p>
                                     <h3 className="text-2xl font-semibold text-navy-800 mb-4">Our Modest Beginnings</h3>
-                                    <p className="text-gray-500 text-sm leading-relaxed max-w-lg">
+                                    <p className="text-gray-500 text-md leading-relaxed max-w-xl">
                                         Founded with a vision to revolutionize air compression, we began as specialized manufacturers.
                                         That core engineering DNA still drives every product we build today, from the smallest manifold
                                         to the largest oxygen generator.
@@ -231,7 +232,7 @@ function AboutPage() {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-extrabold text-[#0b477b]">1<span className="text-xs font-semibold">st</span></p>
+                                        <p className="text-lg font-bold text-navy-800">1<span className="text-xs font-semibold">st</span></p>
                                         <p className="text-[11px] text-gray-400 font-medium">Factory in India</p>
                                     </div>
                                 </div>
@@ -239,7 +240,7 @@ function AboutPage() {
                                 {/* 100% */}
                                 <div className="flex items-center gap-3 flex-1 border-l border-gray-100 pl-6">
                                     <div>
-                                        <p className="text-lg font-extrabold text-[#0b477b]">100%</p>
+                                        <p className="text-lg font-bold text-navy-800">100%</p>
                                         <p className="text-[11px] text-gray-400 font-medium">Quality Focus</p>
                                     </div>
                                 </div>
@@ -326,13 +327,13 @@ function AboutPage() {
 
                         {/* Left: Contact info */}
                         <div>
-                            <h2 className="text-3xl sm:text-4xl font-semibold text-[#0b477b] leading-tight mb-3 ">
+                            <h2 className="text-4xl sm:text-4xl font-semibold text-[#0b477b] leading-tight mb-3 ">
                                 HAVE A QUESTION?
                             </h2>
-                            <p className="text-2xl  text-[#0b477b] uppercase tracking-wider mb-4">
+                            <p className="text-3xl  text-[#0b477b] uppercase tracking-wider mb-7">
                                 WE ARE HERE TO HELP!
                             </p>
-                            <p className="text-gray-600 text-sm leading-relaxed max-w-sm mb-10">
+                            <p className="text-gray-600 text-md leading-relaxed max-w-xl mb-10">
                                 Reach out to us to know what solution fits your needs the best. We are available 24×7 for support.
                             </p>
 
@@ -376,8 +377,8 @@ function AboutPage() {
                                             {c.icon}
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-600 mb-0.5">{c.label}</p>
-                                            <a href={c.href} className="text-sm font-semibold text-[#0b477b] hover:text-[#0b477b] transition-colors">
+                                            <p className="text-[14px] font-bold tracking-widest uppercase text-gray-600 mb-0.5">{c.label}</p>
+                                            <a href={c.href} className="text-md font-semibold text-[#0b477b] hover:text-[#0b477b] transition-colors">
                                                 {c.value}
                                             </a>
                                         </div>

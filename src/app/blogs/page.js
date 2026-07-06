@@ -68,12 +68,12 @@ function BlogPage() {
                             EXPERTS IN MEDICAL GAS SYSTEMS
                         </div>
 
-                        <h1 style={{ fontSize: 52, fontWeight: 700, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.19 }}>
+                        <h1 style={{ fontSize: 60, fontWeight: 700, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.19, maxWidth: 500 }}>
                             MEDICAL GAS<br />
-                            <span style={{ color: "#0b477b" }}>BLOG & GUIDES</span>
+                            <span style={{ color: "#0b477b", maxWidth: 320 }}>BLOG & GUIDES</span>
                         </h1>
 
-                        <p style={{ fontSize: 16, color: "#414446", lineHeight: 1.85, margin: "0 0 12px", maxWidth: 500 }}>
+                        <p style={{ fontSize: 18, color: "#414446", lineHeight: 1.85, margin: "0 0 12px", maxWidth: 600 }}>
                             Welcome to the Technic Spirits Resource Hub. We publish practical articles, technical guides, and expert insights on Medical Gas Pipeline Systems (MGPS), with a focus on <span style={{ color: "#0b477b", fontWeight: 600 }}>the safe, compliant and efficient</span> delivery of medical gases in healthcare environments.
                         </p>
                         <p style={{ fontSize: 16, color: "#414446", lineHeight: 1.85, margin: "0 0 32px", maxWidth: 500 }}>
@@ -90,6 +90,7 @@ function BlogPage() {
                                 transition: "all 0.2s"
                             }}>
                                 📖 EXPLORE THE GUIDES
+
                             </a>
                             <a href="/contact-us" style={{
                                 display: "flex", alignItems: "center", gap: 8,
@@ -196,7 +197,7 @@ function BlogPage() {
                             {s.icon}
                         </div>
                         <div>
-                            <div style={{ fontSize: 16, fontWeight: 800, color: C.navy, lineHeight: 1.2 }}>{s.value}</div>
+                            <div style={{ fontSize: 20, fontWeight: 700, color: C.navy600, lineHeight: 1.2 }}>{s.value}</div>
                             <div style={{ fontSize: 12, color: C.grey, marginTop: 4, lineHeight: 1.2 }}>{s.label}</div>
                         </div>
                     </div>

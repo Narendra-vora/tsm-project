@@ -52,10 +52,10 @@ export default function ContactPage() {
                 {/* Left — text */}
                 <div className="relative z-10 w-full max-w-[1360px] mx-auto px-6 sm:px-8">
                     <div className="max-w-sm">
-                        <h1 className="text-5xl sm:text-4xl md:text-[44px] font-semibold text-[#0b477b] tracking-tight mb-4">
+                        <h1 className="text-7xl sm:text-6xl md:text-[66px] font-semibold text-[#0b477b] tracking-tight mb-4">
                             Contact Us
                         </h1>
-                        <p className="text-[#3a536b] text-sm sm:text-sm font-medium leading-relaxed">
+                        <p className="text-[#3a536b] text-sm sm:text-md font-medium leading-relaxed max-w-[900px]">
                             Partner with India's leader in precision medical engineering and healthcare gas piping systems.
                         </p>
                     </div>
