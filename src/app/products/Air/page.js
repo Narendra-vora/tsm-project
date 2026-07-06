@@ -114,83 +114,11 @@ export default function AirCompressorPage() {
             <section className="bg-white px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">How the System Works?</h2>
+                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-5">How the System Works?</h2>
                         <div className="w-16 h-[3px] bg-[#0b477b] rounded-full mb-6 mx-auto" />
-                        <p className="text-md text-gray-800 max-w-2xl mx-auto leading-relaxed">
-                            A seamless six-stage technical flow ensuring the highest medical air purity and reliability.
+                        <p className="text-lg text-gray-800 max-w-5xl mx-auto leading-relaxed">
+                            The Integrex™ Medical Air Compressor System delivers clean, dry, medical-grade air through a fully integrated and automated solution. Featuring oil-free compressors, advanced filtration, moisture removal, and intelligent PLC controls, it ensures a reliable, efficient, and uninterrupted air supply for critical hospital areas.
                         </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-10 gap-x-2">
-                        {[
-                            {
-                                icon: (
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M12 3v6" /><path d="M12 15v6" /><path d="M5 9l7 6 7-6" />
-                                    </svg>
-                                ),
-                                num: "1", title: "Generation", desc: "Oil-free compression."
-                            },
-                            {
-                                icon: (
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="4" y="4" width="16" height="16" rx="2" /><path d="M8 9h8" /><path d="M8 13h8" /><path d="M8 17h5" />
-                                    </svg>
-                                ),
-                                num: "2", title: "Storage", desc: "Coated air receivers."
-                            },
-                            {
-                                icon: (
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M6 3h12l-4 6v6l-4 2v-8z" />
-                                    </svg>
-                                ),
-                                num: "3", title: "Drying", desc: "Twin-tower desiccant units."
-                            },
-                            {
-                                icon: (
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M4 5h16l-6 8v6l-4 2v-8z" />
-                                    </svg>
-                                ),
-                                num: "4", title: "Filtration", desc: "Removes oil & particles."
-                            },
-                            {
-                                icon: (
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
-                                        <circle cx="12" cy="12" r="3" />
-                                        <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
-                                    </svg>
-                                ),
-                                num: "5", title: "Regulation", desc: "Precision pressure control."
-                            },
-                            {
-                                icon: (
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" />
-                                    </svg>
-                                ),
-                                num: "6", title: "PLC Control", desc: "Master load balancing."
-                            },
-                        ].map((step, i, arr) => (
-                            <div key={step.num} className="relative flex items-center">
-                                <div className="flex flex-col items-center text-center px-2">
-                                    <div className="w-12 h-12 rounded-full bg-[#eef5fc] border-2 border-[#0b477b]/20 flex items-center justify-center mb-4">
-                                        {step.icon}
-                                    </div>
-                                    <h3 className="text-sm font-bold text-[#0b477b] mb-1 whitespace-nowrap">
-                                        {step.num}. {step.title}
-                                    </h3>
-                                    <p className="text-xs text-gray-500 leading-relaxed whitespace-nowrap">{step.desc}</p>
-                                </div>
-
-                                {i !== arr.length - 1 && (
-                                    <svg className="hidden lg:block absolute -right-3 top-6 text-[#0b477b]/40" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M5 12h14" /><path d="M13 6l6 6-6 6" />
-                                    </svg>
-                                )}
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>

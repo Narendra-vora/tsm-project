@@ -113,65 +113,15 @@ export default function OxygenGeneratorPage() {
             </section>
 
             {/* ── HOW THE SYSTEM WORKS ── */}
-            <section style={{ background: C.offWhite, padding: "56px 16px" }}>
-                <div style={{ maxWidth: 1360, margin: "0 auto" }}>
-                    <div style={{ textAlign: "center", marginBottom: 48 }}>
-                        <h2 style={{ fontSize: 30, fontWeight: 700, color: "#0b477b", margin: "0 0 10px" }}>How the System Works</h2>
-                        <p style={{ fontSize: 14, color: C.grey500, margin: 0 }}>
-                            A medical oxygen generator operates as a centralized on-site oxygen generation system <br /> connected to the hospital MGPS network.
-                        </p>
-                    </div>
 
-                    <div style={{ position: "relative", display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 12 }}>
-                        <div style={{ position: "absolute", left: 32, right: 32, top: 32, height: 1, background: C.cardBorder, zIndex: 0 }} />
-                        {[
-                            { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v6" /><path d="M12 15v6" /><path d="M5 9l7 6 7-6" /></svg>, step: "01", title: "Air Compression", desc: "Atmospheric air is drawn and compressed to the required pressure system level." },
-                            { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="3" width="6" height="18" rx="2" /><path d="M15 8h4" /><path d="M15 12h5" /><path d="M15 16h4" /></svg>, step: "02", title: "Drying", desc: "Refrigerated dryers remove moisture to ensure the air is clean and dry for adsorption." },
-                            { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 5h16l-6 8v6l-4 2v-8z" /></svg>, step: "03", title: "Adsorption (ZMS)", desc: "Zeolite Molecular Sieve (ZMS) adsorbs Nitrogen, leaving concentrated Oxygen." },
-                            { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36" /><path d="M21 3v6h-6" /></svg>, step: "04", title: "Regeneration", desc: "The ZMS beds are depressurized to release Nitrogen, regenerating the sieve material." },
-                            { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3" /><path d="M5 6v12c0 1.66 3.13 3 7 3s7-1.34 7-3V6" /></svg>, step: "05", title: "Surge Tank", desc: "Purified oxygen is stored in a surge tank to maintain stable flow and pressure." },
-                            { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M8 17V11" /><path d="M12 17V7" /><path d="M16 17v-4" /></svg>, step: "06", title: "Monitoring", desc: "Continuous purity and pressure analysis before discharge to the hospital supply." },
-                        ].map((s) => (
-                            <div key={s.step} style={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 1 }}>
-                                <div style={{
-                                    width: 64, height: 64, borderRadius: 10,
-                                    background: C.navy,
-                                    display: "flex", alignItems: "center", justifyContent: "center",
-                                    boxShadow: "0 6px 18px rgba(11,71,123,0.22)",
-                                    marginBottom: 20,
-                                }}>
-                                    {s.icon}
-                                </div>
-                                {/* <div style={{
-                                    width: "100%",
-                                    background: C.white,
-                                    borderRadius: 10,
-                                    padding: "20px 14px",
-                                    textAlign: "center",
-                                    border: `1px solid ${C.cardBorder}`,
-                                    minHeight: 160,
-                                }}>
-                                    <div style={{ fontSize: 14, fontWeight: 700, color: "#1a2a3a", marginBottom: 8, lineHeight: 1.35 }}>
-                                        {s.step}. {s.title}
-                                    </div>
-                                    <div style={{ fontSize: 14, color: C.grey, lineHeight: 1.6 }}>{s.desc}</div>
-                                </div> */}
-                                <div style={{
-                                    width: "100%",
-                                    background: C.white,
-                                    borderRadius: 10,
-                                    padding: "16px 12px",
-                                    textAlign: "center",
-                                    border: `1px solid ${C.cardBorder}`,
-                                    minHeight: 130,
-                                }}>
-                                    <div style={{ fontSize: 16, fontWeight: 700, color: "#1a2a3a", marginBottom: 8, lineHeight: 1.35 }}>
-                                        {s.step}. {s.title}
-                                    </div>
-                                    <div style={{ fontSize: 14, color: C.grey, lineHeight: 1.6, maxWidth: 130, marginLeft: "auto", marginRight: "auto" }}>{s.desc}</div>
-                                </div>
-                            </div>
-                        ))}
+            <section className="bg-white px-6 py-16">
+                <div className="max-w-[1360px] mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-7">How the System Works?</h2>
+                        <div className="w-16 h-[3px] bg-[#0b477b] rounded-full mb-8 mx-auto" />
+                        <p className="text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed">
+                            A Medical Oxygen Generator is a centralized on-site system that produces high-purity medical oxygen for the hospital MGPS network. Using PSA (Pressure Swing Adsorption) technology, compressed air is purified, oxygen is separated from nitrogen through Zeolite Molecular Sieves, and delivered at the required pressure. A PLC-based control system ensures continuous, automated, and reliable oxygen supply with real-time purity monitoring.
+                        </p>
                     </div>
                 </div>
             </section>
