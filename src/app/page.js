@@ -378,7 +378,7 @@ export default function HomePage() {
 
       {/* ── 3. WHY HOSPITALS CHOOSE US ── */}
 
-      <section style={{ padding: "60px 24px" }}>
+      <section style={{ background: C.offWhite, padding: "60px 24px" }}>
         <div style={{ maxWidth: 1300, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <h2 style={{ fontSize: 36, fontWeight: 700, color: C.black, margin: "0 0 10px" }}>
@@ -495,8 +495,8 @@ export default function HomePage() {
       {/* ── 4. WHO WE WORK WITH ── */}
       <section style={{ background: C.white, padding: "60px 24px" }}>
         <div style={{ maxWidth: 1300, margin: "0 auto" }}>
-          <h2 style={{ fontSize: 27, fontWeight: 700, color: "#0b477b", margin: "0 0 22px", textAlign: "center" }}>Who we work with</h2>
-          <p style={{ fontSize: 16, fontWeight: 400, color: "#0b477b", margin: "0 0 48px", textAlign: "center" }}>
+          <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 22px", textAlign: "center" }}>Who we work with</h2>
+          <p style={{ fontSize: 18, fontWeight: 400, color: "#0b477b", margin: "0 0 48px", textAlign: "center" }}>
             From hospital promoters to plant room operators, every Technik Spirits system is designed<br /> around the needs of the people who plan, specify, operate, and maintain hospital <br />infrastructure.
           </p>
 
@@ -504,7 +504,7 @@ export default function HomePage() {
             {[
               {
                 icon: (
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="3" y="3" width="7" height="7" rx="1" />
                     <rect x="14" y="3" width="7" height="7" rx="1" />
                     <rect x="3" y="14" width="7" height="7" rx="1" />
@@ -516,7 +516,7 @@ export default function HomePage() {
               },
               {
                 icon: (
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 20h9" />
                     <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
                   </svg>
@@ -526,7 +526,7 @@ export default function HomePage() {
               },
               {
                 icon: (
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="3" />
                     <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
                   </svg>
@@ -536,7 +536,7 @@ export default function HomePage() {
               },
               {
                 icon: (
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
                     <line x1="7" y1="7" x2="7.01" y2="7" strokeWidth="2.5" strokeLinecap="round" />
                   </svg>
@@ -553,7 +553,7 @@ export default function HomePage() {
 
                 {/* Title */}
                 <div style={{
-                  fontSize: 15.5,
+                  fontSize: 17.5,
                   fontWeight: 600,
                   color: "#0b477b",
                   marginBottom: 10,
@@ -562,7 +562,7 @@ export default function HomePage() {
 
                 {/* Desc */}
                 <div style={{
-                  fontSize: 13,
+                  fontSize: 15,
                   color: C.grey,
                   lineHeight: 1.7
                 }}>{w.desc}</div>
@@ -576,8 +576,8 @@ export default function HomePage() {
 
       <section style={{ background: C.offWhite, padding: "60px 24px" }}>
         <div style={{ maxWidth: 1300, margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 8px" }}>Certifications &</h2>
-          <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 48px" }}>Recognized Standards</h2>
+          <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 55px" }}>Certifications & Recognized Standards</h2>
+          {/* <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", margin: "0 0 48px" }}>Recognized Standards</h2> */}
 
           {/* 4 Circle Icons */}
           <div style={{ display: "flex", justifyContent: "center", gap: 60, flexWrap: "wrap", marginBottom: 48 }}>
@@ -664,7 +664,7 @@ export default function HomePage() {
                 textTransform: "uppercase",
                 border: "1px solid rgba(144,202,249,0.3)",
                 borderRadius: 20,
-                padding: "5px 16px"
+                padding: "6px 17px"
               }}>
                 DESIGNED WITH REFERENCE TO RECOGNISED STANDARDS
               </span>
@@ -675,7 +675,7 @@ export default function HomePage() {
               {[
                 {
                   icon: (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   ),
@@ -684,7 +684,7 @@ export default function HomePage() {
                 },
                 {
                   icon: (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <line x1="2" y1="12" x2="22" y2="12" />
                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
@@ -695,7 +695,7 @@ export default function HomePage() {
                 },
                 {
                   icon: (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                     </svg>
                   ),
@@ -709,15 +709,15 @@ export default function HomePage() {
                     alignItems: "center", gap: 16, justifyContent: "center", padding: "0 20px"
                   }}>
                     <div style={{
-                      width: 44, height: 44,
+                      width: 44, height: 50,
                       borderRadius: "50%",
                       background: "rgba(255,255,255,0.15)",
                       display: "flex", alignItems: "center", justifyContent: "center",
                       flexShrink: 0
                     }}>{std.icon}</div>
                     <div style={{ textAlign: "left" }}>
-                      <div style={{ fontSize: 15, fontWeight: 500, color: C.white }}>{std.title}</div>
-                      <div style={{ fontSize: 12, fontWeight: 300, color: C.white, letterSpacing: 0.8, marginTop: 2 }}>{std.sub}</div>
+                      <div style={{ fontSize: 17, fontWeight: 500, color: C.white }}>{std.title}</div>
+                      <div style={{ fontSize: 14, fontWeight: 300, color: C.white, letterSpacing: 0.8, marginTop: 2 }}>{std.sub}</div>
                     </div>
                   </div>
                   {i < 2 && (
@@ -837,13 +837,13 @@ export default function HomePage() {
 
           {/* LEFT */}
           <div style={{ paddingTop: 8 }}>
-            <h2 style={{ fontSize: 34, fontWeight: 600, color: "#0b477b", margin: "0 0 4px", lineHeight: 1.15 }}>
+            <h2 style={{ fontSize: 36, fontWeight: 600, color: "#0b477b", margin: "0 0 4px", lineHeight: 1.15 }}>
               HAVE A QUESTION?
             </h2>
-            <h3 style={{ fontSize: 26, fontWeight: 400, color: "#0b477b", margin: "0 0 20px" }}>
+            <h3 style={{ fontSize: 28, fontWeight: 400, color: "#0b477b", margin: "0 0 20px" }}>
               WE ARE HERE TO HELP!
             </h3>
-            <p style={{ fontSize: 15, color: C.grey600, lineHeight: 1.8, margin: "0 0 38px", maxWidth: 330 }}>
+            <p style={{ fontSize: 16, color: C.grey600, lineHeight: 1.8, margin: "0 0 38px", maxWidth: 500 }}>
               Reach out to us to know what solution fits your needs the best. We are available 24x7 for support.
             </p>
 
@@ -852,7 +852,7 @@ export default function HomePage() {
               {[
                 {
                   icon: (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                       <polyline points="22,6 12,13 2,6" />
                     </svg>
@@ -863,7 +863,7 @@ export default function HomePage() {
                 },
                 {
                   icon: (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.04z" />
                     </svg>
                   ),
@@ -873,7 +873,7 @@ export default function HomePage() {
                 },
                 {
                   icon: (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                       <circle cx="12" cy="10" r="3" />
                     </svg>
@@ -894,7 +894,7 @@ export default function HomePage() {
                     boxShadow: "0 1px 6px rgba(0,0,0,0.06)"
                   }}>{item.icon}</div>
                   <div>
-                    <div style={{ fontSize: 10.5, fontWeight: 700, color: C.grey, letterSpacing: 1, textTransform: "uppercase", marginBottom: 3 }}>
+                    <div style={{ fontSize: 11.5, fontWeight: 700, color: C.grey, letterSpacing: 1, textTransform: "uppercase", marginBottom: 3 }}>
                       {item.label}
                     </div>
                     {item.href ? (
@@ -902,7 +902,7 @@ export default function HomePage() {
                         {item.value}
                       </a>
                     ) : (
-                      <div style={{ fontSize: 14.5, fontWeight: 700, color: "#0b477b" }}>{item.value}</div>
+                      <div style={{ fontSize: 15.5, fontWeight: 700, color: "#0b477b" }}>{item.value}</div>
                     )}
                   </div>
                 </div>
@@ -912,9 +912,11 @@ export default function HomePage() {
 
           {/* RIGHT — Form */}
           <div style={{
+            maxWidth: 700,
+
             background: C.white,
             borderRadius: 16,
-            padding: "32px 28px",
+            padding: "32px 32px",
             boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
             border: `1px solid ${C.cardBorder}`
           }}>

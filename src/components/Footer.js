@@ -17,7 +17,7 @@ export default function Footer() {
                                 <img
                                     src="/Technik-Spirit-logo.png"
                                     alt="Technik Spirits MedTech"
-                                    style={{ height: 105, width: 230 }}
+                                    style={{ height: 130, width: "auto" }}
                                 />
                             </Link>
 
