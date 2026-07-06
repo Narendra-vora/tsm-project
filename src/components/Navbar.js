@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="w-full bg-white sticky top-0 z-69 border-b border-gray-100">
       <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18 sm:h-22">
+        <div className="flex justify-between items-center h-19 sm:h-23">
 
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2.5 group pl-1 sm:pl-2">
@@ -31,11 +31,11 @@ export default function Navbar() {
 
           {/* Center Navigation Links (Desktop) */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className={`font-semibold text-[15px] transition-colors py-2 border-b-2 ${pathname === '/' ? 'text-[#0b477b] border-[#0b477b]' : 'text-gray-600 border-transparent hover:text-[#0b477b]'}`}>
+            <Link href="/" className={`font-semibold text-[18px] transition-colors py-2 border-b-2 ${pathname === '/' ? 'text-[#0b477b] border-[#0b477b]' : 'text-gray-600 border-transparent hover:text-black]'}`}>
               Home
             </Link>
 
-            <Link href="/about" className={`font-semibold text-[15px] transition-colors py-2 border-b-2 ${pathname === '/about' ? 'text-[#0b477b] border-[#0b477b]' : 'text-gray-600 border-transparent hover:text-[#0b477b]'}`}>
+            <Link href="/about" className={`font-semibold text-[18px] transition-colors py-2 border-b-2 ${pathname === '/about' ? 'text-[#0b477b] border-[#0b477b]' : 'text-gray-600 border-transparent hover:text-[#0b477b]'}`}>
               About Us
             </Link>
 
@@ -44,7 +44,7 @@ export default function Navbar() {
                 {/* Click → /products page */}
                 <Link
                   href="/products"
-                  className={`font-semibold text-[15px] transition-colors py-2 border-b-2 flex items-center gap-1 ${['/products', '/products/medical-air-compressor', '/products/oxygen', '/products/agss', '/products/cps', '/products/mgps-design'].includes(pathname)
+                  className={`font-semibold text-[18px] transition-colors py-2 border-b-2 flex items-center gap-1 ${['/products', '/products/medical-air-compressor', '/products/oxygen', '/products/agss', '/products/cps', '/products/mgps-design'].includes(pathname)
                     ? 'text-[#0b477b] border-[#0b477b]'
                     : 'text-gray-600 border-transparent hover:text-[#0b477b]'
                     }`}
@@ -89,7 +89,7 @@ export default function Navbar() {
             {/* Resources Dropdown */}
             <div className="relative group">
               <button
-                className={`font-semibold text-[15px] transition-colors py-2 border-b-2 flex items-center gap-1 ${['/blogs', '/mguc', '/media&press'].includes(pathname) ? 'text-[#0b477b] border-[#0b477b]' : 'text-gray-600 border-transparent hover:text-[#0b477b]'}`}
+                className={`font-semibold text-[18px] transition-colors py-2 border-b-2 flex items-center gap-1 ${['/blogs', '/mguc', '/media&press'].includes(pathname) ? 'text-[#0b477b] border-[#0b477b]' : 'text-gray-600 border-transparent hover:text-[#0b477b]'}`}
               >
                 Resources
                 <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -125,7 +125,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/contact-us" className={`font-semibold text-[15px] transition-colors py-2 border-b-2 ${pathname === '/contact-us' ? 'text-[#0b477b] border-[#0b477b]' : 'text-gray-600 border-transparent hover:text-[#0b477b]'}`}>
+            <Link href="/contact-us" className={`font-semibold text-[18px] transition-colors py-2 border-b-2 ${pathname === '/contact-us' ? 'text-[#0b477b] border-[#0b477b]' : 'text-gray-600 border-transparent hover:text-[#0b477b]'}`}>
               Contact Us
             </Link>
           </nav>
