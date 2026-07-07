@@ -217,7 +217,7 @@ export default function HomePage() {
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 32 }}>
               <div>
                 <div style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", letterSpacing: 1, marginBottom: 6 }}>Our Medical Gas Systems</div>
-                <h2 style={{ fontSize: 19, fontWeight: 500, color: "#565758ff", marginBottom: 2 }}>Smart solutions for systems of every size and speciality</h2>
+                <h2 style={{ fontSize: 19, fontWeight: 500, color: "#565758ff", marginBottom: 20 }}>Smart solutions for systems of every size and speciality</h2>
               </div>
               <Link href="/products" style={{ fontSize: 18, color: C.blue, fontWeight: 600, textDecoration: "none" }}>
                 View all products →

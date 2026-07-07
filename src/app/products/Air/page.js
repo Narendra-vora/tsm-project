@@ -324,7 +324,7 @@ export default function AirCompressorPage() {
                         ].map((f) => (
                             <div
                                 key={f.title}
-                                className="bg-white border-2 border-gray-200 rounded-xl p-5 flex flex-col items-start hover:border-[#0b477b] hover:shadow-md transition-all duration-200"
+                                className="bg-white border-2 border-gray-200 rounded-xl p-5 flex flex-col items-start  hover:shadow-md transition-all duration-200"
                             >
                                 <div className="w-14 h-14 flex items-center justify-start mb-2">
                                     {f.icon}

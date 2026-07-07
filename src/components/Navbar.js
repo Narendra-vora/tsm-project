@@ -83,6 +83,10 @@ export default function Navbar() {
                     <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
                     MGPS Design
                   </Link>
+                  <Link href="/products/Medical-vacuum-pum" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-[#eef5fc] hover:text-[#0b477b] ${pathname === '/products/Medical-vacuum-pum' ? 'text-[#0b477b] bg-[#eef5fc]' : 'text-gray-700'}`}>
+                    <span className="w-2 h-2 rounded-full bg-[#E05A36] flex-shrink-0"></span>
+                    Medical Vacuum Pump
+                  </Link>
                 </div>
               </div>
             </div>

@@ -68,7 +68,7 @@ export default function Hero() {
 
               {/* Image */}
               <Image
-                src="/mguc.png"
+                src="/home_img.png"
                 alt="Medical Gas Pipeline System (MGPS) equipment"
                 fill
                 priority
