@@ -217,7 +217,7 @@ export default function HomePage() {
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 32 }}>
               <div>
                 <div style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", letterSpacing: 1, marginBottom: 6 }}>Our Medical Gas Systems</div>
-                <h2 style={{ fontSize: 19, fontWeight: 500, color: "#565758ff", margin: 0 }}>Smart solutions for systems of every size and speciality</h2>
+                <h2 style={{ fontSize: 19, fontWeight: 500, color: "#565758ff", marginBottom: 2 }}>Smart solutions for systems of every size and speciality</h2>
               </div>
               <Link href="/products" style={{ fontSize: 18, color: C.blue, fontWeight: 600, textDecoration: "none" }}>
                 View all products →
@@ -882,7 +882,7 @@ export default function HomePage() {
                       </div>
 
                       {/* 99 quote mark */}
-                      <div style={{
+                      {/* <div style={{
                         fontSize: 32,
                         fontWeight: 900,
                         color: "rgba(11,71,123,0.08)",
@@ -892,7 +892,7 @@ export default function HomePage() {
                         userSelect: "none",
                       }}>
                         99
-                      </div>
+                      </div> */}
                     </div>
 
                     {/* Quote text */}

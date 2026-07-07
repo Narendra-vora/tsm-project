@@ -127,60 +127,73 @@ export default function ContactPage() {
                         </div>
 
                         {/* Email & Phone Card */}
-                        <div className="bg-white rounded-xl p-5 border border-[#e2e8f0] shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col gap-4">
-                            <div className="flex items-center gap-3.5">
-                                <Mail className="w-5 h-5 text-[#0b477b]" />
-                                <a href="mailto:sales@ts11.in" className="text-[13.5px] font-semibold text-[#1a3a5c] hover:text-[#0b477b] transition-colors" style={{ textDecoration: 'none' }}>
-                                    sales@ts11.in
-                                </a>
+                        <div className="bg-white rounded-2xl border border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col gap-4 p-5">
+                            <div className="relative border border-gray-200 rounded-xl p-4 bg-white flex items-center gap-3.5">
+                                <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
+                                    <Mail className="w-5 h-5 text-[#0b477b]" />
+                                </div>
+                                <div>
+                                    <div className="text-[10px] text-gray-400 uppercase tracking-wide font-semibold mb-0.5">Email</div>
+                                    <a href="mailto:sales@ts11.in" className="text-[13.5px] font-semibold text-[#1a3a5c] hover:text-[#0b477b] transition-colors" style={{ textDecoration: 'none' }}>
+                                        sales@ts11.in
+                                    </a>
+                                </div>
                             </div>
 
-                            <div className="flex items-center gap-3.5">
-                                <Phone className="w-5 h-5 text-[#0b477b]" />
-                                <a href="tel:+919033009328" className="text-[13.5px] font-semibold text-[#1a3a5c] hover:text-[#0b477b] transition-colors" style={{ textDecoration: 'none' }}>
-                                    +91 90330 09328
-                                </a>
+                            <div className="relative border border-gray-200 rounded-xl p-4 bg-white flex items-center gap-3.5">
+                                <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
+                                    <Phone className="w-5 h-5 text-[#0b477b]" />
+                                </div>
+                                <div>
+                                    <div className="text-[10px] text-gray-400 uppercase tracking-wide font-semibold mb-0.5">Phone</div>
+                                    <a href="tel:+919033009328" className="text-[13.5px] font-semibold text-[#1a3a5c] hover:text-[#0b477b] transition-colors" style={{ textDecoration: 'none' }}>
+                                        +91 90330 09328
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
                         {/* Social Links Card */}
-                        <div className="bg-white rounded-xl p-4 border border-[#e2e8f0] shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex justify-center gap-6">
-                            {[
-                                {
-                                    Icon: () => <Globe className="w-4 h-4" />,
-                                    label: "Website",
-                                    href: "https://technikspirits.com/"
-                                },
-                                {
-                                    Icon: () => (
-                                        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                                        </svg>
-                                    ),
-                                    label: "Facebook",
-                                    href: "https://www.facebook.com/TechnikSpiritsInc"
-                                },
-                                {
-                                    Icon: () => (
-                                        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                                        </svg>
-                                    ),
-                                    label: "LinkedIn",
-                                    href: "https://in.linkedin.com/company/technikspiritsmedtech"
-                                },
-                            ].map(({ Icon, label, href }) => (
-                                <a
-                                    key={label}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    title={label}
-                                    className="w-10 h-10 rounded-full border border-[#d0d6e8] hover:border-[#0b477b] hover:text-[#0b477b] flex items-center justify-center text-[#1a3a5c] transition-colors"
-                                >
-                                    <Icon />
-                                </a>
-                            ))}
+                        <div className="bg-white rounded-2xl border border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.05)] p-4">
+                            <div className="text-[10px] text-gray-400 uppercase tracking-widest text-center mb-3 font-semibold">Follow Us</div>
+                            <div className="flex justify-center gap-4">
+                                {[
+                                    {
+                                        Icon: () => <Globe className="w-4 h-4" />,
+                                        label: "Website",
+                                        href: "https://technikspirits.com/"
+                                    },
+                                    {
+                                        Icon: () => (
+                                            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                            </svg>
+                                        ),
+                                        label: "Facebook",
+                                        href: "https://www.facebook.com/TechnikSpiritsInc"
+                                    },
+                                    {
+                                        Icon: () => (
+                                            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                            </svg>
+                                        ),
+                                        label: "LinkedIn",
+                                        href: "https://in.linkedin.com/company/technikspiritsmedtech"
+                                    },
+                                ].map(({ Icon, label, href }) => (
+                                    <a
+                                        key={label}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title={label}
+                                        className="w-10 h-10 rounded-xl border border-gray-200 bg-gray-50 hover:bg-[#eef5fc] hover:border-[#0b477b] flex items-center justify-center text-[#0b477b] transition-colors"
+                                    >
+                                        <Icon />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
 
                     </div>

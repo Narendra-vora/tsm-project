@@ -150,13 +150,14 @@ export default function OxygenGeneratorPage() {
 
                     {/* Right — bordered card with 3 features */}
                     <div style={{
+                        height: 330,
                         background: "white",
                         border: `1px solid ${C.cardBorder}`,
                         borderRadius: 16,
                         padding: "32px 28px",
                         display: "flex",
                         flexDirection: "column",
-                        gap: 26,
+                        gap: 30,
                     }}>
                         {[
                             {
@@ -191,8 +192,8 @@ export default function OxygenGeneratorPage() {
                             <div key={f.title} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
                                 {f.icon}
                                 <div>
-                                    <div style={{ fontSize: 15, fontWeight: 700, color: "#1a2a3a", marginBottom: 4 }}>{f.title}</div>
-                                    <div style={{ fontSize: 13, color: C.grey, lineHeight: 1.6 }}>{f.desc}</div>
+                                    <div style={{ fontSize: 16, fontWeight: 700, color: "#1a2a3a", marginBottom: 6 }}>{f.title}</div>
+                                    <div style={{ fontSize: 14, color: C.grey, lineHeight: 1.6 }}>{f.desc}</div>
                                 </div>
                             </div>
                         ))}
@@ -253,31 +254,36 @@ export default function OxygenGeneratorPage() {
 
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
                         {[
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20h16" /><path d="M7 20V8l5-4 5 4v12" /><path d="M10 20v-5h4v5" /><path d="M12 8v4" /></svg>, title: "On-Site, On-Demand Oxygen Production", desc: "Generates medical-grade oxygen directly from ambient air, reducing dependence on external cylinder or liquid oxygen supply and removing supply instability for the hospital." },
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M7 9h4" /><path d="M7 13h10" /><path d="M15 9h2" /></svg>, title: "Reduced Oxygen Cost", desc: "Produces oxygen in-house at a fraction of the recurring cost. Hospitals typically see active 50% reduction in total oxygen expenditure." },
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19h16" /><path d="M6 15l3-3 3 2 6-7" /><path d="M17 7h1v1" /></svg>, title: "Consistent Purity with Continuous Monitoring", desc: "Delivers oxygen at 93% ± 3% purity, with continuous oxygen analyser providing continuous monitoring with automated alarms if levels deviate." },
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><path d="M12 2v3" /><path d="M12 19v3" /><path d="M4.93 4.93l2.12 2.12" /><path d="M16.95 16.95l2.12 2.12" /><path d="M2 12h3" /><path d="M19 12h3" /><path d="M4.93 19.07l2.12-2.12" /><path d="M16.95 7.05l2.12-2.12" /></svg>, title: "Fully Automatic, Unattended Operation", desc: "PLC-based controls manage the entire process — compression, drying, adsorption, PSA tower cycling, and oxygen alarms — without manual intervention." },
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="6" width="16" height="12" rx="2" /><path d="M8 6v12" /><path d="M10 10h4" /><path d="M10 14h6" /></svg>, title: "Integrated, Skid-Mounted Package", desc: "Factory-assembled, pre-piped, and pre-wired onto a single skid frame. Reduces site installation time and minimises commissioning time." },
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12a8 8 0 0 1 14-5" /><path d="M18 4v4h-4" /><path d="M20 12a8 8 0 0 1-14 5" /><path d="M6 20v-4h4" /></svg>, title: "Auto Changeover to Backup Supply", desc: "Automatically switches to the backup cylinder manifold if oxygen purity falls below threshold, ensuring uninterrupted clinical oxygen delivery." },
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19h16" /><path d="M6 15l4-4 3 3 5-6" /><path d="M15 8h3v3" /></svg>, title: "Advanced Control & Integration", desc: "PLC-based control system with optional BMS connectivity for centralised hospital monitoring and standard onsite alarm display." },
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="8" /><path d="M12 4v4" /><path d="M4 12h4" /><path d="M16 12h4" /><path d="M12 16v4" /></svg>, title: "Unified Ecosystem Integration", desc: "Designed to work in harmony with the complete Technik Spirits MGPS portfolio, including air compressors and vacuum systems." },
-                            { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s7-4 7-10V6l-7-3-7 3v6c0 6 7 10 7 10Z" /><path d="M9 12l2 2 4-4" /></svg>, title: "Responsive After-Sales Support", desc: "24x7 technical support, preventive maintenance contracts, and spare parts availability ensure continuous reliable oxygen supply." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20h16" /><path d="M7 20V8l5-4 5 4v12" /><path d="M10 20v-5h4v5" /><path d="M12 8v4" /></svg>, title: "On-Site, On-Demand Oxygen Production", desc: "Generates medical-grade oxygen directly from ambient air, reducing dependence on external cylinder or liquid oxygen supply and removing supply instability for the hospital." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M7 9h4" /><path d="M7 13h10" /><path d="M15 9h2" /></svg>, title: "Reduced Oxygen Cost", desc: "Produces oxygen in-house at a fraction of the recurring cost. Hospitals typically see active 50% reduction in total oxygen expenditure." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19h16" /><path d="M6 15l3-3 3 2 6-7" /><path d="M17 7h1v1" /></svg>, title: "Consistent Purity with Continuous Monitoring", desc: "Delivers oxygen at 93% ± 3% purity, with continuous oxygen analyser providing continuous monitoring with automated alarms if levels deviate." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><path d="M12 2v3" /><path d="M12 19v3" /><path d="M4.93 4.93l2.12 2.12" /><path d="M16.95 16.95l2.12 2.12" /><path d="M2 12h3" /><path d="M19 12h3" /><path d="M4.93 19.07l2.12-2.12" /><path d="M16.95 7.05l2.12-2.12" /></svg>, title: "Fully Automatic, Unattended Operation", desc: "PLC-based controls manage the entire process — compression, drying, adsorption, PSA tower cycling, and oxygen alarms — without manual intervention." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="6" width="16" height="12" rx="2" /><path d="M8 6v12" /><path d="M10 10h4" /><path d="M10 14h6" /></svg>, title: "Integrated, Skid-Mounted Package", desc: "Factory-assembled, pre-piped, and pre-wired onto a single skid frame. Reduces site installation time and minimises commissioning time." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12a8 8 0 0 1 14-5" /><path d="M18 4v4h-4" /><path d="M20 12a8 8 0 0 1-14 5" /><path d="M6 20v-4h4" /></svg>, title: "Auto Changeover to Backup Supply", desc: "Automatically switches to the backup cylinder manifold if oxygen purity falls below threshold, ensuring uninterrupted clinical oxygen delivery." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19h16" /><path d="M6 15l4-4 3 3 5-6" /><path d="M15 8h3v3" /></svg>, title: "Advanced Control & Integration", desc: "PLC-based control system with optional BMS connectivity for centralised hospital monitoring and standard onsite alarm display." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="8" /><path d="M12 4v4" /><path d="M4 12h4" /><path d="M16 12h4" /><path d="M12 16v4" /></svg>, title: "Unified Ecosystem Integration", desc: "Designed to work in harmony with the complete Technik Spirits MGPS portfolio, including air compressors and vacuum systems." },
+                            { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s7-4 7-10V6l-7-3-7 3v6c0 6 7 10 7 10Z" /><path d="M9 12l2 2 4-4" /></svg>, title: "Responsive After-Sales Support", desc: "24x7 technical support, preventive maintenance contracts, and spare parts availability ensure continuous reliable oxygen supply." },
                         ].map((f) => (
                             <div key={f.title} style={{
+                                position: "relative",
                                 background: C.white,
-                                border: `1px solid ${C.cardBorder}`,
-                                borderRadius: 12,
-                                padding: "16px 16px",
-                                boxShadow: "0 2px 8px rgba(0,0,0,0.04)"
+                                border: "1px solid #e5e7eb",
+                                borderRadius: 16,
+                                padding: 24,
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: 16,
                             }}>
                                 <div style={{
-                                    width: 28, height: 28, borderRadius: 8,
-                                    // background: "#eef5fc", border: "1px solid #d0e4f5",
+                                    width: 40, height: 40, borderRadius: 8,
+                                    background: "#f9fafb", border: "1px solid #e5e7eb",
                                     display: "flex", alignItems: "center", justifyContent: "center",
-                                    color: C.navy, marginBottom: 12
+                                    color: C.navy
                                 }}>{f.icon}</div>
-                                <div style={{ fontSize: 16, fontWeight: 700, color: C.navy600, marginBottom: 8, lineHeight: 1.35 }}>{f.title}</div>
-                                <div style={{ fontSize: 14, color: C.grey, lineHeight: 1.65 }}>{f.desc}</div>
+                                <div>
+                                    <div style={{ fontSize: 20, fontWeight: 600, color: "#0b477b", marginBottom: 8, lineHeight: 1.35 }}>{f.title}</div>
+                                    <div style={{ fontSize: 15, color: C.grey, lineHeight: 1.625 }}>{f.desc}</div>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -464,7 +470,7 @@ export default function OxygenGeneratorPage() {
                         Consult with our engineering team to design your medical gas infrastructure.
                     </p>
                     <div className="flex justify-center gap-4 flex-wrap">
-                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
+                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full    transition-colors">
                             Talk to Our Engineers
                         </Link>
                         <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">

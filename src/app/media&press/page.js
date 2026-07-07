@@ -197,24 +197,25 @@ export default function PressMediaPage() {
 
             {/* ── MEDIA CONTACT ── */}
             <section className="max-w-[1360px] mx-auto px-6 pb-14">
-                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gray-50 border-b border-gray-100 px-8 py-5 text-center">
-                        <h2 className="text-3xl font-semibold text-[#0b477b] mt-4]">Media Contact</h2>
+                    <div className="bg-gray-50 border-b border-gray-200 px-8 py-8 text-center">
+                        <h2 className="text-3xl font-semibold text-[#0b477b]">Media Contact</h2>
                         <p className="text-md text-gray-500 mt-2">
                             For press enquiries, interviews, or additional information, please contact our <br />dedicated relations team.
                         </p>
                     </div>
 
                     {/* Contact card */}
-                    <div className="px-8 py-6 max-w-lg mx-auto">
+                    <div className="px-8 py-8 max-w-lg mx-auto">
                         <div className="text-center mb-6">
-                            <div className="text-md font-bold text-[#0b477b]">Technik Spirits MedTech - Media Relations</div>
+                            <div className="text-lg font-semibold text-[#0b477b]">Technik Spirits MedTech - Media Relations</div>
                         </div>
 
                         <div className="space-y-4">
-                            <div className="flex items-center gap-4 bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
-                                <div className="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0">
+                            {/* Email */}
+                            <div className="relative border border-gray-200 rounded-2xl p-5 bg-white flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                                         <rect x="2" y="4" width="20" height="16" rx="2" />
                                         <path d="M22 6l-10 7L2 6" />
@@ -222,15 +223,15 @@ export default function PressMediaPage() {
                                 </div>
                                 <div>
                                     <div className="text-[10px] text-gray-400 uppercase tracking-wide font-semibold">Email Address</div>
-                                    <a href="mailto:portals@ts11.in" className="text-sm text-[#0b477b]" style={{ textDecoration: "none" }}>
+                                    <a href="mailto:portals@ts11.in" className="text-sm font-medium text-[#0b477b]" style={{ textDecoration: "none" }}>
                                         portals@ts11.in
                                     </a>
                                 </div>
                             </div>
 
                             {/* Press Portal */}
-                            <div className="flex items-center gap-4 bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
-                                <div className="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0">
+                            <div className="relative border border-gray-200 rounded-2xl p-5 bg-white flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                                         <circle cx="12" cy="12" r="10" />
                                         <line x1="2" y1="12" x2="22" y2="12" />
@@ -239,7 +240,7 @@ export default function PressMediaPage() {
                                 </div>
                                 <div>
                                     <div className="text-[10px] text-gray-400 uppercase tracking-wide font-semibold">Official Press Portal</div>
-                                    <a href="https://www.technikspirits.com" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0b477b] underline">
+                                    <a href="https://www.technikspirits.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[#0b477b]" style={{ textDecoration: "none" }}>
                                         www.technikspirits.com
                                     </a>
                                 </div>
@@ -248,7 +249,7 @@ export default function PressMediaPage() {
 
                         {/* Social icons */}
                         <div className="mt-6 pt-6 border-t border-gray-100">
-                            <div className="text-xs text-gray-400 mb-3 text-center">FOLLOW OUR SOCIAL CHANNELS</div>
+                            <div className="text-xs text-gray-400 mb-3 text-center tracking-widest">FOLLOW OUR SOCIAL CHANNELS</div>
                             <div className="flex justify-center gap-4">
                                 {[
                                     {
@@ -290,7 +291,7 @@ export default function PressMediaPage() {
                                         href={s.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-10 h-10 rounded-xl border border-[#d0e4f5] bg-white flex items-center justify-center hover:bg-[#eef5fc] hover:border-[#0b477b] transition-colors"
+                                        className="w-10 h-10 rounded-xl border border-gray-200 bg-gray-50 flex items-center justify-center hover:bg-[#eef5fc] hover:border-[#0b477b] transition-colors"
                                     >
                                         {s.icon}
                                     </Link>

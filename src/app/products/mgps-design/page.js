@@ -58,7 +58,7 @@ export default function MGPSDesignPage() {
       </section>
 
       {/* ── WHY MGPS MATTERS ── */}
-      <section className="max-w-[1500px] bg-gray-100 mx-auto px-6 py-14 text-center">
+      <section className="max-w-[1530px] bg-white mx-auto px-12 py-20 text-center">
         <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Why MGPS design matters early in hospital planning</h2>
         <div className="w-12 h-0.5 bg-[#0b477b] mx-auto mb-5" />
         <p className="text-md text-gray-500 leading-relaxed max-w-5xl mx-auto mb-12">
@@ -79,12 +79,12 @@ export default function MGPSDesignPage() {
       </section>
 
       {/* ── WHAT WE DELIVER ── */}
-      <section className="max-w-[1360px] mx-auto px-6 pb-14 pt-16">
+      <section className="max-w-[1500px] bg-gray-50 mx-auto px-6 pb-14 pt-16">
         <h2 className="mb-2 text-[28px] font-semibold text-[#0b477b] text-center">What We Deliver</h2>
-        <p className="mb-7 text-lg text-[#6f6f6f] text-center">Our MGPS design scope is structured, engineering-led, and execution-ready.</p>
+        <p className="mb-10 text-lg text-[#6f6f6f] text-center">Our MGPS design scope is structured, engineering-led, and execution-ready.</p>
 
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-[#0b477b] p-5 shadow-[0_1px_0_rgba(15,23,42,0.02)] lg:col-span-2">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-[#0b477b] p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)] lg:col-span-2">
             <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#dbeafe] text-[#0b477b]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="5" y="2" width="14" height="20" rx="2" />
@@ -97,7 +97,7 @@ export default function MGPSDesignPage() {
             <p className="max-w-3xl text-[15px] leading-6 text-[#c8d9ea]">Evidence-based consumption analysis for oxygen, medical air, vacuum, AGSS, and specialty gases-factoring specialty mix, bed strength, OT density, and future growth.</p>
           </article>
 
-          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-5 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
+          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
             <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-xl bg-[#fde6df] text-[#e05a36]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="20" x2="18" y2="10" />
@@ -110,7 +110,7 @@ export default function MGPSDesignPage() {
             <p className="text-[15px] leading-6 text-[#6f6f6f]">Right-sizing equipment with clear zoning, service access, and heat dissipation planning.</p>
           </article>
 
-          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-5 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
+          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
             <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-xl bg-[#e9edf5] text-[#374151]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
@@ -120,7 +120,7 @@ export default function MGPSDesignPage() {
             <p className="text-[15px] leading-6 text-[#6f6f6f]">Optimized routing with pressure drop control and department-wise isolation strategy.</p>
           </article>
 
-          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-5 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
+          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
             <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-xl bg-[#e9edf5] text-[#374151]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />
@@ -132,7 +132,7 @@ export default function MGPSDesignPage() {
             <p className="text-[15px] leading-6 text-[#6f6f6f]">Integration with architectural and HVAC services to avoid on-site clashes.</p>
           </article>
 
-          <article className="min-h-28 rounded-[18px] border border-[#0d5c96] bg-[#11558f] p-5 shadow-[0_1px_0_rgba(15,23,42,0.02)] lg:col-start-3 lg:row-start-2 ">
+          <article className="min-h-28 rounded-[18px] border border-[#0d5c96] bg-[#11558f] p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)] lg:col-start-3 lg:row-start-2 ">
             {/* <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 text-white">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" />

@@ -132,7 +132,7 @@ export default function AGSSPage() {
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-200 bg-gray-50">
                   {item.icon}
                 </div>
-                <span className="text-3xl font-bold text-gray-300">{item.num}</span>
+                {/* <span className="text-3xl font-bold text-gray-300">{item.num}</span>  number  right side uper */}
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-[#0b477b] mb-2">{item.title}</h3>
