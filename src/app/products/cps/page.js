@@ -10,7 +10,11 @@ export default function CPSage() {
       <section className="relative bg-white overflow-hidden min-h-[420px] flex items-center">
         <div className="max-w-[1360px] mx-auto grid grid-cols-2 gap-10 items-center">
           <div>
-            <span className="inline-block text-[10px] font-bold bg-[#E05A36] text-white px-3 py-1 rounded-full uppercase tracking-widest mb-5">
+            {/* <span className="inline-block text-[10px] font-bold bg-[#E05A36] text-white px-3 py-1 rounded-full uppercase tracking-widest mb-5">
+              Engineering Excellence
+            </span> */}
+            <span className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0b477b] px-4 py-1.5 rounded-full uppercase tracking-widest mb-5 bg-white/70 border border-[#0b477b]/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0b477b]" />
               Engineering Excellence
             </span>
             <h1 className="text-5xl font-semibold text-[#0b477b] mb-4 leading-tight">

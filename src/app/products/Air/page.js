@@ -27,7 +27,7 @@ export default function AirCompressorPage() {
                         </div>
 
                         <h1 className="text-4xl lg:text-6xl font-semibold text-[#0b477b] mb-5 leading-[1.2]">
-                            Integrex™ Medical<br />Air<br /> Compressor System
+                            Integrex™ Medical<br />Air Compressor <br />System
                         </h1>
 
                         <p className="text-md text-[#0b477b] leading-relaxed mb-7 max-w-lg">
@@ -282,48 +282,51 @@ export default function AirCompressorPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             {
-                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
+                                icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
                                 title: "Purpose-Built",
                                 desc: "Built solely for clinical medical gas applications, not industrial.",
                             },
                             {
-                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>,
+                                icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>,
                                 title: "Modular Architecture",
                                 desc: "Easily add capacity or maintain without system shutdown.",
                             },
                             {
-                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z" /><line x1="17" y1="9" x2="21" y2="15" /><line x1="21" y1="9" x2="17" y2="15" /></svg>,
+                                icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z" /><line x1="17" y1="9" x2="21" y2="15" /><line x1="21" y1="9" x2="17" y2="15" /></svg>,
                                 title: "Ultra-Quiet",
                                 desc: "Silent operation allows placement near patient wards.",
                             },
                             {
-                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
+                                icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
                                 title: "Energy Savings",
                                 desc: "Intelligent sequencing reduces power up to 70% off-peak.",
                             },
                             {
-                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="16" height="12" rx="2" /><path d="M8 8V6a4 4 0 0 1 8 0v2" /></svg>,
+                                icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="8" width="16" height="12" rx="2" /><path d="M8 8V6a4 4 0 0 1 8 0v2" /></svg>,
                                 title: "Skid-Mounted Package",
                                 desc: "Pre-piped and pre-wired for rapid, error-free installation.",
                             },
                             {
-                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 21V14" /><path d="M4 10V3" /><path d="M12 21V12" /><path d="M12 8V3" /><path d="M20 21V16" /><path d="M20 12V3" /><path d="M2 14h4" /><path d="M10 8h4" /><path d="M18 16h4" /></svg>,
+                                icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 21V14" /><path d="M4 10V3" /><path d="M12 21V12" /><path d="M12 8V3" /><path d="M20 21V16" /><path d="M20 12V3" /><path d="M2 14h4" /><path d="M10 8h4" /><path d="M18 16h4" /></svg>,
                                 title: "Advanced Control",
                                 desc: "Touchscreen HMI with remote monitoring and BMS support.",
                             },
                             {
-                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><circle cx="12" cy="12" r="3" /></svg>,
+                                icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><circle cx="12" cy="12" r="3" /></svg>,
                                 title: "Unified Ecosystem",
                                 desc: "Single interface for compressors, dryers, and filtration.",
                             },
                             {
-                                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.04z" /></svg>,
+                                icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.04z" /></svg>,
                                 title: "24/7 Support",
                                 desc: "Backed by Technik Spirits' expert global service teams.",
                             },
                         ].map((f) => (
-                            <div key={f.title} className="bg-white border border-gray-200 rounded-xl p-4">
-                                <div className="w-14 h-14  flex items-center justify-center mb-1">
+                            <div
+                                key={f.title}
+                                className="bg-white border-2 border-gray-200 rounded-xl p-5 flex flex-col items-start hover:border-[#0b477b] hover:shadow-md transition-all duration-200"
+                            >
+                                <div className="w-14 h-14 flex items-center justify-start mb-2">
                                     {f.icon}
                                 </div>
                                 <h4 className="text-lg font-semibold text-navy-800 mb-1.5">{f.title}</h4>
@@ -391,7 +394,7 @@ export default function AirCompressorPage() {
                                         "PLC-based, BMS-ready, control system",
                                         "All necessary accessories and ancillaries for complete system integration",
                                     ].map((item) => (
-                                        <li key={item} className="text-sm text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
+                                        <li key={item} className="text-md text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
                                             {item}
                                         </li>
                                     ))}
@@ -414,7 +417,7 @@ export default function AirCompressorPage() {
                                         "CO, CO2, and other gas analyzer for Medical air quality monitoring",
                                         "Duplex / multi air receivers (parallel)",
                                     ].map((item) => (
-                                        <li key={item} className="text-sm text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
+                                        <li key={item} className="text-md text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
                                             {item}
                                         </li>
                                     ))}
@@ -487,7 +490,7 @@ export default function AirCompressorPage() {
                         Let's find the right integrex medical air compressor system configuration for your hospital project. Our engineering team is ready to assist with sizing and custom layouts
                     </p>
                     <div className="flex justify-center gap-4 flex-wrap">
-                        <Link href="/contact" className="inline-block bg-[#0b2d4e] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
+                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
                             Talk to Our Engineers
                         </Link>
                         <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors">

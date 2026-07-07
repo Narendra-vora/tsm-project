@@ -835,7 +835,7 @@ export default function HomePage() {
             </div>
           </FadeUp>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, alignItems: "stretch" }}>
             {[
               {
                 stars: 5,
@@ -854,18 +854,21 @@ export default function HomePage() {
                 initials: "VP",
               },
             ].map((t, i) => (
-              <FadeUp key={i} delay={i * 150}>
-                <HoverCard style={{ borderRadius: 12 }}>
+              <FadeUp key={i} delay={i * 150} style={{ height: "100%" }}>
+                <HoverCard style={{ borderRadius: 12, height: "100%" }}>
                   <div style={{
                     background: "#fff",
                     borderRadius: 12,
                     padding: "28px 28px 24px",
                     border: `1px solid ${C.cardBorder}`,
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+                    boxShadow: "none",
                     position: "relative",
                     display: "flex",
                     flexDirection: "column",
+                    overflow: "hidden",
                     gap: 0,
+                    height: "100%",
+                    overflow: "hidden",
                   }}>
                     {/* Top row: stars left, 99 right */}
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 14 }}>

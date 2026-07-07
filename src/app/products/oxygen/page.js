@@ -129,21 +129,21 @@ export default function OxygenGeneratorPage() {
             {/* ── WHY ON-SITE OXYGEN GENERATION ── */}
             {/* <section style={{ background: C.white, padding: "56px 16px" }}> */}
             <section style={{ background: "#eef0f3", padding: "56px 16px" }}>
-                <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 50, alignItems: "start" }}>
+                <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 50, alignItems: "center" }}>
 
                     {/* Left text */}
                     <div>
-                        <h2 style={{ fontSize: 34, fontWeight: 700, color: C.navy, margin: "0 0 18px" }}>Why On-Site Oxygen Generation?</h2>
-                        <p style={{ fontSize: 14, color: C.grey500, lineHeight: 1.85, margin: "0 0 16px", maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
+                        <h2 style={{ fontSize: 34, fontWeight: 700, color: "#0b477b", margin: "0 0 18px" }}>Why On-Site Oxygen Generation?</h2>
+                        <p style={{ fontSize: 17, color: C.grey, lineHeight: 1.85, margin: "0 0 16px", maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
                             Hospital oxygen supply has traditionally depended on cylinders or liquid oxygen. Both models can work, but they also bring operational dependencies: ordering, transportation, refilling, storage, vendor coordination, pressure management, and emergency planning.
                         </p>
-                        <p style={{ fontSize: 14, color: "#1a2a3a", fontWeight: 700, lineHeight: 1.85, margin: "0 0 16px", marginLeft: "auto", marginRight: "auto" }}>
+                        <p style={{ fontSize: 17, color: "#1a2a3a", fontWeight: 700, lineHeight: 1.85, margin: "0 0 16px", marginLeft: "auto", marginRight: "auto" }}>
                             On-site oxygen generation changes the operating model.
                         </p>
-                        <p style={{ fontSize: 14, color: C.grey500, lineHeight: 1.85, margin: "0 0 16px" }}>
+                        <p style={{ fontSize: 17, color: C.grey, lineHeight: 1.85, margin: "0 0 16px" }}>
                             Instead of depending only on delivered oxygen, the hospital generates oxygen within its own premises from atmospheric air and supplies it directly to the MGPS network. For facilities with medium to high and consistent oxygen demand, this can materially reduce oxygen procurement cost, simplify logistics, and improve long-term supply control.
                         </p>
-                        <p style={{ fontSize: 14, color: C.grey500, lineHeight: 1.85, margin: 0 }}>
+                        <p style={{ fontSize: 17, color: C.grey, lineHeight: 1.85, margin: 0 }}>
                             This is especially relevant for hospitals where oxygen usage is regular across ICUs, wards, operation theatres, emergency areas, and respiratory care applications.
                         </p>
                     </div>
@@ -225,7 +225,7 @@ export default function OxygenGeneratorPage() {
                         <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0b477b", margin: "0 0 18px" }}>
                             Pressure Swing Adsorption (PSA)   <br /> The Technology
                         </h2>
-                        <p style={{ fontSize: 16.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px", maxWidth: 700 }}>
+                        <p style={{ fontSize: 16.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px", maxWidh: 700 }}>
                             PSA is a well-established gas separation technology used in medical oxygen generation worldwide. The principle is straightforward: selective adsorption of nitrogen from compressed air using a material called Zeolite, also known as molecular sieve.
                         </p>
                         <p style={{ fontSize: 16.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px", maxWidth: 700 }}>
@@ -464,7 +464,7 @@ export default function OxygenGeneratorPage() {
                         Consult with our engineering team to design your medical gas infrastructure.
                     </p>
                     <div className="flex justify-center gap-4 flex-wrap">
-                        <Link href="/contact" className="inline-block bg-[#0b2d4e] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
+                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
                             Talk to Our Engineers
                         </Link>
                         <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors">
