@@ -294,7 +294,7 @@ export default function OxygenGeneratorPage() {
                         borderRadius: 14,
                         overflow: "hidden",
                         border: `1px solid ${C.cardBorder}`,
-                        minHeight: 620,
+                        minHeight: 670,
                     }}>
                         <div style={{ background: C.navy, padding: "18px 24px" }}>
                             <h3 style={{ fontSize: 17, fontWeight: 700, color: C.white, margin: 0 }}>Technical Specifications</h3>
@@ -424,7 +424,7 @@ export default function OxygenGeneratorPage() {
             {/* ── FAQ ── */}
             <section style={{ background: C.white, padding: "56px 16px" }}>
                 <div style={{ maxWidth: 760, margin: "0 auto" }}>
-                    <h2 style={{ fontSize: 24, fontWeight: 700, color: "0b477b", textAlign: "center", margin: "0 0 32px" }}>
+                    <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0b477b", textAlign: "center", marginBottom: "46px" }}>
                         Frequently Asked Questions
                     </h2>
 
@@ -457,17 +457,17 @@ export default function OxygenGeneratorPage() {
             </section>
 
             {/* ── FINAL CTA ── */}
-            <section className="bg-white px-6 py-14">
+            <section className="bg-gray-50 px-6 py-14">
                 <div className="max-w-[1360px] mx-auto text-center">
                     <h2 className="text-4xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Ready to Engineer Your Future?</h2>
                     <p className="text-md text-[#0b477b] mb-8 max-w-[450px] mx-auto">
                         Consult with our engineering team to design your medical gas infrastructure.
                     </p>
                     <div className="flex justify-center gap-4 flex-wrap">
-                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
+                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
                             Talk to Our Engineers
                         </Link>
-                        <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors">
+                        <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
                             Download Brochure
                         </Link>
                     </div>

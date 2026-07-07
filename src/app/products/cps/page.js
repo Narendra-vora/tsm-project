@@ -37,104 +37,122 @@ export default function CPSage() {
       </section>
 
       {/* ── SUPPLY OF COMPRESSORS ── */}
-      <section className="max-w-[1360px] mx-auto px-6 py-14">
-        <h2 className="text-xl font-semibold text-[#0b477b] mb-1">Supply of Compressors and Pumps</h2>
-        <div className="w-16 h-0.5 bg-[#0b477b] mb-8" />
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-[1360px] mx-auto">
+          <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Supply of Compressors and Pumps</h2>
+          <div className="w-16 h-1 bg-[#0b477b] mb-10" />
 
-        <div className="grid grid-cols-3 gap-5">
-          {/* Left card — 2 cols */}
-          <div className="col-span-2 border border-gray-200 rounded-2xl p-6">
-            <div className="w-9 h-9 bg-[#eef5fc] rounded-lg flex items-center justify-center mb-4">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" />
-                <line x1="6" y1="20" x2="6" y2="14" /><line x1="2" y1="20" x2="22" y2="20" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-navy mb-2">Complete Units & Custom Systems</h3>
-            <p className="text-md text-gray-500 leading-relaxed mb-6  w-[660px]">
-              Direct supply of genuine Thomas and Gast compressors and pumps for new installations or replacement of aging equipment. Fully engineered systems configured to your application, available with desiccant or refrigeration dryers, filtration, and integrated automation controls.
-            </p>
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                { name: "Thomas E160NA2" },
-                { name: "Gast 87R" },
-              ].map((p) => (
-                <div key={p.name} className="border border-gray-200 rounded-xl p-3">
-                  <div className="text-md font-semibold text-[#0b477b] mb-1">{p.name}</div>
-                  <a href="#" className="text-[12px] text-[#0b477b] font-semibold flex items-center gap-1 hover:underline">
-                    ↓ Download Datasheet
-                  </a>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Left card — 2 cols */}
+            <div className="lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-between gap-6 shadow-sm">
+              <div>
+                <div className="mb-4 text-[#0b477b]">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2 20h20" />
+                    <path d="M5 17V8l4 4V8l4 4V8l6 5v4H5z" />
+                    <rect x="6" y="11" width="2" height="2" />
+                    <rect x="10" y="11" width="2" height="2" />
+                  </svg>
                 </div>
-              ))}
-            </div>
-          </div>
+                <h3 className="text-2xl font-semibold text-[#1a2a3a] mb-4">Complete Units & Custom Systems</h3>
+                <p className="text-md text-gray-500 leading-relaxed mb-6 max-w-[720px]">
+                  Direct supply of genuine Thomas and Gast compressors and pumps for new installations or replacement of aging equipment. Fully engineered systems configured to your application, available with desiccant or refrigeration dryers, filtration, and integrated automation controls.
+                </p>
+              </div>
 
-          {/* Right card — navy */}
-          <div className="bg-[#0b477b] rounded-2xl p-6 flex flex-col">
-            <div className="w-10 h-10 bg-[#E05A36] rounded-lg flex items-center justify-center mb-8">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-              </svg>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { name: "Thomas E160N42" },
+                  { name: "Gast 87R" },
+                ].map((p) => (
+                  <div key={p.name} className="border border-gray-200 bg-[#f4f6f8]/80 rounded-2xl p-5 flex flex-col gap-2">
+                    <div className="text-lg font-semibold text-[#0b477b]">{p.name}</div>
+                    <a href="#" className="text-sm text-[#0b477b] font-medium flex items-center gap-2 hover:underline">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                      </svg>
+                      Download Datasheet
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
-            <h3 className="text-lg font-semibold text-white mb-4">Stock Availability</h3>
-            <p className="text-md text-blue-200 leading-relaxed mb-10 flex-1">
-              Fast-moving Thomas and Gast models are held<br /> in local inventory for quick turnaround on new and replacement requirements.
-            </p>
-            <button className="bg-[#E05A36] text-white text-md font-semibold px-2 py-3 rounded-3xl hover:bg-[#c94d2c] transition-colors ">
-              Check Inventory
-            </button>
+
+            {/* Right card — navy */}
+            <div className="bg-[#0b477b] rounded-3xl p-8 flex flex-col justify-between gap-6 shadow-sm min-h-[360px]">
+              <div>
+                <div className="mb-8 text-[#E05A36]">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">Stock Availability</h3>
+                <p className="text-md text-blue-200/90 leading-relaxed">
+                  Fast-moving Thomas and Gast models are held in local inventory for quick turnaround on new and replacement requirements.
+                </p>
+              </div>
+              <button className="w-full bg-[#E05A36] text-white text-md font-semibold py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors mt-auto">
+                Check Inventory
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── SPARE PARTS ── */}
-      <section className="max-w-[1360px] mx-auto px-6 pb-14">
-        <h2 className="text-xl font-semibold text-[#0b477b] mb-3">Spare Parts and Service Kits</h2>
-
-        <div className="grid grid-cols-3 gap-5">
+      <section className="  max-w-[1350px] mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
           {/* Left */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
+            <h2 className="text-3xl font-semibold text-[#0b477b] leading-tight">Spare Parts and Service Kits</h2>
             <p className="text-md text-gray-500 leading-relaxed">
               We stock genuine Thomas and Gast spare parts to maintain the long-term performance and reliability of your vacuum and pressure systems.
             </p>
-            <div className="border border-gray-200 rounded-2xl p-4 mt-2 bg-gray-100">
-              <div className="w-8 h-8 bg-[#eef5fc] rounded-lg flex items-center justify-center mb-3">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+            <div className="border border-gray-200 rounded-3xl p-6 bg-white shadow-sm flex flex-col gap-4">
+              <div className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-[#0b477b]">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
                 </svg>
               </div>
-              <div className="text-md font-bold text-[#0b477b] mb-1">Need a specific part?</div>
-              <p className="text-[15px] text-gray-500 leading-relaxed">
-                Provide your model number and serial for an immediate availability quote.
-              </p>
+              <div>
+                <h3 className="text-md font-bold text-[#0b2d4e] mb-1">Need a specific part?</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Provide your model number and serial for an immediate availability quote.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Right — accordion items */}
-          <div className="col-span-2 flex flex-col gap-3">
+          <div className="lg:col-span-2 flex flex-col gap-5">
             {[
               {
                 num: "01", title: "Service Kits",
-                tags: ["Suction/Inlet Filter Elements", "Piston Cup Covers", "Piston Rings", "Tom Fasteners", "Flap Valve Sets", "Ancillaries"]
+                tags: ["Suction/Inlet Filter Elements", "Piston Cup Covers", "Piston Rings", "Torx Fasteners", "Flap Valve Sets", "Ancillaries"]
               },
               {
                 num: "02", title: "Internal Components",
-                tags: ["Pistons", "Connecting Rods", "Bearings", "Valve Plates", "O-Rings", "Seals", "Fan Covers"]
+                tags: ["Pistons", "Connecting Rods", "Bearings", "Valve Plates", "O-Rings", "seals", "Fan Covers"]
               },
               {
                 num: "03", title: "Ancillary Components",
-                tags: ["Non-Return Valves", "Anti-Vibration Mounts", "Mufflers", "Starting Capacitors", "Cooling Fans", "Pressure Switches"]
+                tags: ["Non-Return Valves", "Anti-Vibration Mounts", "Mufflers", "Starting Capacitors", "cooling fans", "Pressure Switches"]
               },
             ].map((item) => (
-              <div key={item.num} className="border border-gray-200 rounded-2xl p-4">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-md font-semibold text-[#0b477b] bg-[#eef5fc] px-2 py-1 rounded-2xl">{item.num}</span>
-                  <span className="text-md font-semibold text-[#0b477b]">{item.title}</span>
+              <div key={item.num} className="border border-gray-200 bg-white rounded-3xl p-6 shadow-sm flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <span className="w-9 h-9 rounded-full bg-[#eef5fc] flex items-center justify-center text-sm font-semibold text-[#0b477b]">{item.num}</span>
+                  <span className="text-lg font-semibold text-[#0b477b]">{item.title}</span>
                 </div>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-2">
                   {item.tags.map((tag) => (
-                    <span key={tag} className="text-[12px] text-gray-700 bg-[#eef5fc] border border-[#eef5fc] px-5 py-1 rounded-xl">
+                    <span key={tag} className="text-[13px] text-gray-700 bg-[#eef5fc]/60 border border-[#eef5fc]/40 px-4 py-1.5 rounded-full whitespace-nowrap">
                       {tag}
                     </span>
                   ))}
@@ -149,13 +167,13 @@ export default function CPSage() {
       <section className="bg-gray-50 px-6 py-14">
         <div className="max-w-[1360px] mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-semibold text-[#0b477b] mb-4">Repairing and Overhauling Services</h2>
-            <p className="text-sm text-gray-500 max-w-[550px] mx-auto leading-relaxed ">
+            <h2 className="text-3xl font-semibold text-[#0b477b] mb-4">Repairing and Overhauling Services</h2>
+            <p className="text-md text-gray-500 max-w-[570px] mx-auto leading-relaxed ">
               Restoring your Thomas & Gast equipment to reliable operating conditions with manufacturer-approved precision.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-3 gap-7">
             {[
               {
                 icon: (
@@ -192,9 +210,24 @@ export default function CPSage() {
                   {card.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-navy-100 mb-2">{card.title}</h3>
-                <p className="text-md text-gray-500 leading-relaxed">{card.desc}</p>
+                <p className="text-md text-gray-500 leading-relaxed mb-10">{card.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      {/* ── FINAL CTA ── */}
+      <section className="bg-gray-100 px-6 py-14">
+        <div className="max-w-[1360px] mx-auto text-center">
+          <h2 className="text-4xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Looking for Thomas & Gast Spares?</h2>
+          <p className="text-md text-greyt-100 mb-8 max-w-[650px] mx-auto">
+            Whether you need a replacement compressor, a service kit, or ongoing AMC coverage for your equipment, our team is ready to assist.
+          </p>
+          <div className="flex justify-center gap-4 flex-wrap">
+
+            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
+              Get in touch
+            </Link>
           </div>
         </div>
       </section>

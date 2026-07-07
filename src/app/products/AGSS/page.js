@@ -56,7 +56,7 @@ export default function AGSSPage() {
             <div className="flex gap-3 flex-wrap">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-[#0b477b] text-white text-sm font-bold px-6 py-3 rounded-full hover:bg-[#0d3d68] transition-colors"
+                className="inline-flex items-center gap-2 bg-[#0b477b] text-white text-sm font-bold px-6 py-3 rounded-full  transition-colors"
                 style={{ textDecoration: "none" }}
               >
                 Talk to Our Engineers →
@@ -127,13 +127,17 @@ export default function AGSSPage() {
               desc: "Integrated monitoring and alarms run on remote service access or on alarm status panel in OT."
             },
           ].map((item) => (
-            <div key={item.num} className="relative border border-gray-200 rounded-2xl p-5 bg-white">
-              <span className="absolute top-4 right-5 text-3xl font-bold text-gray-300">{item.num}</span>
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mb-3">
-                {item.icon}
+            <div key={item.num} className="relative border border-gray-200 rounded-2xl p-6 bg-white flex flex-col gap-4">
+              <div className="flex justify-between items-center">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-200 bg-gray-50">
+                  {item.icon}
+                </div>
+                <span className="text-3xl font-bold text-gray-300">{item.num}</span>
               </div>
-              <h3 className="text-xl font-semibold text-[#0b477b] mb-1">{item.title}</h3>
-              <p className="text-md text-gray-500 leading-relaxed">{item.desc}</p>
+              <div>
+                <h3 className="text-xl font-semibold text-[#0b477b] mb-2">{item.title}</h3>
+                <p className="text-md text-gray-500 leading-relaxed">{item.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -156,71 +160,88 @@ export default function AGSSPage() {
         </div>
       </section>
 
-      {/* ── KEY FEATURES & BENEFITS ── */}
-      <section className="bg-gray-50 px-6 py-14">
+      <section className="bg-gray-50 px-6 py-16">
         <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-14">Key Features & Benefits</h2>
 
-          {/* Top 2 wide cards */}
-          {/* Top 2 wide cards */}
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="bg-white border border-gray-200 rounded-2xl p-5">
-              <div className="flex items-center gap-2 mb-3">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1: International Standards (col-span-2) */}
+            <div className="md:col-span-2 bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+              <div className="flex items-center gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                   <path d="M20 13c0 5-3.5 7.5-7.35 8.75a1 1 0 0 1-.6 0C8.5 20.5 5 18 5 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C15.5 3.8 18 5 20 5a1 1 0 0 1 1 1z" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
-                <span className="text-lg font-semibold text-[#0b477b]">Designed with Reference to International Standards</span>
+                <h3 className="text-2xl font-semibold text-[#0b477b] leading-tight">Designed with Reference to International Standards</h3>
               </div>
               <p className="text-md text-gray-500 leading-relaxed">
                 Engineered in line with ISO 80601, ISO 7396-2, EN ISO 9170-2, and HTM 02-01— ensuring the system does not interfere with anaesthesia workstation operation while effectively scavenging waste gases.
               </p>
             </div>
 
-            <div className="bg-[#0b477b] rounded-2xl p-5">
-              <div className="mb-3">
-                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            {/* Card 2: Universal Compatibility (col-span-1) */}
+            <div className="bg-[#0b477b] rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+              <div>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="14" height="9" rx="2" />
                   <rect x="7" y="11" width="14" height="9" rx="2" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Universal Compatibility</h3>
-              <p className="text-md text-blue-200 leading-relaxed">
-                Supports all major brands of anaesthesia workstations, regardless of high or low flow operation.
-              </p>
-            </div>
-          </div>
-
-          {/* Bottom 3 cards */}
-          <div className="grid grid-cols-3 gap-5">
-            {[
-              {
-                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 21V14" /><path d="M4 10V3" /><path d="M12 21V12" /><path d="M12 8V3" /><path d="M20 21V16" /><path d="M20 12V3" /><path d="M2 14h4" /><path d="M10 8h4" /><path d="M18 16h4" /></svg>,
-                title: "Complete System",
-                desc: "We supply everything from central plants to remote switches as one engineered package."
-              },
-              {
-                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>,
-                title: "Advanced Control",
-                desc: "Native PLC-based system with full BMS compatibility for remote hospital monitoring.",
-                dark: true
-              },
-              {
-                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></svg>,
-                title: "24/7 Support",
-                desc: "Responsive after-sales support with proactive preventive maintenance and immediate response."
-              },
-            ].map((card, i) => (
-              <div key={i} className={`rounded-2xl p-5 border ${card.dark ? "bg-[#0b477b] border-[#0b477b]" : "bg-white border-gray-200"}`}>
-                <div className="mb-3">
-                  {card.dark
-                    ? <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
-                    : card.icon}
-                </div>
-                <h3 className={`text-lg font-semibold mb-2 ${card.dark ? "text-white" : "text-[#0b477b]"}`}>{card.title}</h3>
-                <p className={`text-md leading-relaxed max-w-sm ${card.dark ? "text-blue-200" : "text-gray-500"}`}>{card.desc}</p>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2 leading-tight">Universal Compatibility</h3>
+                <p className="text-md text-blue-200/90 leading-relaxed">
+                  Supports all major brands of anaesthesia workstations, regardless of high or low flow operation.
+                </p>
               </div>
-            ))}
+            </div>
+
+            {/* Card 3: Complete System */}
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+              <div>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 21V14" /><path d="M4 10V3" /><path d="M12 21V12" /><path d="M12 8V3" /><path d="M20 21V16" /><path d="M20 12V3" /><path d="M2 14h4" /><path d="M10 8h4" /><path d="M18 16h4" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-[#0b477b] mb-2 leading-tight">Complete System</h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  We supply everything from central plants to remote switches as one engineered package.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4: Advanced Control */}
+            <div className="bg-[#0b477b] rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+              <div>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="m7 8 5 4-5 4M13 16h4" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2 leading-tight">Advanced Control</h3>
+                <p className="text-md text-blue-200/90 leading-relaxed">
+                  Native PLC-based system with full BMS compatibility for remote hospital monitoring.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 5: 24/7 Support */}
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+              <div>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z" />
+                  <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-[#0b477b] mb-2 leading-tight">24/7 Support</h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Responsive after-sales support with proactive preventive maintenance and immediate response.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -352,17 +373,17 @@ export default function AGSSPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-white px-6 py-14">
+      <section className="bg-gray-50 px-6 py-14">
         <div className="max-w-[1360px] mx-auto text-center">
           <h2 className="text-3xl font-semibold text-[#0b477b] mb-6 max-w-[850px] mx-auto">Let's find the right AGSS configuration for your hospital's OT complex.</h2>
           <p className="text-lg text-[#0b477b] mb-10 max-w-[650px] mx-auto">
             Whether you are installing new operation theatres or evaluating AGSS for an existing facility, we can help you select the right configuration, sizing, and system integration.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/contact" className="inline-block bg-[#0b477b] border border-white/30 text-white text-sm font-bold px-6 py-3 rounded-full hover:bg-[#0a3d6a] transition-colors">
+            <Link href="/contact" className="inline-block bg-[#0b477b] border border-white/30 text-white text-sm font-bold px-6 py-3 rounded-full transition-colors">
               Talk to our Engineers
             </Link>
-            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-6 py-3 rounded-full hover:bg-[#c94d2c] transition-colors">
+            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-6 py-3 rounded-full transition-colors">
               Download Datasheet (PDF)
             </Link>
           </div>

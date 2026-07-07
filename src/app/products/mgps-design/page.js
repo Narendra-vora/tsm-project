@@ -41,15 +41,15 @@ export default function MGPSDesignPage() {
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#0b477b] mb-5 leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-semibold text-[#0b477b] mb-5 leading-tight">
             MGPS Design & Consulting<br />Services
           </h1>
-          <p className="text-sm sm:text-base text-[#0b477b]/80 leading-relaxed mb-8 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-[#0b477b]/80 leading-relaxed mb-12 max-w-2xl mx-auto">
             Medical gas pipeline system design, plant room planning, and compliance support for hospitals. We provide evidence-based engineering aligned with ISO 7396-1 and HTM 02-01.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#0b2d4e] text-white text-sm font-semibold px-8 py-3.5 rounded-full hover:bg-[#0d3d68] transition-colors shadow-lg"
+            className="inline-block bg-[#0b2d4e] text-white text-sm font-semibold px-8 py-3.5 rounded-full  transition-colors shadow-lg"
             style={{ textDecoration: "none" }}
           >
             Discuss Your Project
@@ -58,7 +58,7 @@ export default function MGPSDesignPage() {
       </section>
 
       {/* ── WHY MGPS MATTERS ── */}
-      <section className="max-w-[1360px] mx-auto px-6 py-14 text-center">
+      <section className="max-w-[1500px] bg-gray-100 mx-auto px-6 py-14 text-center">
         <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Why MGPS design matters early in hospital planning</h2>
         <div className="w-12 h-0.5 bg-[#0b477b] mx-auto mb-5" />
         <p className="text-md text-gray-500 leading-relaxed max-w-5xl mx-auto mb-12">
@@ -79,7 +79,7 @@ export default function MGPSDesignPage() {
       </section>
 
       {/* ── WHAT WE DELIVER ── */}
-      <section className="max-w-[1360px] mx-auto px-6 pb-14 pt-2">
+      <section className="max-w-[1360px] mx-auto px-6 pb-14 pt-16">
         <h2 className="mb-2 text-[28px] font-semibold text-[#0b477b] text-center">What We Deliver</h2>
         <p className="mb-7 text-lg text-[#6f6f6f] text-center">Our MGPS design scope is structured, engineering-led, and execution-ready.</p>
 
@@ -201,7 +201,7 @@ export default function MGPSDesignPage() {
       </section>
 
       {/* ── BENEFITS FOR HOSPITALS ── */}
-      <section className="bg-gray-50 px-6 py-14">
+      <section className="bg-gray-100 px-6 py-14">
         <div className="max-w-[1360px] mx-auto">
           <h2 className="text-4xl font-semibold text-[#0b477b] text-center mb-4">Benefits for Hospitals</h2>
           <div className="w-18 h-1 rounded-md bg-[#0b477b] mx-auto mb-10" />
@@ -234,7 +234,7 @@ export default function MGPSDesignPage() {
       </section>
 
       {/* ── WHY TECHNIK SPIRITS ── */}
-      <section className="bg-[#eef5fc] px-6 py-14">
+      <section className="bg-white px-6 py-14">
         <div className="max-w-[1360px] mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[1.15fr_0.95fr] lg:items-center">
           <div>
             <h2 className="mb-4 text-[26px] font-medium text-[#0b477b] lg:text-[30px]">Why Technik Spirits for MGPS Design</h2>

@@ -313,9 +313,9 @@ export default function HomePage() {
                       {/* Features */}
                       <div style={{ display: "flex", flexDirection: "column", gap: 16, flex: 1 }}>
                         {p.features.map((f, i) => (
-                          <div key={i} style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                          <div key={i} style={{ display: "flex", alignItems: "center", gap: 20 }}>
                             <div style={{
-                              width: 38, height: 38,
+                              width: 40, height: 40,
                               borderRadius: "50%",
                               border: "1px solid rgba(255,255,255,0.2)",
                               background: C.white,
