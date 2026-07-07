@@ -53,12 +53,12 @@ export default function OxygenGeneratorPage() {
                             ISO 13485 & ISO 9001 CERTIFIED
                         </div>
 
-                        <h1 style={{ fontSize: 36, fontWeight: 600, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.25 }}>
+                        <h1 style={{ fontSize: 40, fontWeight: 600, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.25 }}>
                             Medical Oxygen Generator:<br />
                             On-Site Life Support <br />Engineering.
                         </h1>
 
-                        <p style={{ fontSize: 15, color: "#0b477b", lineHeight: 1.85, margin: "0 0 28px", maxWidth: 435 }}>
+                        <p style={{ fontSize: 15, color: "#0b477b", lineHeight: 1.85, margin: "0 0 28px", maxWidth: 600 }}>
                             Engineered for clinical safety and absolute reliability. Our PSA oxygen systems deliver high-purity medical-grade oxygen directly to your hospital pipeline, eliminating logistical risks and oxygen shortages.
                         </p>
 
@@ -119,7 +119,7 @@ export default function OxygenGeneratorPage() {
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-semibold text-[#0b477b] mb-7">How the System Works?</h2>
                         <div className="w-16 h-[3px] bg-[#0b477b] rounded-full mb-8 mx-auto" />
-                        <p className="text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-lg text-gray-800 max-w-3xl mx-auto leading-relaxed">
                             A Medical Oxygen Generator is a centralized on-site system that produces high-purity medical oxygen for the hospital MGPS network. Using PSA (Pressure Swing Adsorption) technology, compressed air is purified, oxygen is separated from nitrogen through Zeolite Molecular Sieves, and delivered at the required pressure. A PLC-based control system ensures continuous, automated, and reliable oxygen supply with real-time purity monitoring.
                         </p>
                     </div>
@@ -127,7 +127,8 @@ export default function OxygenGeneratorPage() {
             </section>
 
             {/* ── WHY ON-SITE OXYGEN GENERATION ── */}
-            <section style={{ background: C.white, padding: "56px 16px" }}>
+            {/* <section style={{ background: C.white, padding: "56px 16px" }}> */}
+            <section style={{ background: "#eef0f3", padding: "56px 16px" }}>
                 <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 50, alignItems: "start" }}>
 
                     {/* Left text */}
@@ -149,7 +150,7 @@ export default function OxygenGeneratorPage() {
 
                     {/* Right — bordered card with 3 features */}
                     <div style={{
-                        background: "#f9fafb",
+                        background: "white",
                         border: `1px solid ${C.cardBorder}`,
                         borderRadius: 16,
                         padding: "32px 28px",
@@ -200,7 +201,7 @@ export default function OxygenGeneratorPage() {
             </section>
 
             {/* ── PSA TECHNOLOGY ── */}
-            <section style={{ background: C.offWhite, padding: "56px 16px" }}>
+            <section style={{ background: C.White, padding: "56px 16px" }}>
                 <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 50, alignItems: "start" }}>
 
                     {/* Left — image */}
@@ -224,16 +225,16 @@ export default function OxygenGeneratorPage() {
                         <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0b477b", margin: "0 0 18px" }}>
                             Pressure Swing Adsorption (PSA)   <br /> The Technology
                         </h2>
-                        <p style={{ fontSize: 13.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px" }}>
+                        <p style={{ fontSize: 16.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px", maxWidth: 700 }}>
                             PSA is a well-established gas separation technology used in medical oxygen generation worldwide. The principle is straightforward: selective adsorption of nitrogen from compressed air using a material called Zeolite, also known as molecular sieve.
                         </p>
-                        <p style={{ fontSize: 13.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px" }}>
+                        <p style={{ fontSize: 16.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px", maxWidth: 700 }}>
                             The system uses two Zeolite-filled adsorption towers. At any given time, compressed air flows through one tower. The Zeolite selectively traps nitrogen molecules in its nanometre-sized pores, while allowing oxygen molecules to pass through unaffected.
                         </p>
-                        <p style={{ fontSize: 13.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px" }}>
+                        <p style={{ fontSize: 16.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px", maxWidth: 700 }}>
                             When the Zeolite in the active tower becomes saturated with nitrogen, the system automatically switches the compressed air flow to the second tower, which continues the oxygen separation without interruption. Meanwhile, the saturated tower is regenerated through depressurisation and oxygen flushing — releasing the trapped nitrogen back into the atmosphere and restoring the Zeolite's adsorption capacity.
                         </p>
-                        <p style={{ fontSize: 13.5, color: C.grey, lineHeight: 1.75, margin: 0 }}>
+                        <p style={{ fontSize: 16.5, color: C.grey, lineHeight: 1.75, margin: 0, maxWidth: 700 }}>
                             This alternating cycle repeats continuously and automatically, producing a steady supply of medical-grade oxygen at the required purity level.
                         </p>
                     </div>
@@ -241,16 +242,16 @@ export default function OxygenGeneratorPage() {
             </section>
 
             {/* ── KEY FEATURES & BENEFITS ── */}
-            <section style={{ background: C.white, padding: "56px 16px" }}>
+            <section style={{ background: C.offWhite, padding: "56px 16px" }}>
                 <div style={{ maxWidth: 1360, margin: "0 auto" }}>
                     <div style={{ textAlign: "center", marginBottom: 40 }}>
-                        <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0b477b", margin: "0 0 10px" }}>Key Features & Benefits</h2>
-                        <p style={{ fontSize: 13.5, color: C.grey, margin: 0 }}>
+                        <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0b477b", margin: "0 0 10px" }}>Key Features & Benefits</h2>
+                        <p style={{ fontSize: 14.5, color: C.grey, marginBottom: 60 }}>
                             Engineered for reliability, efficiency, and seamless integration into hospital infrastructure.
                         </p>
                     </div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
                         {[
                             { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20h16" /><path d="M7 20V8l5-4 5 4v12" /><path d="M10 20v-5h4v5" /><path d="M12 8v4" /></svg>, title: "On-Site, On-Demand Oxygen Production", desc: "Generates medical-grade oxygen directly from ambient air, reducing dependence on external cylinder or liquid oxygen supply and removing supply instability for the hospital." },
                             { icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M7 9h4" /><path d="M7 13h10" /><path d="M15 9h2" /></svg>, title: "Reduced Oxygen Cost", desc: "Produces oxygen in-house at a fraction of the recurring cost. Hospitals typically see active 50% reduction in total oxygen expenditure." },

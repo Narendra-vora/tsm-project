@@ -132,10 +132,10 @@ export default function AirCompressorPage() {
                             <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-12 border border-[#e0ecf8]">
                                 Our Approach
                             </div>
-                            <h2 className="text-5xl font-semibold text-[#0b477b] mb-8 leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-semibold text-[#0b477b] mb-7 leading-tight">
                                 Modular Design<br />Philosophy
                             </h2>
-                            <div className="w-10 h-[3px] bg-[#0b477b] rounded-full mb-5" />
+                            <div className="w-10 h-[3px] bg-[#0b477b] rounded-full mb-6" />
                             <p className="text-md text-gray-500 leading-relaxed max-w-md">
                                 Our engineering approach moves beyond traditional fixed-capacity systems. By utilizing a modular architecture, we provide a scalable, redundant, and highly efficient medical air solution that grows with your facility.
                             </p>
@@ -154,7 +154,7 @@ export default function AirCompressorPage() {
                     </div>
 
                     {/* Bottom 3 cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             {
                                 icon: (
@@ -195,8 +195,8 @@ export default function AirCompressorPage() {
                                     {card.icon}
                                 </div>
                                 <h3 className="text-md font-bold text-[#0b477b] uppercase tracking-wide mb-2">{card.title}</h3>
-                                <div className="w-8 h-[2px] bg-[#0b477b] rounded-full mb-4" />
-                                <p className="text-md text-gray-500 leading-relaxed mb-5">{card.desc}</p>
+                                <div className="w-8 h-[4px] bg-[#0b477b] rounded-full mb-4" />
+                                <p className="text-md text-gray-500 leading-relaxed mb-8">{card.desc}</p>
                                 <div className="flex flex-col gap-2.5">
                                     {card.points.map((point) => (
                                         <div key={point} className="flex items-center gap-3">
@@ -216,8 +216,8 @@ export default function AirCompressorPage() {
             <section className="bg-white px-6 py-16">
                 <div className="max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-6">Ultra-High Purity Medical Air</h2>
-                        <p className="text-md text-gray-500 leading-relaxed mb-7 max-w-md">
+                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-6 max-w-xl">Ultra-High Purity Medical Air</h2>
+                        <p className="text-md text-gray-500 leading-relaxed mb-7 max-w-lg">
                             Patient safety starts with the quality of the air they breathe. Integrex™ system exceeds HTM 02-01 and ISO 7396-1 standards for breathing air quality.
                         </p>
                         <div className="flex flex-col gap-5">
@@ -278,7 +278,7 @@ export default function AirCompressorPage() {
             {/* ══════════════════ FEATURES & CRITICAL BENEFITS ══════════════════ */}
             <section className="bg-[#eef5fc] px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
-                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-12">Features & Critical Benefits</h2>
+                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-16">Features & Critical Benefits</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             {
@@ -327,7 +327,7 @@ export default function AirCompressorPage() {
                                     {f.icon}
                                 </div>
                                 <h4 className="text-lg font-semibold text-navy-800 mb-1.5">{f.title}</h4>
-                                <p className="text-[15px] text-gray-700 leading-relaxed">{f.desc}</p>
+                                <p className="text-[15px] text-gray-700 leading-relaxed mb-4">{f.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -342,7 +342,7 @@ export default function AirCompressorPage() {
                         <thead>
                             <tr className="bg-[#0b477b]">
                                 <th className="text-left text-md font-bold text-white px-6 py-4">Parameter</th>
-                                <th className="text-left text-md font-bold text-white px-6 py-4">Specifications</th>
+                                <th className="text-left text-md font-bold text-white px-6 py-4">integrex™ Standard Configuration</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -357,7 +357,7 @@ export default function AirCompressorPage() {
 
                             ].map(([param, spec], i) => (
                                 <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                                    <td className="text-md font-semibold text-[#0b477b] px-6 py-5">{param}</td>
+                                    <td className="text-md font-semibold text-[#0b477b] px-7 py-5">{param}</td>
                                     <td className="text-md text-gray-500 px-6 py-5">{spec}</td>
                                 </tr>
                             ))}
@@ -368,8 +368,8 @@ export default function AirCompressorPage() {
                 {/* ══════════════════ STANDARD SCOPE OF SUPPLY ══════════════════ */}
                 <section className="bg-white px-6 py-16">
                     <div className="max-w-[1360px] mx-auto">
-                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-10">Standard Scope of Supply</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-16">Standard Scope of Supply</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                             {/* Included Components */}
                             <div className="bg-[#fdf3f0] border border-gray-200 rounded-2xl p-7">

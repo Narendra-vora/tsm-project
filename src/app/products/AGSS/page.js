@@ -50,7 +50,7 @@ export default function AGSSPage() {
             <h1 className="text-5xl sm:text-6xl font-semibold text-[#0b2d4e] mb-5 leading-tight">
               Anaesthetic Gas<br />Scavenging System<br />(AGSS)
             </h1>
-            <p className="text-md text-[#3d5570] leading-relaxed mb-8 max-w-xl">
+            <p className="text-lg text-[#3d5570] leading-relaxed mb-8 max-w-xl">
               Active anaesthetic gas scavenging system engineered for modern operation theatres. Ensure clinical safety and regulatory compliance with Technik Spirits' centralized safety infrastructure.
             </p>
             <div className="flex gap-3 flex-wrap">
@@ -85,10 +85,10 @@ export default function AGSSPage() {
       {/* ── HOW THE SYSTEM WORKS ── */}
       <section className="max-w-[1360px] mx-auto px-6 py-14">
         <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-3">How the System Works</h2>
-        <p className="text-md text-gray-500 text-center mb-10 max-w-xl mx-auto leading-relaxed">
+        <p className="text-md text-gray-500 text-center mb-16 max-w-xl mx-auto leading-relaxed">
           A centralized safety ecosystem designed to remove waste anaesthetic gases (WAGs) directly from the source.
         </p>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-3 gap-8">
           {[
             {
               num: "01",
@@ -159,7 +159,7 @@ export default function AGSSPage() {
       {/* ── KEY FEATURES & BENEFITS ── */}
       <section className="bg-gray-50 px-6 py-14">
         <div className="max-w-[1360px] mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-12">Key Features & Benefits</h2>
+          <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-14">Key Features & Benefits</h2>
 
           {/* Top 2 wide cards */}
           {/* Top 2 wide cards */}
@@ -192,7 +192,7 @@ export default function AGSSPage() {
           </div>
 
           {/* Bottom 3 cards */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-5">
             {[
               {
                 icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 21V14" /><path d="M4 10V3" /><path d="M12 21V12" /><path d="M12 8V3" /><path d="M20 21V16" /><path d="M20 12V3" /><path d="M2 14h4" /><path d="M10 8h4" /><path d="M18 16h4" /></svg>,
@@ -354,8 +354,8 @@ export default function AGSSPage() {
       {/* ── CTA ── */}
       <section className="bg-white px-6 py-14">
         <div className="max-w-[1360px] mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-[#0b477b] mb-3 max-w-[800px] mx-auto">Let's find the right AGSS configuration for your hospital's OT complex.</h2>
-          <p className="text-md text-[#0b477b] mb-8 max-w-[550px] mx-auto">
+          <h2 className="text-3xl font-semibold text-[#0b477b] mb-6 max-w-[850px] mx-auto">Let's find the right AGSS configuration for your hospital's OT complex.</h2>
+          <p className="text-lg text-[#0b477b] mb-10 max-w-[650px] mx-auto">
             Whether you are installing new operation theatres or evaluating AGSS for an existing facility, we can help you select the right configuration, sizing, and system integration.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
