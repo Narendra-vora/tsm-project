@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import Image from "next/image";
+import { FadeUp, HoverCard } from "@/components/Animations";
 import Link from "next/link";
 
 export default function AirCompressorPage() {
@@ -31,7 +32,7 @@ export default function AirCompressorPage() {
                         </h1>
 
                         <p className="text-md text-[#0b477b] leading-relaxed mb-7 max-w-lg">
-                            Advanced centralized medical air compressor system for modern hospitals: silent, compact & oil-free. Engineered for maximum reliability and patient safety.
+                            Advanced centralized medical air compressor system for modern hospitals: silent, compact &amp; oil-free. Engineered for maximum reliability and patient safety.
                         </p>
                         <div className="flex gap-3.5 flex-wrap">
 
@@ -83,14 +84,14 @@ export default function AirCompressorPage() {
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
 
             {/* ══════════════════ PERFORMANCE THAT BENEFITS ══════════════════ */}
-            < section className="bg-[#f4f7fb] px-6 py-12" >
+            <section className="bg-[#f4f7fb] px-6 py-12">
                 <div className="max-w-[1360px] mx-auto">
-                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center tracking-wide mb-8">
+                    <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] text-center tracking-wide mb-8">
                         PERFORMANCE THAT BENEFITS
-                    </h2>
+                    </h2></FadeUp>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
                         {[
                             { value: "Up to 80%", label: "Less Noise" },
@@ -98,23 +99,24 @@ export default function AirCompressorPage() {
                             { value: "Up to 80%", label: "Less Space" },
                             { value: "Up to 70%", label: "Lower Electricity" },
                         ].map((stat) => (
-                            <div
-                                key={stat.label}
-                                className="bg-white border border-gray-200 rounded-2xl py-6 px-4 text-center shadow-sm"
-                            >
-                                <div className="text-4xl font-semibold text-[#0b477b] mb-1">{stat.value}</div>
-                                <div className="text-sm  text-[#0b477b]">{stat.label}</div>
-                            </div>
+                            <FadeUp key={stat.label}>
+                                <HoverCard>
+                                    <div className="bg-white border border-gray-200 rounded-2xl py-6 px-4 text-center shadow-sm h-full">
+                                        <div className="text-4xl font-semibold text-[#0b477b] mb-1">{stat.value}</div>
+                                        <div className="text-sm text-[#0b477b]">{stat.label}</div>
+                                    </div>
+                                </HoverCard>
+                            </FadeUp>
                         ))}
                     </div>
                 </div>
-            </section >
+            </section>
 
             {/* ══════════════════ HOW THE SYSTEM WORKS ══════════════════ */}
             <section className="bg-white px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-5">How the System Works?</h2>
+                        <FadeUp><h2 className="text-4xl font-semibold text-[#0b477b] mb-5">How the System Works?</h2></FadeUp>
                         <div className="w-16 h-[3px] bg-[#0b477b] rounded-full mb-6 mx-auto" />
                         <p className="text-lg text-gray-800 max-w-5xl mx-auto leading-relaxed">
                             The Integrex™ Medical Air Compressor System delivers clean, dry, medical-grade air through a fully integrated and automated solution. Featuring oil-free compressors, advanced filtration, moisture removal, and intelligent PLC controls, it ensures a reliable, efficient, and uninterrupted air supply for critical hospital areas.
@@ -122,27 +124,28 @@ export default function AirCompressorPage() {
                     </div>
                 </div>
             </section>
+
             {/* ══════════════════ MODULAR DESIGN PHILOSOPHY ══════════════════ */}
             <section className="bg-[#f4f7fb] px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
 
                     {/* Top row — text left, image right */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-14">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-23">
                         <div>
                             <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-12 border border-[#e0ecf8]">
                                 Our Approach
                             </div>
-                            <h2 className="text-3xl md:text-5xl font-semibold text-[#0b477b] mb-7 leading-tight">
+                            <FadeUp><h2 className="text-3xl md:text-5xl font-semibold text-[#0b477b] mb-7 leading-tight">
                                 Modular Design<br />Philosophy
-                            </h2>
+                            </h2></FadeUp>
                             <div className="w-10 h-[3px] bg-[#0b477b] rounded-full mb-6" />
                             <p className="text-md text-gray-500 leading-relaxed max-w-md">
                                 Our engineering approach moves beyond traditional fixed-capacity systems. By utilizing a modular architecture, we provide a scalable, redundant, and highly efficient medical air solution that grows with your facility.
                             </p>
                         </div>
 
-                        {/* Right — image placeholder (fixed height/width) */}
-                        <div className="relative w-full max-w-[500px] h-[380px] mx-auto lg:mx-0 rounded-2xl overflow-hidden">
+                        {/* Right — image */}
+                        <div className="relative w-full max-w-[400px] h-[300px] mx-auto lg:mx-0 rounded-2xl overflow-hidden">
                             <Image
                                 src="/air_page.jpg"
                                 alt="Modular design concept — traditional vs Integrex"
@@ -190,33 +193,38 @@ export default function AirCompressorPage() {
                                 points: ["Real-time demand matching", "Predictive maintenance alerts"],
                             },
                         ].map((card) => (
-                            <div key={card.title} className="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm">
-                                <div className="w-11 h-11 rounded-xl bg-[#eef5fc] border border-[#d0e4f5] flex items-center justify-center mb-5">
-                                    {card.icon}
-                                </div>
-                                <h3 className="text-md font-bold text-[#0b477b] uppercase tracking-wide mb-2">{card.title}</h3>
-                                <div className="w-8 h-[4px] bg-[#0b477b] rounded-full mb-4" />
-                                <p className="text-md text-gray-500 leading-relaxed mb-8">{card.desc}</p>
-                                <div className="flex flex-col gap-2.5">
-                                    {card.points.map((point) => (
-                                        <div key={point} className="flex items-center gap-3">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0">
-                                                <circle cx="12" cy="12" r="10" /><path d="M8 12.5l2.5 2.5L16 9.5" />
-                                            </svg>
-                                            <span className="text-sm font-semibold text-gray-700 ">{point}</span>
+                            <FadeUp key={card.title}>
+                                <HoverCard>
+                                    <div className="bg-white border border-gray-200 rounded-3xl p-7 shadow-sm h-full">
+                                        <div className="w-11 h-11 rounded-xl bg-[#eef5fc] border border-[#d0e4f5] flex items-center justify-center mb-5">
+                                            {card.icon}
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
+                                        <h3 className="text-md font-bold text-[#0b477b] uppercase tracking-wide mb-2">{card.title}</h3>
+                                        <div className="w-8 h-[4px] bg-[#0b477b] rounded-full mb-4" />
+                                        <p className="text-md text-gray-500 leading-relaxed mb-8">{card.desc}</p>
+                                        <div className="flex flex-col gap-2.5">
+                                            {card.points.map((point) => (
+                                                <div key={point} className="flex items-center gap-3">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0">
+                                                        <circle cx="12" cy="12" r="10" /><path d="M8 12.5l2.5 2.5L16 9.5" />
+                                                    </svg>
+                                                    <span className="text-sm font-semibold text-gray-700">{point}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </HoverCard>
+                            </FadeUp>
                         ))}
                     </div>
                 </div>
             </section>
+
             {/* ══════════════════ ULTRA-HIGH PURITY MEDICAL AIR ══════════════════ */}
             <section className="bg-white px-6 py-16">
                 <div className="max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-6 max-w-xl">Ultra-High Purity Medical Air</h2>
+                        <FadeUp><h2 className="text-4xl font-semibold text-[#0b477b] mb-6 max-w-xl">Ultra-High Purity Medical Air</h2></FadeUp>
                         <p className="text-md text-gray-500 leading-relaxed mb-7 max-w-lg">
                             Patient safety starts with the quality of the air they breathe. Integrex™ system exceeds HTM 02-01 and ISO 7396-1 standards for breathing air quality.
                         </p>
@@ -278,7 +286,7 @@ export default function AirCompressorPage() {
             {/* ══════════════════ FEATURES & CRITICAL BENEFITS ══════════════════ */}
             <section className="bg-[#eef5fc] px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
-                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-16">Features & Critical Benefits</h2>
+                    <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-16">Features &amp; Critical Benefits</h2></FadeUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             {
@@ -322,18 +330,19 @@ export default function AirCompressorPage() {
                                 desc: "Backed by Technik Spirits' expert global service teams.",
                             },
                         ].map((f) => (
-                            <div
-                                key={f.title}
-                                className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-all duration-200"
-                            >
-                                <div className="w-10 h-10 rounded-lg bg-[#f9fafb] border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
-                                    {f.icon}
-                                </div>
-                                <div>
-                                    <h4 className="text-xl font-semibold text-[#0b477b] mb-2 leading-snug">{f.title}</h4>
-                                    <p className="text-[15px] text-gray-500 leading-relaxed">{f.desc}</p>
-                                </div>
-                            </div>
+                            <FadeUp key={f.title}>
+                                <HoverCard>
+                                    <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 h-full">
+                                        <div className="w-10 h-10 rounded-lg bg-[#f9fafb] border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
+                                            {f.icon}
+                                        </div>
+                                        <div>
+                                            <h4 className="text-xl font-semibold text-[#0b477b] mb-2 leading-snug">{f.title}</h4>
+                                            <p className="text-[15px] text-gray-500 leading-relaxed">{f.desc}</p>
+                                        </div>
+                                    </div>
+                                </HoverCard>
+                            </FadeUp>
                         ))}
                     </div>
                 </div>
@@ -341,7 +350,7 @@ export default function AirCompressorPage() {
 
             {/* ══════════════════ TECHNICAL SPECIFICATIONS ══════════════════ */}
             <section className="max-w-[1360px] mx-auto px-6 py-16">
-                <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-8">Technical Specifications</h2>
+                <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-8">Technical Specifications</h2></FadeUp>
                 <div className="border border-gray-200 rounded-2xl overflow-hidden">
                     <table className="w-full">
                         <thead>
@@ -359,7 +368,6 @@ export default function AirCompressorPage() {
                                 ["Filtration", "Integrated four-stage filtration; down to 0.01 micron"],
                                 ["Air Receiver Capacity", "300 to 5000+ Litres"],
                                 ["Power Supply", "415 V, 50 Hz, 3 Phase"],
-
                             ].map(([param, spec], i) => (
                                 <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                                     <td className="text-md font-semibold text-[#0b477b] px-7 py-5">{param}</td>
@@ -369,70 +377,71 @@ export default function AirCompressorPage() {
                         </tbody>
                     </table>
                 </div>
+            </section>
 
-                {/* ══════════════════ STANDARD SCOPE OF SUPPLY ══════════════════ */}
-                <section className="bg-white px-6 py-16">
-                    <div className="max-w-[1360px] mx-auto">
-                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-16">Standard Scope of Supply</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* ══════════════════ STANDARD SCOPE OF SUPPLY ══════════════════ */}
+            <section className="bg-white px-6 py-16">
+                <div className="max-w-[1360px] mx-auto">
+                    <FadeUp><h2 className="text-4xl font-semibold text-[#0b477b] mb-16">Standard Scope of Supply</h2></FadeUp>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                            {/* Included Components */}
-                            <div className="bg-[#fdf3f0] border border-gray-200 rounded-2xl p-7">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                                        <rect x="8" y="2" width="8" height="4" rx="1" />
-                                        <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2" />
-                                        <path d="M9 12l2 2 4-4" />
-                                    </svg>
-                                    <h3 className="text-md font-semibold text-[#1a2a3a]">Included Components</h3>
-                                </div>
-                                <ul className="flex flex-col gap-2.5">
-                                    {[
-                                        "Oil-free air compressor modules",
-                                        "Air receiver(s) with auto drain valve",
-                                        "Integrated dryer(s) for moisture removal",
-                                        "Multi-stage filtration assembly",
-                                        "Pressure regulation assembly for 4 bar or 7 bar MGPS delivery",
-                                        "PLC-based, BMS-ready, control system",
-                                        "All necessary accessories and ancillaries for complete system integration",
-                                    ].map((item) => (
-                                        <li key={item} className="text-md text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
+                        {/* Included Components */}
+                        <div className="bg-[#fdf3f0] border border-gray-200 rounded-2xl p-7">
+                            <div className="flex items-center gap-2 mb-4">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="8" y="2" width="8" height="4" rx="1" />
+                                    <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2" />
+                                    <path d="M9 12l2 2 4-4" />
+                                </svg>
+                                <h3 className="text-md font-semibold text-[#1a2a3a]">Included Components</h3>
                             </div>
+                            <ul className="flex flex-col gap-2.5">
+                                {[
+                                    "Oil-free air compressor modules",
+                                    "Air receiver(s) with auto drain valve",
+                                    "Integrated dryer(s) for moisture removal",
+                                    "Multi-stage filtration assembly",
+                                    "Pressure regulation assembly for 4 bar or 7 bar MGPS delivery",
+                                    "PLC-based, BMS-ready, control system",
+                                    "All necessary accessories and ancillaries for complete system integration",
+                                ].map((item) => (
+                                    <li key={item} className="text-md text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-                            {/* Optional Accessories */}
-                            <div className="bg-[#fdf3f0] border border-gray-200 rounded-2xl p-7">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <path d="M12 8v8M8 12h8" />
-                                    </svg>
-                                    <h3 className="text-md font-semibold text-[#1a2a3a]">Optional Accessories</h3>
-                                </div>
-                                <ul className="flex flex-col gap-2.5">
-                                    {[
-                                        "Duplex / multi dryer and filtration assemblies for enhanced reliability",
-                                        "Dew point analyzer for dryer switching and moisture monitoring",
-                                        "CO, CO2, and other gas analyzer for Medical air quality monitoring",
-                                        "Duplex / multi air receivers (parallel)",
-                                    ].map((item) => (
-                                        <li key={item} className="text-md text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
+                        {/* Optional Accessories */}
+                        <div className="bg-[#fdf3f0] border border-gray-200 rounded-2xl p-7">
+                            <div className="flex items-center gap-2 mb-4">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E05A36" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 8v8M8 12h8" />
+                                </svg>
+                                <h3 className="text-md font-semibold text-[#1a2a3a]">Optional Accessories</h3>
                             </div>
+                            <ul className="flex flex-col gap-2.5">
+                                {[
+                                    "Duplex / multi dryer and filtration assemblies for enhanced reliability",
+                                    "Dew point analyzer for dryer switching and moisture monitoring",
+                                    "CO, CO2, and other gas analyzer for Medical air quality monitoring",
+                                    "Duplex / multi air receivers (parallel)",
+                                ].map((item) => (
+                                    <li key={item} className="text-md text-gray-600 leading-relaxed pl-3 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
-                </section>
+                </div>
             </section>
+
             {/* ══════════════════ TECHNICAL FAQ ══════════════════ */}
             <section className="bg-[#eceef0] px-6 py-16">
                 <div className="max-w-[850px] mx-auto">
-                    <h2 className="text-3xl font-bold text-[#0b477b] text-center mb-10">Technical FAQ</h2>
+                    <FadeUp><h2 className="text-3xl font-bold text-[#0b477b] text-center mb-10">Technical FAQ</h2></FadeUp>
                     <div className="flex flex-col gap-4">
                         {[
                             {
@@ -456,52 +465,57 @@ export default function AirCompressorPage() {
                                 a: "Its modular skid-mounted design reduces the plant room footprint substantially compared to traditional systems of equivalent capacity, freeing up valuable hospital space.",
                             },
                         ].map((faq, i) => (
-                            <div key={i} className="bg-white border border-gray-200 rounded-full overflow-hidden">
-                                <button
-                                    className="w-full flex items-center justify-between gap-4 px-7 py-5 text-left"
-                                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                                >
-                                    <span className="text-sm font-semibold text-[#1a2a3a]">
-                                        {i + 1}. {faq.q}
-                                    </span>
-                                    <svg
-                                        className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${openFaq === i ? "rotate-180" : ""}`}
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
+                            <FadeUp key={i}>
+                                <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                                    <button
+                                        className="w-full flex items-center justify-between gap-4 px-7 py-5 text-left"
+                                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
                                     >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                {faq === i && (
-                                    <div className="px-7 pb-5">
-                                        <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
-                                    </div>
-                                )}
-                            </div>
+                                        <span className="text-sm font-semibold text-[#1a2a3a]">
+                                            {i + 1}. {faq.q}
+                                        </span>
+                                        <svg
+                                            className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ${openFaq === i ? "rotate-180" : ""}`}
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    {openFaq === i && (
+                                        <div className="px-7 pb-5">
+                                            <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            </FadeUp>
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* ── FINAL CTA ── */}
-            <section className="bg-white px-6 py-14">
+            <section className="bg-gray-50 px-6 py-14">
                 <div className="max-w-[1360px] mx-auto text-center">
-                    <h2 className="text-5xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Ready to upgrade your medical air?</h2>
-                    <p className="text-lg text-gray-700 mb-8 max-w-[650px] mx-auto">
-                        Let's find the right integrex medical air compressor system configuration for your hospital project. Our engineering team is ready to assist with sizing and custom layouts
+                    <FadeUp><h2 className="text-5xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Ready to upgrade your medical air?</h2></FadeUp>
+                    <p className="text-lg text-gray-500 mb-8 max-w-[650px] mx-auto">
+                        Let&apos;s find the right integrex medical air compressor system configuration for your hospital project. Our engineering team is ready to assist with sizing and custom layouts
                     </p>
                     <div className="flex justify-center gap-4 flex-wrap">
-                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
-                            Talk to Our Engineers
-                        </Link>
-                        <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors">
-                            Download Brochure
-                        </Link>
+                        <HoverCard>
+                            <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full  transition-colors">
+                                Talk to Our Engineers
+                            </Link></HoverCard>
+                        <HoverCard>
+                            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full  transition-colors">
+                                Download Brochure
+                            </Link>
+                        </HoverCard>
                     </div>
                 </div>
             </section>
 
-        </main >
+        </main>
     );
 }

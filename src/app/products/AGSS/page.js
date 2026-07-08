@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { FadeUp, HoverCard } from "@/components/Animations";
 
 export default function AGSSPage() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -29,14 +30,14 @@ export default function AGSSPage() {
     <main className="bg-white min-h-screen">
 
       {/* ── HERO ── */}
-      <section className="relative px-6 py-16 overflow-hidden bg-gradient-to-br from-[#eef5fc] via-[#f4f9fd] to-[#e3eef8]">
+      <section className="relative w-full min-h-[420px] lg:min-h-[500px] flex items-center overflow-hidden">
         {/* Background ambient image (hospital interior blur) */}
-        <div className="absolute inset-0 z-0">
+        <div className="height:500px w-full absolute inset-0 z-0">
           <Image
-            src="/hospital-bg.jpg"
+            src="/Agss.webp"
             alt=""
             fill
-            className="object-cover object-center opacity-50"
+            className="object-cover object-center opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#eef5fc] via-[#eef5fc]/70 to-transparent" />
         </div>
@@ -54,37 +55,32 @@ export default function AGSSPage() {
               Active anaesthetic gas scavenging system engineered for modern operation theatres. Ensure clinical safety and regulatory compliance with Technik Spirits' centralized safety infrastructure.
             </p>
             <div className="flex gap-3 flex-wrap">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-[#0b477b] text-white text-sm font-bold px-6 py-3 rounded-full  transition-colors"
-                style={{ textDecoration: "none" }}
-              >
-                Talk to Our Engineers →
-              </Link>
-              <Link
-                href="#"
-                className="inline-flex items-center gap-2 bg-white text-[#0b2d4e] text-sm font-semibold px-6 py-3 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
-                style={{ textDecoration: "none" }}
-              >
-                ⬇ Download Datasheet (PDF)
-              </Link>
+              <FadeUp>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-[#0b477b] text-white text-sm font-bold px-6 py-3 rounded-full  transition-colors"
+                  style={{ textDecoration: "none" }}
+                >
+                  Talk to Our Engineers →
+                </Link>
+              </FadeUp>
+              <FadeUp>
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-2 bg-white text-[#0b2d4e] text-sm font-semibold px-6 py-3 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm"
+                  style={{ textDecoration: "none" }}
+                >
+                  ⬇ Download Datasheet (PDF)
+                </Link>
+              </FadeUp>
             </div>
-          </div>
-
-          <div className="relative h-[340px] lg:h-[420px]">
-            <Image
-              src="/product-agss.png"
-              alt="AGSS System"
-              fill
-              className="object-contain object-center drop-shadow-2xl"
-            />
           </div>
         </div>
       </section>
 
       {/* ── HOW THE SYSTEM WORKS ── */}
       <section className="max-w-[1360px] mx-auto px-6 py-14">
-        <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-3">How the System Works</h2>
+        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-3">How the System Works</h2></FadeUp>
         <p className="text-md text-gray-500 text-center mb-16 max-w-xl mx-auto leading-relaxed">
           A centralized safety ecosystem designed to remove waste anaesthetic gases (WAGs) directly from the source.
         </p>
@@ -127,7 +123,8 @@ export default function AGSSPage() {
               desc: "Integrated monitoring and alarms run on remote service access or on alarm status panel in OT."
             },
           ].map((item) => (
-            <div key={item.num} className="relative border border-gray-200 rounded-2xl p-6 bg-white flex flex-col gap-4">
+
+            <div key={item.num} className="relative border border-gray-200 hover:scale-103 transition-all duration-300 rounded-2xl p-6 bg-white flex flex-col gap-4">
               <div className="flex justify-between items-center">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center border border-gray-200 bg-gray-50">
                   {item.icon}
@@ -139,6 +136,7 @@ export default function AGSSPage() {
                 <p className="text-md text-gray-500 leading-relaxed">{item.desc}</p>
               </div>
             </div>
+
           ))}
         </div>
       </section>
@@ -149,7 +147,7 @@ export default function AGSSPage() {
             <Image src="/product-agss.png" alt="AGSS" fill className="object-contain object-center" />
           </div>
           <div>
-            <h2 className="text-3xl font-semibold text-[#0b477b] mb-4">Why Hospitals Need AGSS</h2>
+            <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] mb-4">Why Hospitals Need AGSS</h2></FadeUp>
             <p className="text-lg text-gray-500 leading-relaxed mb-4 max-w-xl">
               In operating theatres without active scavenging, waste anaesthetic gases are removed only through the OT AHU's air changes, which are not designed to control these gases at safe occupational exposure levels. Even with modern anaesthesia workstations, small amounts of waste gases are released during every procedure, as no breathing circuit is completely sealed.
             </p>
@@ -162,11 +160,11 @@ export default function AGSSPage() {
 
       <section className="bg-gray-50 px-6 py-16">
         <div className="max-w-[1360px] mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-14">Key Features & Benefits</h2>
+          <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-14">Key Features & Benefits</h2></FadeUp>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1: International Standards (col-span-2) */}
-            <div className="md:col-span-2 bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+            <div className="md:col-span-2 bg-white border border-gray-200 hover:scale-103 transition-all duration-300 rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
               <div className="flex items-center gap-3">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                   <path d="M20 13c0 5-3.5 7.5-7.35 8.75a1 1 0 0 1-.6 0C8.5 20.5 5 18 5 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C15.5 3.8 18 5 20 5a1 1 0 0 1 1 1z" />
@@ -180,7 +178,7 @@ export default function AGSSPage() {
             </div>
 
             {/* Card 2: Universal Compatibility (col-span-1) */}
-            <div className="bg-[#0b477b] rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+            <div className="bg-[#0b477b] rounded-3xl p-8 hover:scale-103 transition-all duration-300  flex flex-col justify-center gap-5 min-h-[220px]">
               <div>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="14" height="9" rx="2" />
@@ -196,7 +194,7 @@ export default function AGSSPage() {
             </div>
 
             {/* Card 3: Complete System */}
-            <div className="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+            <div className="bg-white border border-gray-200 rounded-3xl hover:scale-103 transition-all duration-300  p-8 flex flex-col justify-center gap-5 min-h-[220px]">
               <div>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 21V14" /><path d="M4 10V3" /><path d="M12 21V12" /><path d="M12 8V3" /><path d="M20 21V16" /><path d="M20 12V3" /><path d="M2 14h4" /><path d="M10 8h4" /><path d="M18 16h4" />
@@ -211,7 +209,7 @@ export default function AGSSPage() {
             </div>
 
             {/* Card 4: Advanced Control */}
-            <div className="bg-[#0b477b] rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+            <div className="bg-[#0b477b] rounded-3xl p-8 flex hover:scale-103 transition-all duration-300  flex-col justify-center gap-5 min-h-[220px]">
               <div>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -227,7 +225,7 @@ export default function AGSSPage() {
             </div>
 
             {/* Card 5: 24/7 Support */}
-            <div className="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
+            <div className="bg-white border border-gray-200 hover:scale-103 transition-all duration-300  rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
               <div>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b477b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
@@ -250,9 +248,9 @@ export default function AGSSPage() {
       <section className="max-w-[1360px] mx-auto px-6 py-14">
         <div className="grid grid-cols-3 gap-8 items-start">
           <div>
-            <h2 className="text-4xl font-bold text-[#1a2a3a] mb-3 leading-tight">
+            <FadeUp>  <h2 className="text-4xl font-bold text-[#1a2a3a] mb-3 leading-tight">
               Standard Scope<br />of <span className="text-[#0b477b]">Supply</span>
-            </h2>
+            </h2></FadeUp>
             <div className="w-12 h-[5px] bg-[#0b477b] rounded-full mb-4" />
             <p className="text-md text-gray-500 leading-relaxed max-w-[350px]">
               Every Technik Spirits system is delivered as a plug-and-play, pre-wired, and pre-commissioned solution.
@@ -302,15 +300,15 @@ export default function AGSSPage() {
       {/* ── TECHNICAL FAQ ── */}
       <section className="bg-gray-50 px-6 py-14">
         <div className="max-w-[1360px] mx-auto">
-          <h2 className="text-2xl font-bold text-[#0b477b] text-center mb-10">Technical FAQ</h2>
+          <FadeUp>  <h2 className="text-2xl font-bold text-[#0b477b] text-center mb-10">Technical FAQ</h2></FadeUp>
           <div className="flex flex-col gap-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+              <div key={i} className="bg-white border border-gray-200 hover:scale-103 transition-all duration-300  rounded-2xl overflow-hidden shadow-sm">
                 <button
                   className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
-                  <span className={`text-sm font-semibold text-[#0b477b] ${openFaq === i ? "sm:w-48 shrink-0" : ""}`}>
+                  <span className={`text-md text-center font-semibold text-[#0b477b] ${openFaq === i ? "sm:w-48 shrink-0" : ""}`}>
                     {faq.q}
                   </span>
 
@@ -344,7 +342,7 @@ export default function AGSSPage() {
 
       {/* ── TECHNICAL SPECIFICATIONS ── */}
       <section className="max-w-[1360px] mx-auto px-6 py-16">
-        <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-8">Technical Specifications</h2>
+        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-8">Technical Specifications</h2></FadeUp>
         <div className="border border-gray-200 rounded-2xl overflow-hidden">
           <table className="w-full">
             <thead>
@@ -375,17 +373,21 @@ export default function AGSSPage() {
       {/* ── CTA ── */}
       <section className="bg-gray-50 px-6 py-14">
         <div className="max-w-[1360px] mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-[#0b477b] mb-6 max-w-[850px] mx-auto">Let's find the right AGSS configuration for your hospital's OT complex.</h2>
-          <p className="text-lg text-[#0b477b] mb-10 max-w-[650px] mx-auto">
+          <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] mb-6 max-w-[850px] mx-auto">Let's find the right AGSS configuration for your hospital's OT complex.</h2></FadeUp>
+          <FadeUp><p className="text-lg text-gray-500 mb-10 max-w-[650px] mx-auto">
             Whether you are installing new operation theatres or evaluating AGSS for an existing facility, we can help you select the right configuration, sizing, and system integration.
-          </p>
+          </p></FadeUp>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link href="/contact" className="inline-block bg-[#0b477b] border border-white/30 text-white text-sm font-bold px-6 py-3 rounded-full transition-colors">
-              Talk to our Engineers
-            </Link>
-            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-6 py-3 rounded-full transition-colors">
-              Download Datasheet (PDF)
-            </Link>
+            <HoverCard>
+              <Link href="/contact" className="inline-block bg-[#0b477b] border border-white/30 text-white text-sm font-bold px-6 py-3 rounded-full transition-colors">
+                Talk to our Engineers
+              </Link>
+            </HoverCard>
+            <HoverCard>
+              <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-6 py-3 rounded-full transition-colors">
+                Download Datasheet (PDF)
+              </Link>
+            </HoverCard>
           </div>
         </div>
       </section>

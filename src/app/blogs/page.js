@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FadeUp, HoverCard } from "@/components/Animations";
 
 
 const C = {

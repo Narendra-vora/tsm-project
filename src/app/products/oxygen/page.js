@@ -1,5 +1,7 @@
+
 import Link from "next/link";
 import Image from "next/image";
+import { FadeUp, HoverCard } from "@/components/Animations";
 
 const C = {
     navy: "#0b477b",
@@ -117,7 +119,7 @@ export default function OxygenGeneratorPage() {
             <section className="bg-white px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-semibold text-[#0b477b] mb-7">How the System Works?</h2>
+                        <FadeUp>  <h2 className="text-4xl font-semibold text-[#0b477b] mb-7">How the System Works?</h2></FadeUp>
                         <div className="w-16 h-[3px] bg-[#0b477b] rounded-full mb-8 mx-auto" />
                         <p className="text-lg text-gray-800 max-w-3xl mx-auto leading-relaxed">
                             A Medical Oxygen Generator is a centralized on-site system that produces high-purity medical oxygen for the hospital MGPS network. Using PSA (Pressure Swing Adsorption) technology, compressed air is purified, oxygen is separated from nitrogen through Zeolite Molecular Sieves, and delivered at the required pressure. A PLC-based control system ensures continuous, automated, and reliable oxygen supply with real-time purity monitoring.
@@ -133,7 +135,7 @@ export default function OxygenGeneratorPage() {
 
                     {/* Left text */}
                     <div>
-                        <h2 style={{ fontSize: 34, fontWeight: 700, color: "#0b477b", margin: "0 0 18px" }}>Why On-Site Oxygen Generation?</h2>
+                        <FadeUp> <h2 style={{ fontSize: 34, fontWeight: 700, color: "#0b477b", margin: "0 0 18px" }}>Why On-Site Oxygen Generation?</h2></FadeUp>
                         <p style={{ fontSize: 17, color: C.grey, lineHeight: 1.85, margin: "0 0 16px", maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
                             Hospital oxygen supply has traditionally depended on cylinders or liquid oxygen. Both models can work, but they also bring operational dependencies: ordering, transportation, refilling, storage, vendor coordination, pressure management, and emergency planning.
                         </p>
@@ -223,9 +225,9 @@ export default function OxygenGeneratorPage() {
 
                     {/* Right text */}
                     <div>
-                        <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0b477b", margin: "0 0 18px" }}>
+                        <FadeUp><h2 style={{ fontSize: 28, fontWeight: 700, color: "#0b477b", margin: "0 0 18px" }}>
                             Pressure Swing Adsorption (PSA)   <br /> The Technology
-                        </h2>
+                        </h2></FadeUp>
                         <p style={{ fontSize: 16.5, color: C.grey, lineHeight: 1.75, margin: "0 0 18px", maxWidh: 700 }}>
                             PSA is a well-established gas separation technology used in medical oxygen generation worldwide. The principle is straightforward: selective adsorption of nitrogen from compressed air using a material called Zeolite, also known as molecular sieve.
                         </p>
@@ -242,11 +244,12 @@ export default function OxygenGeneratorPage() {
                 </div>
             </section>
 
+
             {/* ── KEY FEATURES & BENEFITS ── */}
             <section style={{ background: C.offWhite, padding: "56px 16px" }}>
                 <div style={{ maxWidth: 1360, margin: "0 auto" }}>
                     <div style={{ textAlign: "center", marginBottom: 40 }}>
-                        <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0b477b", margin: "0 0 10px" }}>Key Features & Benefits</h2>
+                        <FadeUp><h2 style={{ fontSize: 28, fontWeight: 700, color: "#0b477b", margin: "0 0 10px" }}>Key Features & Benefits</h2></FadeUp>
                         <p style={{ fontSize: 14.5, color: C.grey, marginBottom: 60 }}>
                             Engineered for reliability, efficiency, and seamless integration into hospital infrastructure.
                         </p>
@@ -264,12 +267,12 @@ export default function OxygenGeneratorPage() {
                             { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="8" /><path d="M12 4v4" /><path d="M4 12h4" /><path d="M16 12h4" /><path d="M12 16v4" /></svg>, title: "Unified Ecosystem Integration", desc: "Designed to work in harmony with the complete Technik Spirits MGPS portfolio, including air compressors and vacuum systems." },
                             { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s7-4 7-10V6l-7-3-7 3v6c0 6 7 10 7 10Z" /><path d="M9 12l2 2 4-4" /></svg>, title: "Responsive After-Sales Support", desc: "24x7 technical support, preventive maintenance contracts, and spare parts availability ensure continuous reliable oxygen supply." },
                         ].map((f) => (
-                            <div key={f.title} style={{
+                            <div key={f.title} className="feature-card" style={{
                                 position: "relative",
                                 background: C.white,
                                 border: "1px solid #e5e7eb",
                                 borderRadius: 16,
-                                padding: 24,
+                                padding: 25,
                                 display: "flex",
                                 flexDirection: "column",
                                 gap: 16,
@@ -287,6 +290,17 @@ export default function OxygenGeneratorPage() {
                             </div>
                         ))}
                     </div>
+
+                    <style js>{`
+            .feature-card {
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            .feature-card:hover {
+                transform: scale(1.03);
+                box-shadow: 0 8px 24px rgba(11, 71, 123, 0.12);
+            }
+        `}</style>
                 </div>
             </section>
 
@@ -330,35 +344,41 @@ export default function OxygenGeneratorPage() {
 
                     {/* Right — Engineered for Performance */}
                     <div>
-                        <h2 style={{ fontSize: 26, fontWeight: 700, color: "#1a2a3a", margin: "0 0 20px" }}>Engineered for Performance</h2>
+                        <FadeUp><h2 style={{ fontSize: 26, fontWeight: 700, color: "#1a2a3a", margin: "0 0 20px" }}>Engineered for Performance</h2></FadeUp>
 
                         {/* Top 2 small cards */}
                         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 16 }}>
-                            <div style={{ background: C.white, border: `1px solid ${C.cardBorder}`, borderRadius: 12, padding: "18px 18px" }}>
-                                <div style={{ width: 24, height: 24, borderRadius: 6, background: "#eef5fc", border: "1px solid #d0e4f5", display: "flex", alignItems: "center", justifyContent: "center", color: C.navy, marginBottom: 8 }}>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M19 9h1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1" />
-                                        <path d="M3 12v3a4 4 0 0 0 4 4h5a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4H9a4 4 0 0 0-2.83 1.17L3 9" />
-                                        <circle cx="15" cy="11" r="0.5" fill="currentColor" />
-                                        <path d="M9 5V3.5" />
-                                        <path d="M3 9l-1.5-1" />
-                                    </svg>
+                            <HoverCard>
+                                <div style={{ background: C.white, border: `1px solid ${C.cardBorder}`, borderRadius: 12, padding: "18px 18px" }}>
+                                    <div style={{ width: 24, height: 24, borderRadius: 6, background: "#eef5fc", border: "1px solid #d0e4f5", display: "flex", alignItems: "center", justifyContent: "center", color: C.navy, marginBottom: 8 }}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M19 9h1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1" />
+                                            <path d="M3 12v3a4 4 0 0 0 4 4h5a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4H9a4 4 0 0 0-2.83 1.17L3 9" />
+                                            <circle cx="15" cy="11" r="0.5" fill="currentColor" />
+                                            <path d="M9 5V3.5" />
+                                            <path d="M3 9l-1.5-1" />
+                                        </svg>
+                                    </div>
+                                    <div style={{ fontSize: 14, fontWeight: 700, color: "#1a2a3a", marginBottom: 4 }}>50% Operational Savings</div>
+                                    <div style={{ fontSize: 12, color: C.grey, lineHeight: 1.5 }}>Eliminate oxygen cylinder rentals and transport costs entirely.</div>
                                 </div>
-                                <div style={{ fontSize: 14, fontWeight: 700, color: "#1a2a3a", marginBottom: 4 }}>50% Operational Savings</div>
-                                <div style={{ fontSize: 12, color: C.grey, lineHeight: 1.5 }}>Eliminate oxygen cylinder rentals and transport costs entirely.</div>
-                            </div>
-                            <div style={{ background: C.white, border: `1px solid ${C.cardBorder}`, borderRadius: 12, padding: "18px 18px" }}>
-                                <div style={{ width: 24, height: 24, borderRadius: 6, background: "#eef5fc", border: "1px solid #d0e4f5", display: "flex", alignItems: "center", justifyContent: "center", color: C.navy, marginBottom: 8 }}>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M3 14v-3a9 9 0 0 1 18 0v3" />
-                                        <path d="M21 14a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h3z" />
-                                        <path d="M3 14a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H3z" />
-                                        <path d="M13 17.5a3.5 3.5 0 0 1-3.5 3.5" />
-                                    </svg>
+                            </HoverCard>
+                            <HoverCard>
+                                <div style={{ background: C.white, border: `1px solid ${C.cardBorder}`, borderRadius: 12, padding: "18px 18px" }}>
+
+                                    <div style={{ width: 24, height: 24, borderRadius: 6, background: "#eef5fc", border: "1px solid #d0e4f5", display: "flex", alignItems: "center", justifyContent: "center", color: C.navy, marginBottom: 8 }}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M3 14v-3a9 9 0 0 1 18 0v3" />
+                                            <path d="M21 14a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h3z" />
+                                            <path d="M3 14a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H3z" />
+                                            <path d="M13 17.5a3.5 3.5 0 0 1-3.5 3.5" />
+                                        </svg>
+                                    </div>
+                                    <div style={{ fontSize: 14, fontWeight: 700, color: "#1a2a3a", marginBottom: 4 }}>24/7 Global Support</div>
+                                    <div style={{ fontSize: 12, color: C.grey, lineHeight: 1.5 }}>Expert engineering response for any technical requirement worldwide.</div>
                                 </div>
-                                <div style={{ fontSize: 14, fontWeight: 700, color: "#1a2a3a", marginBottom: 4 }}>24/7 Global Support</div>
-                                <div style={{ fontSize: 12, color: C.grey, lineHeight: 1.5 }}>Expert engineering response for any technical requirement worldwide.</div>
-                            </div>
+                            </HoverCard>
+
                         </div>
 
                         {/* Complete Scope of Supply — navy box */}
@@ -465,17 +485,20 @@ export default function OxygenGeneratorPage() {
             {/* ── FINAL CTA ── */}
             <section className="bg-gray-50 px-6 py-14">
                 <div className="max-w-[1360px] mx-auto text-center">
-                    <h2 className="text-4xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Ready to Engineer Your Future?</h2>
-                    <p className="text-md text-[#0b477b] mb-8 max-w-[450px] mx-auto">
+                    <FadeUp> <h2 className="text-4xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Ready to Engineer Your Future?</h2></FadeUp>
+                    <p className="text-md text-gray-500 mb-8 max-w-[450px] mx-auto">
                         Consult with our engineering team to design your medical gas infrastructure.
                     </p>
                     <div className="flex justify-center gap-4 flex-wrap">
-                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full    transition-colors">
-                            Talk to Our Engineers
-                        </Link>
-                        <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
-                            Download Brochure
-                        </Link>
+                        <HoverCard>
+                            <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
+                                Talk to Our Engineers
+                            </Link></HoverCard>
+                        <HoverCard>
+                            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
+                                Download Brochure
+                            </Link>
+                        </HoverCard>
                     </div>
                 </div>
             </section>

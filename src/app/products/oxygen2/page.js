@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { FadeUp, HoverCard } from "@/components/Animations";
 
 const features = [
     {
@@ -197,7 +198,7 @@ export default function VentilatorCompressorPage() {
             {/* ── HOW THE SYSTEM WORKS ── */}
             <section className="bg-[#f7f9fb] px-6 py-16">
                 <div className="max-w-[1360px] mx-auto text-center">
-                    <h2 className="text-3xl font-semibold text-[#0b477b] mb-6">How the System Works</h2>
+                    <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] mb-6">How the System Works</h2></FadeUp>
                     <div className="w-16 h-1 rounded-full bg-[#0b477b] mx-auto mb-9" />
 
                     <p className="text-[22px] text-gray-500 max-w-3xl mx-auto mb-6 leading-relaxed">
@@ -220,17 +221,17 @@ export default function VentilatorCompressorPage() {
             <section className="bg-[#fdf6f2] px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
                     <div className="text-center mb-14">
-                        <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Key Features & Benefits</h2>
+                        <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Key Features & Benefits</h2></FadeUp>
                         <p className="text-md text-gray-500">
                             Engineered for reliability, quiet operation, and pristine air quality.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
                         {features.map(({ icon, title, desc }) => (
                             <div
                                 key={title}
-                                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4"
+                                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col gap-4 hover:scale-105 transition-all duration-300"
                             >
                                 <div className="w-12 h-12 rounded-lg flex items-center justify-center border border-gray-200 bg-gray-50">
                                     {icon}
@@ -255,9 +256,9 @@ export default function VentilatorCompressorPage() {
 
                     {/* Left — Specs table */}
                     <div>
-                        <h2 className="text-2xl font-bold text-[#0b2d4e] mb-5">
+                        <FadeUp> <h2 className="text-2xl font-bold text-[#0b477b] mb-5">
                             Typical Technical Specifications
-                        </h2>
+                        </h2></FadeUp>
                         <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white">
                             <table className="w-full">
                                 <thead>
@@ -280,9 +281,9 @@ export default function VentilatorCompressorPage() {
 
                     {/* Right — Scope of Supply */}
                     <div>
-                        <h2 className="text-2xl font-bold text-[#0b2d4e] mb-5">
+                        <FadeUp><h2 className="text-2xl font-bold text-[#0b477b] mb-5">
                             Standard Scope of Supply
-                        </h2>
+                        </h2></FadeUp>
                         <div className="bg-[#0b477b] rounded-2xl p-9">
                             <p className="text-md text-blue-100 leading-relaxed mb-5">
                                 Every Technik Spirits standalone medical ventilator air compressor
@@ -317,9 +318,9 @@ export default function VentilatorCompressorPage() {
             {/* ── FREQUENTLY ASKED QUESTIONS ── */}
             <section className="bg-[#f7f9fb] px-6 py-16">
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-bold text-[#0b2d4e] text-center mb-10">
+                    <FadeUp><h2 className="text-2xl font-bold text-[#0b477b] text-center mb-10">
                         Frequently Asked Questions
-                    </h2>
+                    </h2></FadeUp>
                     <div className="flex flex-col gap-4">
                         {faqs.map((faq, i) => (
                             <div key={faq.q} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
@@ -355,16 +356,20 @@ export default function VentilatorCompressorPage() {
             <section className="bg-gray-100 px-6 py-14">
                 <div className="max-w-[1360px] mx-auto text-center">
                     <h2 className="text-4xl font-semibold text-[#0b477b] mb-6 max-w-[750px] mx-auto">Need a standalone medical air compressor for your ventilators?</h2>
-                    <p className="text-lg text-gray-500 mb-10 max-w-[750px] mx-auto">
+                    <p className="text-md text-gray-500 mb-10 max-w-[600px] mx-auto">
                         Our engineering team can help you determine the right configuration - standalone bedside compressors, centralized medical air, or a combination - based on your facility's clinical requirements
                     </p>
                     <div className="flex justify-center gap-6 flex-wrap">
-                        <Link href="/contact" className="inline-block bg-[#0b477b] border border-white/30 text-white text-sm font-bold px-6 py-4 rounded-full transition-colors">
-                            Talk Discuss Your Requiremento Our Engineers
-                        </Link>
-                        <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-6 py-4 rounded-full transition-colors">
-                            Explore Integrex medical Air Compressor System
-                        </Link>
+                        <HoverCard>
+                            <Link href="/contact" className="inline-block bg-[#0b477b] border border-white/30 text-white text-sm font-bold px-6 py-4 rounded-full transition-colors">
+                                Talk Discuss Your Requiremento Our Engineers
+                            </Link>
+                        </HoverCard>
+                        <HoverCard>
+                            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-6 py-4 rounded-full transition-colors">
+                                Explore Integrex medical Air Compressor System
+                            </Link>
+                        </HoverCard>
                     </div>
                 </div>
             </section>

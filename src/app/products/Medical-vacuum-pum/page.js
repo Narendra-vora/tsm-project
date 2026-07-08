@@ -1,112 +1,7 @@
-// 'use client';
-
-// import Link from "next/link";
-// import Image from "next/image";
-
-// export default function MedicalVacuumPumps() {
-//     return (
-//         <main className="bg-white min-h-screen">
-//             <section className="relative px-6 py-20 overflow-hidden bg-gradient-to-b from-[#eaf3fb] to-[#d9ecf9]">
-//                 {/* Background image with waves */}
-//                 <div className="absolute inset-0 z-0">
-//                     <Image
-//                         src="/mgps_plant.png"
-//                         alt="MGPS Design"
-//                         fill
-//                         className="object-cover object-center opacity-40"
-//                         priority
-//                     />
-//                     <div className="absolute inset-0 bg-gradient-to-b from-[#eaf3fb]/80 via-[#eaf3fb]/60 to-[#d9ecf9]/80" />
-//                 </div>
-
-//                 <div className="relative z-10 max-w-3xl mx-auto text-center">
-//                     <h1 className="text-4xl sm:text-5xl font-semibold text-[#0b477b] mb-5 leading-tight">
-//                         MGPS Design & Consulting
-//                         <br />
-//                         Services
-//                     </h1>
-
-//                     <p className="text-sm sm:text-base text-[#0b477b]/80 leading-relaxed mb-12 max-w-2xl mx-auto">
-//                         Medical gas pipeline system design, plant room planning,
-//                         and compliance support for hospitals. We provide
-//                         evidence-based engineering aligned with ISO 7396-1 and
-//                         HTM 02-01.
-//                     </p>
-
-//                     <Link
-//                         href="/contact"
-//                         className="inline-block bg-[#0b2d4e] text-white text-sm font-semibold px-8 py-3.5 rounded-full transition-colors shadow-lg"
-//                         style={{ textDecoration: "none" }}
-//                     >
-//                         Discuss Your Project
-//                     </Link>
-//                 </div>
-//             </section>
-//             {/* niche ka section here */}
-//             <section className="bg-[#eaf2fc] text-center px-6 py-16 md:py-20 mb-10">
-//                 <h1 className="text-3xl md:text-4xl font-semibold text-[#0b477b] mb-4">
-//                     Rotary Vane
-//                 </h1>
-//                 <div className="w-16 h-[3px] bg-[#0b477b] mx-auto my-4 rounded mb-12" />
-//                 <p className=" text-lg md:text-lg mx-auto text-grey-100 leading-relaxed max-w-[800px]">
-//                     The Rotary Vane Medical Vacuum Pump System is a centralized solution
-//                     engineered for continuous hospital operation. With quiet
-//                     performance, minimal vibration, and a compact skid-mounted design,
-//                     it delivers reliable medical-grade suction while improving energy
-//                     efficiency, installation flexibility, and long-term operational
-//                     reliability.
-//                 </p>
-//             </section>
-//             {/* SECTION 2: BOXES + IMAGE */}
-//             <section className="bg-[#fdf7f4] px-6 py-16">
-//                 <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-stretch justify-center">
-//                     {/* LEFT: 2 boxes */}
-//                     <div className="flex flex-col gap-5 w-full md:w-[400px]">
-//                         <div className="bg-[#1a4a73] text-[#eef4fa] rounded-2xl p-7 flex-1">
-//                             <h2 className="text-xl font-bold mb-3">How the System Works?</h2>
-//                             <p className="text-sm leading-relaxed text-[#dce8f2]">
-//                                 The Rotary Vane Medical Vacuum Pump System is a fully
-//                                 integrated, centralized solution that delivers reliable
-//                                 medical-grade suction across the hospital MGPS network. Its
-//                                 balanced rotary technology ensures quiet, low-vibration
-//                                 operation, while advanced filtration and a PLC-based,
-//                                 BMS-ready control system provide clean, consistent, and
-//                                 dependable performance for continuous hospital use.
-//                             </p>
-//                         </div>
-
-//                         <div className="bg-[#1a4a73] text-[#eef4fa] rounded-2xl p-7 flex-1">
-//                             <h2 className="text-xl font-bold mb-3">Why Choose Rotary Vane?</h2>
-//                             <p className="text-sm leading-relaxed text-[#dce8f2]">
-//                                 Rotary vane technology provides quieter operation, minimal
-//                                 vibration, and smooth, continuous suction compared to
-//                                 conventional reciprocating systems. Its compact design,
-//                                 reliable performance, and lower lifecycle costs make it an
-//                                 ideal solution for modern centralized hospital vacuum
-//                                 systems.
-//                             </p>
-//                         </div>
-//                     </div>
-
-//                     {/* RIGHT: image, same width/height as left column */}
-//                     <div className="relative w-full md:w-[340px] rounded-2xl overflow-hidden bg-[#f3f3f3]">
-//                         <Image
-//                             src="/rotary-vane-pump.jpg" // apni image public/ folder me daal kar path update karo
-//                             alt="Rotary Vane Pump System"
-//                             fill
-//                             className="object-cover"
-//                         />
-//                     </div>
-//                 </div>
-//             </section>
-
-
-//         </main>
-//     );
-// }
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { FadeUp, HoverCard } from "@/components/Animations";
 
 export default function RotaryVanePage() {
     return (
@@ -117,7 +12,7 @@ export default function RotaryVanePage() {
                 {/* Background image with waves */}
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/mgps_plant.png"
+                        src="/medical vacuum pump.webp"
                         alt="MGPS Design"
                         fill
                         className="object-cover object-center opacity-40"
@@ -150,7 +45,7 @@ export default function RotaryVanePage() {
             </section>
             {/* ── ROTARY VANE INTRO ── */}
             <section className="max-w-[1500px] bg-[#f4f7fb] mx-auto px-6 py-16 text-center">
-                <h2 className="text-4xl font-semibold text-[#0b477b] mb-4">Rotary Vane</h2>
+                <FadeUp>  <h2 className="text-4xl font-semibold text-[#0b477b] mb-4">Rotary Vane</h2></FadeUp>
                 <div className="w-16 h-1 rounded-full bg-[#0b477b] mx-auto mb-9" />
                 <p className="text-[19px] text-gray-500 leading-relaxed max-w-4xl mx-auto">
                     The Rotary Vane Medical Vacuum Pump System is a centralized solution engineered for
@@ -167,7 +62,7 @@ export default function RotaryVanePage() {
                     {/* LEFT: 2 boxes, slightly narrower */}
                     <div className="flex flex-col gap-7 w-full lg:max-w-[650px]">
                         <article className="bg-[#0b477b] text-white rounded-[18px] p-7 shadow-sm">
-                            <h3 className="text-2xl font-semibold mb-4 mt-3">How the System Works?</h3>
+                            <FadeUp>  <h3 className="text-2xl font-semibold mb-4 mt-3">How the System Works?</h3></FadeUp>
                             <p className="text-[18px] leading-7 text-[#c8d9ea]">
                                 The Rotary Vane Medical Vacuum Pump System is a fully integrated, centralized
                                 solution that delivers reliable medical-grade suction across the hospital MGPS
@@ -178,7 +73,7 @@ export default function RotaryVanePage() {
                         </article>
 
                         <article className="bg-[#0b477b] text-white rounded-[18px] p-7 shadow-sm">
-                            <h3 className="text-2xl font-semibold mb-4 mt-4">Why Choose Rotary Vane?</h3>
+                            <FadeUp>  <h3 className="text-2xl font-semibold mb-4 mt-4">Why Choose Rotary Vane?</h3></FadeUp>
                             <p className="text-[18px] leading-7 text-[#c8d9ea]">
                                 Rotary vane technology provides quieter operation, minimal vibration, and smooth,
                                 continuous suction compared to conventional reciprocating systems. Its compact
@@ -203,9 +98,9 @@ export default function RotaryVanePage() {
             {/* ══════════════════ PERFORMANCE THAT BENEFITS ══════════════════ */}
             < section className="bg-[#f4f7fb] px-6 py-12" >
                 <div className="max-w-[1360px] mx-auto">
-                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center tracking-wide mb-8">
+                    <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] text-center tracking-wide mb-8">
                         PERFORMANCE THAT BENEFITS
-                    </h2>
+                    </h2></FadeUp>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
                         {[
                             { value: "Up to 80%", label: "Less Noise" },
@@ -213,13 +108,17 @@ export default function RotaryVanePage() {
                             { value: "Up to 80%", label: "Less Space" },
                             { value: "Up to 70%", label: "Lower Electricity" },
                         ].map((stat) => (
-                            <div
-                                key={stat.label}
-                                className="bg-white border border-gray-200 rounded-2xl py-6 px-4 text-center shadow-sm"
-                            >
-                                <div className="text-4xl font-semibold text-[#0b477b] mb-1">{stat.value}</div>
-                                <div className="text-sm  text-[#0b477b]">{stat.label}</div>
-                            </div>
+                            <FadeUp key={stat.label}>
+                                <HoverCard>
+                                    <div
+
+                                        className="bg-white border border-gray-200 rounded-2xl py-6 px-4 text-center shadow-sm"
+                                    >
+                                        <div className="text-4xl font-semibold text-[#0b477b] mb-1">{stat.value}</div>
+                                        <div className="text-sm  text-[#0b477b]">{stat.label}</div>
+                                    </div>
+                                </HoverCard>
+                            </FadeUp>
                         ))}
                     </div>
                 </div>
@@ -228,7 +127,7 @@ export default function RotaryVanePage() {
             {/* ══════════════════ FEATURES & CRITICAL BENEFITS ══════════════════ */}
             <section className="bg-[#eef5fc] px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
-                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-16">Features & Critical Benefits</h2>
+                    <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-16">Features & Critical Benefits</h2></FadeUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             {
@@ -274,7 +173,7 @@ export default function RotaryVanePage() {
                         ].map((f) => (
                             <div
                                 key={f.title}
-                                className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-all duration-200"
+                                className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md hover:scale-105 transition-all duration-300"
                             >
                                 <div className="w-10 h-10 rounded-lg bg-[#f9fafb] border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
                                     {f.icon}
@@ -290,14 +189,14 @@ export default function RotaryVanePage() {
             </section>
 
             <section className="w-full bg-[#f5f1ec] py-10 px-6">
-                <div className="max-w-5xl mx-auto grid grid-cols-2 gap-6 items-stretch">
+                <div className="max-w-5xl mx-auto grid grid-cols-2 gap-12 items-stretch">
 
                     {/* Left — text box */}
                     <div className="bg-[#0b477b] rounded-3xl p-8 flex flex-col justify-center">
                         <h2 className="text-white text-2xl font-bold mb-4">
                             How the System Works?
                         </h2>
-                        <p className="text-blue-200 text-sm leading-relaxed">
+                        <p className="text-blue-200 text-sm leading-relaxed ">
                             A centralized safety ecosystem designed to remove wThe
                             Reciprocating Medical Vacuum Pump System delivers reliable
                             medical-grade suction through proven piston technology. Equipped
@@ -323,7 +222,7 @@ export default function RotaryVanePage() {
 
             {/* ── ROTARY VANE INTRO ── */}
             <section className="max-w-[1500px] bg-[#f4f7fb] mx-auto px-6 py-16 text-center">
-                <h2 className="text-4xl font-semibold text-[#0b477b] mb-4">Reciprocating</h2>
+                <FadeUp> <h2 className="text-4xl font-semibold text-[#0b477b] mb-4">Reciprocating</h2></FadeUp>
                 <div className="w-16 h-1 rounded-full bg-[#0b477b] mx-auto mb-9" />
                 <p className="text-[19px] text-gray-500 leading-relaxed max-w-4xl mx-auto">
                     The Reciprocating Medical Vacuum Pump System is a reliable, heavy-duty solution for centralized hospital suction. Designed for operating theatres, ICUs, and wards, it delivers dependable vacuum performance with PLC-based automatic controls, making it an ideal choice for hospitals seeking proven technology and cost-effective operation.
@@ -335,7 +234,7 @@ export default function RotaryVanePage() {
             {/* ══════════════════ FEATURES & CRITICAL BENEFITS ══════════════════ */}
             <section className="bg-[#eef5fc] px-6 py-16">
                 <div className="max-w-[1360px] mx-auto">
-                    <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-16">Features & Critical Benefits</h2>
+                    <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-16">Features & Critical Benefits</h2></FadeUp>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             {
@@ -381,7 +280,7 @@ export default function RotaryVanePage() {
                         ].map((f) => (
                             <div
                                 key={f.title}
-                                className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-all duration-200"
+                                className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md hover:scale-105 transition-all duration-300"
                             >
                                 <div className="w-10 h-10 rounded-lg bg-[#f9fafb] border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
                                     {f.icon}
@@ -396,19 +295,23 @@ export default function RotaryVanePage() {
                 </div>
             </section>
             {/* ── FINAL CTA ── */}
-            <section className="bg-white px-6 py-14">
+            <section className="bg-gray-50 px-6 py-14">
                 <div className="max-w-[1360px] mx-auto text-center">
-                    <h2 className="text-3xl font-semibold text-[#0b477b] mb-9 max-w-[950px] mx-auto"> Let's find the right integrex medical Vacuum system for your hospital</h2>
-                    <p className="text-md text-gray-700 mb-12 max-w-[800px] mx-auto">
+                    <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] mb-9 max-w-[950px] mx-auto"> Let's find the right integrex medical Vacuum system for your hospital</h2></FadeUp>
+                    <p className="text-md text-gray-500 mb-12 max-w-[800px] mx-auto">
                         Whether you're evaluating reciprocating or rotary vane vacuum technology - or need help determining which system suits your facility - our engineering team can help you select the right configuration.
                     </p>
                     <div className="flex justify-center gap-4 flex-wrap">
-                        <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
-                            Talk to Our Engineers
-                        </Link>
-                        <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors">
-                            Download Datasheets (PDF)
-                        </Link>
+                        <HoverCard>
+                            <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#0a3d6a] transition-colors">
+                                Talk to Our Engineers
+                            </Link>
+                        </HoverCard>
+                        <HoverCard>
+                            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors">
+                                Download Datasheets (PDF)
+                            </Link>
+                        </HoverCard>
                     </div>
                 </div>
             </section>

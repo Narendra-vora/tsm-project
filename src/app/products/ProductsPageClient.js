@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { FadeUp } from '@/components/Animations';
+
 
 
 
@@ -191,9 +193,9 @@ export default function ProductsPageClient() {
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0b477b]">
+            <FadeUp><h2 className="text-2xl sm:text-3xl font-bold text-[#0b477b]">
               Comprehensive Product Range
-            </h2>
+            </h2></FadeUp>
             <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1 self-start sm:self-auto">
               <button
                 onClick={() => setViewMode('grid')}

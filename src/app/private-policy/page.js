@@ -1,4 +1,5 @@
 "use client";
+import { FadeUp, HoverCard } from "@/components/Animations";
 
 export default function PrivacyPolicyPage() {
     return (
@@ -17,7 +18,7 @@ export default function PrivacyPolicyPage() {
                     textAlign: "center",
                     border: "1px solid #e8eaf0"
                 }}>
-                    <h1 style={{ fontSize: 28, fontWeight: 700, color: "#1a2340", margin: "0 0 6px" }}>Privacy Policy</h1>
+                    <FadeUp><h1 style={{ fontSize: 28, fontWeight: 700, color: "#1a2340", margin: "0 0 6px" }}>Privacy Policy</h1></FadeUp>
                     <p style={{ color: "#5a6280", fontSize: 14, margin: "0 0 20px" }}>Technik Spirits MedTech Private Limited</p>
 
                     {/* Info Bar */}
@@ -150,7 +151,7 @@ export default function PrivacyPolicyPage() {
                 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
                         <span style={{ fontSize: 18 }}>📞</span>
-                        <h2 style={{ fontSize: 16.5, fontWeight: 700, color: "#1a2340", margin: 0 }}>7. Contact Us</h2>
+                        <FadeUp><h2 style={{ fontSize: 16.5, fontWeight: 700, color: "#1a2340", margin: 0 }}>7. Contact Us</h2></FadeUp>
                     </div>
                     <div style={{ borderTop: "1px dashed #e0e4ef", paddingTop: 16 }}>
                         <p style={{ fontSize: 13.5, color: "#4a5270", margin: "0 0 16px", lineHeight: 1.75 }}>
@@ -220,7 +221,7 @@ export default function PrivacyPolicyPage() {
                 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
                         <span style={{ fontSize: 18 }}>🕐</span>
-                        <h2 style={{ fontSize: 16.5, fontWeight: 700, color: "#1a2340", margin: 0 }}>8. Changes to This Policy</h2>
+                        <FadeUp><h2 style={{ fontSize: 16.5, fontWeight: 700, color: "#1a2340", margin: 0 }}>8. Changes to This Policy</h2></FadeUp>
                     </div>
                     <div style={{ borderTop: "1px dashed #e0e4ef", paddingTop: 16 }}>
                         <p style={{ fontSize: 13.5, color: "#4a5270", margin: 0, lineHeight: 1.75 }}>
@@ -282,9 +283,9 @@ function Section({ icon, number, title, children }) {
         }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
                 <span style={{ fontSize: 18 }}>{icon}</span>
-                <h2 style={{ fontSize: 16.5, fontWeight: 700, color: "#1a2340", margin: 0 }}>
+                <FadeUp><h2 style={{ fontSize: 16.5, fontWeight: 700, color: "#1a2340", margin: 0 }}>
                     {number}. {title}
-                </h2>
+                </h2></FadeUp>
             </div>
             <div style={{ borderTop: "1px dashed #e0e4ef", paddingTop: 16 }}>
                 {children}

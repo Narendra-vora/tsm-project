@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { FadeUp, HoverCard } from "@/components/Animations";
 
 export default function PressMediaPage() {
     return (
@@ -44,11 +45,14 @@ export default function PressMediaPage() {
 
                     {/* Left */}
                     <div>
-                        <h2 className="text-3xl font-semibold text-[#0b477b] mb-6">About Technik Spirits MedTech</h2>
+                        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] mb-6">About Technik Spirits MedTech</h2></FadeUp>
                         <div className="w-12 h-1 bg-[#0b477b] rounded mb-7" />
+
                         <p className="text-sm text-gray-700 leading-relaxed mb-4">
                             Technik Spirits MedTech Private Limited (formerly Technik Spirits Inc.) is a premier healthcare engineering and manufacturing company with an exclusive focus on hospital medical gas plant-room systems.
                         </p>
+
+
                         <p className="text-sm text-gray-700 leading-relaxed mb-4">
                             Our portfolio includes advanced medical air compressors, medical vacuum pump systems, oxygen generators, and anaesthetic gas scavenging systems (AGSS), all engineered to exceed ISO 13485 standards.
                         </p>
@@ -92,10 +96,12 @@ export default function PressMediaPage() {
             <section className="max-w-[1360px] mx-auto px-6 pb-14">
                 <div className="flex items-center justify-between mb-9">
                     <div>
-                        <h2 className="text-3xl font-semibold text-[#0b477b]">In the News</h2>
+                        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b]">In the News</h2></FadeUp>
+
                         <p className="text-md text-gray-500 mt-1">
                             Stay updated with our latest technical breakthroughs and corporate announcements.
                         </p>
+
                     </div>
                     <Link href="#" className="text-md text-[#0b477b] font-semibold flex items-center gap-1" style={{ textDecoration: "none" }}>
                         View Archive →
@@ -200,7 +206,7 @@ export default function PressMediaPage() {
                 <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
                     {/* Header */}
                     <div className="bg-gray-50 border-b border-gray-200 px-8 py-8 text-center">
-                        <h2 className="text-3xl font-semibold text-[#0b477b]">Media Contact</h2>
+                        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b]">Media Contact</h2></FadeUp>
                         <p className="text-md text-gray-500 mt-2">
                             For press enquiries, interviews, or additional information, please contact our <br />dedicated relations team.
                         </p>

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { FadeUp, HoverCard } from '@/components/Animations';
 
 /* ─── Stats Bar Data ────────────────────────────────────────────── */
 const stats = [
@@ -132,7 +133,7 @@ function AboutPage() {
                     </p>
 
                     {/* CTA Button */}
-                    <Link
+                    <FadeUp><Link
                         href="#evolution"
                         className="inline-flex items-center gap-2 bg-[#0b477b] hover:bg-[#0d599b] text-white px-8 py-3.5 rounded-full text-sm font-semibold shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-xl group mb-8"
                     >
@@ -146,7 +147,7 @@ function AboutPage() {
                         >
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
-                    </Link>
+                    </Link></FadeUp>
                 </div>
             </section>
 
@@ -175,12 +176,12 @@ function AboutPage() {
                 <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section header */}
                     <div className="text-center mb-14">
-                        <h2 className="text-4xl sm:text-4xl font-semibold text-[#1a2a3a]">
+                        <FadeUp><h2 className="text-4xl sm:text-4xl font-semibold text-[#1a2a3a]">
                             The Evolution of{' '}
                             <span className="relative inline-block text-[#0b477b]">
                                 Excellence
                             </span>
-                        </h2>
+                        </h2></FadeUp>
                         <p className="text-gray-500 mt-5 text-sm sm:text-base max-w-2xl mx-auto">
                             Over five decades of specialized medical sector focus and in-depth engineering mastery.
                         </p>
@@ -260,6 +261,7 @@ function AboutPage() {
                         <div className="lg:col-span-5 flex flex-col gap-6">
 
                             {/* Box 1 — Medical Specialist (dark navy) */}
+
                             <div className="bg-[#0b477b] text-white rounded-2xl p-7 relative overflow-hidden">
                                 {/* decorative circles */}
                                 <div className="absolute -top-8 -right-10 w-34  h-36 rounded-full bg-white/5" />
@@ -284,6 +286,7 @@ function AboutPage() {
                                     </p>
                                 </div>
                             </div>
+
 
                             {/* Box 2 — Integrex (white) */}
                             <div className="border border-gray-200 rounded-2xl p-7 bg-white relative overflow-hidden">
@@ -396,7 +399,7 @@ function AboutPage() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <h3 className="text-xl font-bold text-[#1a2a3a] mb-2">Inquiry Sent!</h3>
+                                    <FadeUp><h3 className="text-xl font-bold text-[#1a2a3a] mb-2">Inquiry Sent!</h3></FadeUp>
                                     <p className="text-gray-500 text-sm">We'll get back to you shortly.</p>
                                 </div>
                             ) : (

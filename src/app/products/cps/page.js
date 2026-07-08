@@ -1,45 +1,50 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { FadeUp, HoverCard } from "@/components/Animations";
 
 export default function CPSage() {
   return (
     <main className="bg-white min-h-screen">
 
       {/* ── HERO ── */}
-      <section className="relative bg-white overflow-hidden min-h-[420px] flex items-center">
-        <div className="max-w-[1360px] mx-auto grid grid-cols-2 gap-10 items-center">
-          <div>
-            {/* <span className="inline-block text-[10px] font-bold bg-[#E05A36] text-white px-3 py-1 rounded-full uppercase tracking-widest mb-5">
-              Engineering Excellence
-            </span> */}
-            <span className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0b477b] px-4 py-1.5 rounded-full uppercase tracking-widest mb-5 bg-white/70 border border-[#0b477b]/10">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#0b477b]" />
-              Engineering Excellence
-            </span>
-            <h1 className="text-5xl font-semibold text-[#0b477b] mb-4 leading-tight">
-              Compressors, Pumps & <br /> Spares
-            </h1>
-            <p className="text-sm text-[#0b477b] leading-relaxed mb-7 w-[650px]">
-              Genuine Thomas & Gast compressors, vacuum pumps, spare parts, and <br /> maintenance services. Technical precision meets industrial reliability for<br /> medical and laboratory applications.
-            </p>
-            <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-semibold px-6 py-3 rounded-3xl hover:bg-[#0b477b] transition-colors">
-              Get in Touch
-            </Link>
-          </div>
-          <div className="flex justify-center">
-            <div className="rounded-2xl overflow-hidden w-full h-58 relative">
-              <Image src="/Thomas_F47_E160N42-.png
-              " alt="Compressor" fill className="object-contain" />
-            </div>
-          </div>
+      <section className="relative w-full min-h-[420px] lg:min-h-[500px] flex items-center overflow-hidden">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/cps.webp"
+            alt="Compressors, Pumps &amp; Spares background"
+            fill
+            priority
+            className="object-cover object-right"
+          />
+          {/* Left fade overlay to remove white edges */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#e8f3fc] via-[#e8f3fc]/70 to-transparent" />
+        </div>
+
+        {/* Text content placed directly at left edge with padding */}
+        <div className="relative z-10 w-full pl-8 sm:pl-14 lg:pl-20 pr-6 py-14">
+          <span className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0b477b] px-4 py-1.5 rounded-full uppercase tracking-widest mb-5 bg-white/80 border border-[#e0ecf8]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0b477b]" />
+            Engineering Excellence
+          </span>
+          <h1 className="text-5xl font-semibold text-[#0b477b] mb-4 leading-tight max-w-[520px]">
+            Compressors, Pumps &amp; <br /> Spares
+          </h1>
+          <div className="w-20 h-1 bg-[#0b477b] mt-2 mb-6 rounded-full" />
+          <p className="text-gray-700 text-base leading-relaxed max-w-[480px] mb-8">
+            Genuine Thomas &amp; Gast compressors, vacuum pumps, spare parts, and maintenance services. Technical precision meets industrial reliability for medical and laboratory applications.
+          </p>
+          <Link href="/contact" className="inline-block bg-[#0b477b] text-white text-sm font-semibold px-6 py-3 rounded-3xl transition-colors shadow-md hover:scale-[1.02]">
+            Get in Touch
+          </Link>
         </div>
       </section>
 
       {/* ── SUPPLY OF COMPRESSORS ── */}
       <section className="bg-gray-50 py-16 px-6">
         <div className="max-w-[1360px] mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Supply of Compressors and Pumps</h2>
+          <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Supply of Compressors and Pumps</h2></FadeUp>
           <div className="w-16 h-1 bg-[#0b477b] mb-10" />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -95,6 +100,7 @@ export default function CPSage() {
                   Fast-moving Thomas and Gast models are held in local inventory for quick turnaround on new and replacement requirements.
                 </p>
               </div>
+
               <button className="w-full bg-[#E05A36] text-white text-md font-semibold py-3.5 rounded-full hover:bg-[#c94d2c] transition-colors mt-auto">
                 Check Inventory
               </button>
@@ -108,7 +114,7 @@ export default function CPSage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
           {/* Left */}
           <div className="flex flex-col gap-6">
-            <h2 className="text-3xl font-semibold text-[#0b477b] leading-tight">Spare Parts and Service Kits</h2>
+            <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] leading-tight">Spare Parts and Service Kits</h2></FadeUp>
             <p className="text-md text-gray-500 leading-relaxed">
               We stock genuine Thomas and Gast spare parts to maintain the long-term performance and reliability of your vacuum and pressure systems.
             </p>
@@ -167,7 +173,7 @@ export default function CPSage() {
       <section className="bg-gray-50 px-6 py-14">
         <div className="max-w-[1360px] mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-semibold text-[#0b477b] mb-4">Repairing and Overhauling Services</h2>
+            <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] mb-4">Repairing and Overhauling Services</h2></FadeUp>
             <p className="text-md text-gray-500 max-w-[570px] mx-auto leading-relaxed ">
               Restoring your Thomas & Gast equipment to reliable operating conditions with manufacturer-approved precision.
             </p>
@@ -205,13 +211,17 @@ export default function CPSage() {
                 desc: "Comprehensive AMC coverage for complete systems including compressors, pumps, dryers and control panels with structured preventive care."
               },
             ].map((card) => (
-              <div key={card.title} className="bg-white border border-gray-200 rounded-2xl p-5">
-                <div className="w-9 h-9 bg-[#eef5fc] rounded-lg flex items-center justify-center mb-4">
-                  {card.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-[#0b477b] mb-2">{card.title}</h3>
-                <p className="text-md text-gray-500 leading-relaxed mb-10">{card.desc}</p>
-              </div>
+              <FadeUp key={card.title}>
+                <HoverCard>
+                  <div className="bg-white border border-gray-200 rounded-2xl p-5 h-full">
+                    <div className="w-9 h-9 bg-[#eef5fc] rounded-lg flex items-center justify-center mb-4">
+                      {card.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-[#0b477b] mb-2">{card.title}</h3>
+                    <p className="text-md text-gray-500 leading-relaxed mb-10">{card.desc}</p>
+                  </div>
+                </HoverCard>
+              </FadeUp>
             ))}
           </div>
         </div>
@@ -219,15 +229,16 @@ export default function CPSage() {
       {/* ── FINAL CTA ── */}
       <section className="bg-gray-100 px-6 py-14">
         <div className="max-w-[1360px] mx-auto text-center">
-          <h2 className="text-4xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Looking for Thomas & Gast Spares?</h2>
-          <p className="text-md text-greyt-100 mb-8 max-w-[650px] mx-auto">
+          <FadeUp><h2 className="text-4xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Looking for Thomas & Gast Spares?</h2></FadeUp>
+          <p className="text-md text-gray-500 mb-8 max-w-[650px] mx-auto">
             Whether you need a replacement compressor, a service kit, or ongoing AMC coverage for your equipment, our team is ready to assist.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-
-            <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
-              Get in touch
-            </Link>
+            <HoverCard>
+              <Link href="#" className="inline-block bg-[#E05A36] text-white text-sm font-bold px-7 py-3.5 rounded-full transition-colors">
+                Get in touch
+              </Link>
+            </HoverCard>
           </div>
         </div>
       </section>

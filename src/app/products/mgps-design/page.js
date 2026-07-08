@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { HoverCard, FadeUp } from "@/components/Animations";
 
 export default function MGPSDesignPage() {
   return (
@@ -32,7 +33,7 @@ export default function MGPSDesignPage() {
         {/* Background image with waves */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/mgps_plant.png"
+            src="/mgps design.webp"
             alt="MGPS Design"
             fill
             className="object-cover object-center opacity-40"
@@ -47,6 +48,7 @@ export default function MGPSDesignPage() {
           <p className="text-sm sm:text-base text-[#0b477b]/80 leading-relaxed mb-12 max-w-2xl mx-auto">
             Medical gas pipeline system design, plant room planning, and compliance support for hospitals. We provide evidence-based engineering aligned with ISO 7396-1 and HTM 02-01.
           </p>
+
           <Link
             href="/contact"
             className="inline-block bg-[#0b2d4e] text-white text-sm font-semibold px-8 py-3.5 rounded-full  transition-colors shadow-lg"
@@ -54,12 +56,13 @@ export default function MGPSDesignPage() {
           >
             Discuss Your Project
           </Link>
+
         </div>
       </section>
 
       {/* ── WHY MGPS MATTERS ── */}
       <section className="max-w-[1530px] bg-white mx-auto px-12 py-20 text-center">
-        <h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Why MGPS design matters early in hospital planning</h2>
+        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Why MGPS design matters early in hospital planning</h2></FadeUp>
         <div className="w-12 h-0.5 bg-[#0b477b] mx-auto mb-5" />
         <p className="text-md text-gray-500 leading-relaxed max-w-5xl mx-auto mb-12">
           Medical gas decisions made during the planning stage affect the hospital for years. Incorrect load assumptions, oversized equipment,<br /> and weak service access create avoidable costs and maintenance issues. A well-planned design helps your team make better<br /> decisions before procurement begins.
@@ -80,11 +83,12 @@ export default function MGPSDesignPage() {
 
       {/* ── WHAT WE DELIVER ── */}
       <section className="max-w-[1500px] bg-gray-50 mx-auto px-6 pb-14 pt-16">
-        <h2 className="mb-2 text-[28px] font-semibold text-[#0b477b] text-center">What We Deliver</h2>
+        <FadeUp><h2 className="mb-2 text-[28px] font-semibold text-[#0b477b] text-center">What We Deliver</h2></FadeUp>
         <p className="mb-10 text-lg text-[#6f6f6f] text-center">Our MGPS design scope is structured, engineering-led, and execution-ready.</p>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-[#0b477b] p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)] lg:col-span-2">
+
+          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-[#0b477b] hover:scale-103 transition-all duration-300 p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)] lg:col-span-2">
             <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#dbeafe] text-[#0b477b]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="5" y="2" width="14" height="20" rx="2" />
@@ -97,7 +101,7 @@ export default function MGPSDesignPage() {
             <p className="max-w-3xl text-[15px] leading-6 text-[#c8d9ea]">Evidence-based consumption analysis for oxygen, medical air, vacuum, AGSS, and specialty gases-factoring specialty mix, bed strength, OT density, and future growth.</p>
           </article>
 
-          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
+          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] hover:scale-103 transition-all duration-300  bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
             <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-xl bg-[#fde6df] text-[#e05a36]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="20" x2="18" y2="10" />
@@ -110,7 +114,7 @@ export default function MGPSDesignPage() {
             <p className="text-[15px] leading-6 text-[#6f6f6f]">Right-sizing equipment with clear zoning, service access, and heat dissipation planning.</p>
           </article>
 
-          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
+          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] hover:scale-103 transition-all duration-300  bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
             <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-xl bg-[#e9edf5] text-[#374151]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
@@ -120,7 +124,7 @@ export default function MGPSDesignPage() {
             <p className="text-[15px] leading-6 text-[#6f6f6f]">Optimized routing with pressure drop control and department-wise isolation strategy.</p>
           </article>
 
-          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
+          <article className="min-h-28 rounded-[18px] border border-[#d6dbe4] hover:scale-103 transition-all duration-300  bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)]">
             <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-xl bg-[#e9edf5] text-[#374151]">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />
@@ -132,7 +136,7 @@ export default function MGPSDesignPage() {
             <p className="text-[15px] leading-6 text-[#6f6f6f]">Integration with architectural and HVAC services to avoid on-site clashes.</p>
           </article>
 
-          <article className="min-h-28 rounded-[18px] border border-[#0d5c96] bg-[#11558f] p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)] lg:col-start-3 lg:row-start-2 ">
+          <article className="min-h-28 rounded-[18px] border border-[#0d5c96] bg-[#11558f] hover:scale-103 transition-all duration-300  p-6 shadow-[0_1px_0_rgba(15,23,42,0.02)] lg:col-start-3 lg:row-start-2 ">
             {/* <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 text-white">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -150,9 +154,9 @@ export default function MGPSDesignPage() {
 
       <section className="bg-[#f8f9fb] px-6 py-16">
         <div className="mx-auto max-w-[900px]">
-          <h2 className="mb-10 text-center text-2xl sm:text-3xl font-semibold text-[#0b477b]">
+          <FadeUp> <h2 className="mb-10 text-center text-2xl sm:text-3xl font-semibold text-[#0b477b]">
             Who This Is For
-          </h2>
+          </h2></FadeUp>
           <div className="flex flex-col gap-5">
             {[
               {
@@ -190,7 +194,7 @@ export default function MGPSDesignPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white px-6 py-5 shadow-sm"
+                className="flex items-center gap-4 rounded-xl border hover:scale-103 transition-all duration-300  border-gray-200 bg-white px-6 py-5 shadow-sm"
               >
                 <div className="shrink-0">{item.icon}</div>
                 <p className="text-[17px] font-semibold text-[#232323]">{item.text}</p>
@@ -203,7 +207,7 @@ export default function MGPSDesignPage() {
       {/* ── BENEFITS FOR HOSPITALS ── */}
       <section className="bg-gray-100 px-6 py-14">
         <div className="max-w-[1360px] mx-auto">
-          <h2 className="text-4xl font-semibold text-[#0b477b] text-center mb-4">Benefits for Hospitals</h2>
+          <FadeUp>  <h2 className="text-4xl font-semibold text-[#0b477b] text-center mb-4">Benefits for Hospitals</h2></FadeUp>
           <div className="w-18 h-1 rounded-md bg-[#0b477b] mx-auto mb-10" />
           <div className="grid grid-cols-3 gap-4 mb-4">
             {[
@@ -211,7 +215,7 @@ export default function MGPSDesignPage() {
               { tag: "SITE EXECUTION", title: "Prevent Rework and Site Clashes", desc: "Integrated planning at the design stage avoids on-site delays, repeated design iterations, and costly modifications before they reach the site." },
               { tag: "TIMELINE SECURITY", title: "Prevent Project Delays", desc: "A ready-to-execute design package with a clear BoQ streamlines tendering and procurement, ensuring commissioning on schedule." },
             ].map((b) => (
-              <div key={b.title} className="bg-white border border-gray-200 rounded-2xl p-5">
+              <div key={b.title} className="bg-white border hover:scale-103 transition-all duration-300  border-gray-200 rounded-2xl p-5">
                 <div className="text-[9px] font-semibold text-[#0b477b] uppercase tracking-widest mb-2">{b.tag}</div>
                 <h3 className="text-xl font-semibold text-navy-900 mb-2 w-[300px]">{b.title}</h3>
                 <p className="text-[16px] text-gray-500 leading-relaxed">{b.desc}</p>
@@ -219,12 +223,12 @@ export default function MGPSDesignPage() {
             ))}
           </div>
           <div className="grid grid-cols-3 gap-4">
-            <div className="bg-white border border-gray-200 rounded-2xl p-5">
+            <div className="bg-white border hover:scale-103 transition-all duration-300  border-gray-200 rounded-2xl p-5">
               <div className="text-[9px] font-bold text-[#0b477b] uppercase tracking-widest mb-2">EQUIPMENT CHOICE</div>
               <h3 className="text-xl font-semibold text-navy-900 mb-2">Objective Specifications</h3>
               <p className="text-[16px] text-gray-400 leading-relaxed">Evaluate equipment options on a like-for-like basis, with grounded technical specifications based on real-world performance.</p>
             </div>
-            <div className="col-span-2 bg-white border border-gray-200 rounded-2xl p-5">
+            <div className="col-span-2 bg-white border hover:scale-103 transition-all duration-300  border-gray-200 rounded-2xl p-5">
               <div className="text-[9px] font-bold text-[#0b477b] uppercase tracking-widest mb-2">COMPLIANCE ASSURANCE</div>
               <h3 className="text-xl font-semibold text-navy-900 mb-2">Accreditation and Audit Readiness</h3>
               <p className="text-[16px] text-gray-500 leading-relaxed">Designs developed with reference to ISO, HTM, NABH and JCI requirements help ensure your facility is better prepared for accreditation audits from day one.</p>
@@ -237,7 +241,7 @@ export default function MGPSDesignPage() {
       <section className="bg-white px-6 py-14">
         <div className="max-w-[1360px] mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[1.15fr_0.95fr] lg:items-center">
           <div>
-            <h2 className="mb-4 text-[26px] font-medium text-[#0b477b] lg:text-[30px]">Why Technik Spirits for MGPS Design</h2>
+            <FadeUp>  <h2 className="mb-4 text-[26px] font-medium text-[#0b477b] lg:text-[30px]">Why Technik Spirits for MGPS Design</h2></FadeUp>
             <p className="mb-4 max-w-xl text-[15px] leading-6 text-gray-500">
               Technik Spirits brings a different perspective. Our design support is grounded in direct manufacturing and engineering experience across medical air, vacuum, and oxygen systems.
             </p>
@@ -245,11 +249,11 @@ export default function MGPSDesignPage() {
               We help teams evaluate real operating conditions-clinical demand, peak load, space constraints, and energy use-before critical project decisions are locked.
             </p>
             <div className="flex max-w-xl gap-3">
-              <div className="flex-1 rounded-xl bg-[#dce8f5] px-4 py-4">
+              <div className="flex-1 rounded-xl hover:scale-103 transition-all duration-300  bg-[#dce8f5] px-4 py-4">
                 <div className="text-[28px] font-semibold leading-none text-navy-800">15+</div>
                 <div className="mt-2 text-[11px] font-medium text-navy-800">Years of Expertise</div>
               </div>
-              <div className="flex-1 rounded-xl bg-[#dce8f5] px-4 py-4">
+              <div className="flex-1 rounded-xl hover:scale-103 transition-all duration-300  bg-[#dce8f5] px-4 py-4">
                 <div className="text-[28px] font-semibold leading-none text-navy-800">500+</div>
                 <div className="mt-2 text-[11px] font-medium text-navy-800">Projects Delivered</div>
               </div>
@@ -276,6 +280,6 @@ export default function MGPSDesignPage() {
         </div>
       </section>
 
-    </main>
+    </main >
   );
 }

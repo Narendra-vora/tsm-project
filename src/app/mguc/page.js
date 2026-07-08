@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-
+import { FadeUp, HoverCard } from "@/components/Animations";
 // ── Conversion Data ──────────────────────────────────────────
 const pressureRows = [
     { from: "1 bar", to: "14.5038 psi" },
@@ -116,83 +116,91 @@ export default function ConverterPage() {
             </section>
             {/* ── 3 CONVERTER CARDS ── */}
             <section className="max-w-[1360px] mx-auto px-4 py-10">
+
                 <div className="grid grid-cols-3 gap-13">
 
                     {/* Pressure */}
-                    <div className="bg-[#0b477b] rounded-2xl p-5 shadow-lg">
-                        <div className="flex items-center gap-2 mb-5">
-                            <div className="w-10 h-10 bg-white/15 rounded-lg flex items-center justify-center">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <line x1="18" y1="20" x2="18" y2="10" />
-                                    <line x1="12" y1="20" x2="12" y2="4" />
-                                    <line x1="6" y1="20" x2="6" y2="14" />
-                                    <line x1="2" y1="20" x2="22" y2="20" />
-                                </svg>
-                            </div>
-                            <h3 className="text-white font-bold text-base">Pressure</h3>
-                        </div>
-                        <div className="space-y-2 mb-4">
-                            {pressureRows.map((r, i) => (
-                                <div key={i} className="flex justify-between bg-white/10 rounded-lg px-3 py-2.5">
-                                    <span className="text-blue-200 text-xs">{r.from}</span>
-                                    <span className="text-white font-semibold text-xs">{r.to}</span>
+                    <HoverCard>
+                        <div className="bg-[#0b477b] rounded-2xl p-5 shadow-lg">
+                            <div className="flex items-center gap-2 mb-5">
+                                <div className="w-10 h-10 bg-white/15 rounded-lg flex items-center justify-center">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <line x1="18" y1="20" x2="18" y2="10" />
+                                        <line x1="12" y1="20" x2="12" y2="4" />
+                                        <line x1="6" y1="20" x2="6" y2="14" />
+                                        <line x1="2" y1="20" x2="22" y2="20" />
+                                    </svg>
                                 </div>
-                            ))}
+                                <h3 className="text-white font-bold text-base">Pressure</h3>
+                            </div>
+                            <div className="space-y-2 mb-4">
+                                {pressureRows.map((r, i) => (
+                                    <div key={i} className="flex justify-between bg-white/10 rounded-lg px-3 py-2.5">
+                                        <span className="text-blue-200 text-xs">{r.from}</span>
+                                        <span className="text-white font-semibold text-xs">{r.to}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button className="mt-6 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors mb-4">
+                                View all conversions →
+                            </button>
                         </div>
-                        <button className="mt-6 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors mb-4">
-                            View all conversions →
-                        </button>
-                    </div>
+                    </HoverCard>
 
                     {/* Vacuum */}
-                    <div className="bg-[#0b477b] rounded-2xl p-5 shadow-lg">
-                        <div className="flex items-center gap-2 mb-5">
-                            <div className="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                                </svg>
-                            </div>
-                            <h3 className="text-white font-bold text-base">Vacuum</h3>
-                        </div>
-                        <div className="space-y-2 mb-4">
-                            {vacuumRows.map((r, i) => (
-                                <div key={i} className="flex justify-between bg-white/10 rounded-lg px-3 py-2.5">
-                                    <span className="text-blue-200 text-xs">{r.from}</span>
-                                    <span className="text-white font-semibold text-xs">{r.to}</span>
+                    <HoverCard>
+                        <div className="bg-[#0b477b] rounded-2xl p-5 shadow-lg">
+                            <div className="flex items-center gap-2 mb-5">
+                                <div className="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                    </svg>
                                 </div>
-                            ))}
+                                <h3 className="text-white font-bold text-base">Vacuum</h3>
+                            </div>
+                            <div className="space-y-2 mb-4">
+                                {vacuumRows.map((r, i) => (
+                                    <div key={i} className="flex justify-between bg-white/10 rounded-lg px-3 py-2.5">
+                                        <span className="text-blue-200 text-xs">{r.from}</span>
+                                        <span className="text-white font-semibold text-xs">{r.to}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button className="mt-6 mb-4 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                                View all conversions →
+                            </button>
                         </div>
-                        <button className="mt-6 mb-4 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
-                            View all conversions →
-                        </button>
-                    </div>
+                    </HoverCard>
 
                     {/* Flow Rate */}
-                    <div className="bg-[#0b477b] rounded-2xl p-5 shadow-lg">
-                        <div className="flex items-center gap-2 mb-5">
-                            <div className="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <polyline points="23 4 23 10 17 10" />
-                                    <polyline points="1 20 1 14 7 14" />
-                                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-                                </svg>
-                            </div>
-                            <h3 className="text-white font-bold text-base">Flow Rate</h3>
-                        </div>
-                        <div className="space-y-2 mb-4">
-                            {flowRows.map((r, i) => (
-                                <div key={i} className="flex justify-between bg-white/10 rounded-lg px-3 py-2.5">
-                                    <span className="text-blue-200 text-xs">{r.from}</span>
-                                    <span className="text-white font-semibold text-xs">{r.to}</span>
+                    <HoverCard>
+                        <div className="bg-[#0b477b] rounded-2xl p-5 shadow-lg">
+                            <div className="flex items-center gap-2 mb-5">
+                                <div className="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <polyline points="23 4 23 10 17 10" />
+                                        <polyline points="1 20 1 14 7 14" />
+                                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                                    </svg>
                                 </div>
-                            ))}
+                                <h3 className="text-white font-bold text-base">Flow Rate</h3>
+                            </div>
+                            <div className="space-y-2 mb-4">
+                                {flowRows.map((r, i) => (
+                                    <div key={i} className="flex justify-between bg-white/10 rounded-lg px-3 py-2.5">
+                                        <span className="text-blue-200 text-xs">{r.from}</span>
+                                        <span className="text-white font-semibold text-xs">{r.to}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <button className="mt-6 mt-4 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
+                                View all conversions →
+                            </button>
                         </div>
-                        <button className="mt-6 mt-4 text-xs text-white font-semibold flex items-center gap-1 hover:text-white transition-colors">
-                            View all conversions →
-                        </button>
-                    </div>
+                    </HoverCard>
 
                 </div>
+
             </section>
 
             {/* ── MEDICAL OXYGEN CONVERSIONS ── */}
@@ -246,23 +254,25 @@ export default function ConverterPage() {
             </section>
 
             {/* ── CTA BANNER ── */}
-            <section className="w-full bg-white">
+            <section className="w-full bg-gray-100">
                 <div className="w-full bg-white border border-gray-200 shadow-sm px-8 py-10 text-center">
-                    <h2 className="text-3xl font-semibold  text-navy-400 mb-3">
+                    <FadeUp>  <h2 className="text-3xl font-semibold  text-[#0b477b] mb-3">
                         Need technical assistance with your MGPS design?
-                    </h2>
+                    </h2></FadeUp>
                     <p className="text-sm text-gray-500 mb-6 max-w-lg mx-auto leading-relaxed">
                         Our engineering team can help with load calculations, pipe sizing, and system architecture to ensure compliance and clinical safety.
                     </p>
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 bg-[#e65c00] hover:bg-orange-600 text-white font-semibold px-7 py-3 rounded-full text-sm transition-colors"
-                    >
-                        Get Quote →
-                    </Link>
+                    <FadeUp>
+                        <Link
+                            href="/contact"
+                            className="inline-flex items-center gap-2 bg-[#e65c00]  text-white font-semibold px-7 py-3 rounded-full text-sm transition-colors"
+                        >
+                            Get Quote →
+                        </Link>
+                    </FadeUp>
                 </div>
             </section>
 
-        </main>
+        </main >
     );
 }
