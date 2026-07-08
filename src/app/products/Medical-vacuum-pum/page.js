@@ -274,18 +274,53 @@ export default function RotaryVanePage() {
                         ].map((f) => (
                             <div
                                 key={f.title}
-                                className="bg-white border-2 border-gray-200 rounded-xl p-5 flex flex-col items-start  hover:shadow-md transition-all duration-200"
+                                className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-all duration-200"
                             >
-                                <div className="w-14 h-14 flex items-center justify-start mb-2">
+                                <div className="w-10 h-10 rounded-lg bg-[#f9fafb] border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
                                     {f.icon}
                                 </div>
-                                <h4 className="text-lg font-semibold text-[#0b477b] mb-1.5">{f.title}</h4>
-                                <p className="text-[16px] text-gray-700 leading-relaxed mb-4 max-w-2xl">{f.desc}</p>
+                                <div>
+                                    <h4 className="text-xl font-semibold text-[#0b477b] mb-2 leading-snug">{f.title}</h4>
+                                    <p className="text-[15px] text-gray-500 leading-relaxed">{f.desc}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
+
+            <section className="w-full bg-[#f5f1ec] py-10 px-6">
+                <div className="max-w-5xl mx-auto grid grid-cols-2 gap-6 items-stretch">
+
+                    {/* Left — text box */}
+                    <div className="bg-[#0b477b] rounded-3xl p-8 flex flex-col justify-center">
+                        <h2 className="text-white text-2xl font-bold mb-4">
+                            How the System Works?
+                        </h2>
+                        <p className="text-blue-200 text-sm leading-relaxed">
+                            A centralized safety ecosystem designed to remove wThe
+                            Reciprocating Medical Vacuum Pump System delivers reliable
+                            medical-grade suction through proven piston technology. Equipped
+                            with advanced filtration and a PLC-based, BMS-ready control
+                            system, it ensures clean, consistent, and dependable vacuum
+                            performance for continuous hospital operation.aste anaesthetic
+                            gases (WAGs) directly from the source.
+                        </p>
+                    </div>
+
+                    {/* Right — image box */}
+                    <div className="bg-white rounded-3xl p-6 flex items-center justify-center">
+                        <img
+                            src="/vacuum-pump.png"
+                            alt="Reciprocating Medical Vacuum Pump System"
+                            className="max-h-[280px] w-auto object-contain"
+                        />
+                    </div>
+
+                </div>
+            </section>
+
+
             {/* ── ROTARY VANE INTRO ── */}
             <section className="max-w-[1500px] bg-[#f4f7fb] mx-auto px-6 py-16 text-center">
                 <h2 className="text-4xl font-semibold text-[#0b477b] mb-4">Reciprocating</h2>
@@ -346,13 +381,15 @@ export default function RotaryVanePage() {
                         ].map((f) => (
                             <div
                                 key={f.title}
-                                className="bg-white border-2 border-gray-200 rounded-xl p-5 flex flex-col items-start  hover:shadow-md transition-all duration-200"
+                                className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-all duration-200"
                             >
-                                <div className="w-14 h-14 flex items-center justify-start mb-2">
+                                <div className="w-10 h-10 rounded-lg bg-[#f9fafb] border border-gray-200 flex items-center justify-center text-[#0b477b] flex-shrink-0">
                                     {f.icon}
                                 </div>
-                                <h4 className="text-lg font-semibold text-[#0b477b] mb-1.5">{f.title}</h4>
-                                <p className="text-[16px] text-gray-700 leading-relaxed mb-4 max-w-2xl">{f.desc}</p>
+                                <div>
+                                    <h4 className="text-xl font-semibold text-[#0b477b] mb-2 leading-snug">{f.title}</h4>
+                                    <p className="text-[15px] text-gray-500 leading-relaxed">{f.desc}</p>
+                                </div>
                             </div>
                         ))}
                     </div>

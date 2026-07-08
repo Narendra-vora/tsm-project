@@ -209,7 +209,7 @@ export default function CPSage() {
                 <div className="w-9 h-9 bg-[#eef5fc] rounded-lg flex items-center justify-center mb-4">
                   {card.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-navy-100 mb-2">{card.title}</h3>
+                <h3 className="text-lg font-semibold text-[#0b477b] mb-2">{card.title}</h3>
                 <p className="text-md text-gray-500 leading-relaxed mb-10">{card.desc}</p>
               </div>
             ))}

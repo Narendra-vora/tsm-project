@@ -63,8 +63,8 @@ export default function ContactPage() {
             </div>
 
             {/* Main Content */}
-            <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
-                <div className="grid grid-cols-1 md:grid-cols-[360px_1fr] gap-6">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+                <div className="grid grid-cols-1 md:grid-cols-[380px_1fr] lg:grid-cols-[400px_1fr] gap-8 lg:gap-12">
 
                     {/* LEFT - Column containing the contact cards */}
                     <div className="flex flex-col gap-6">
@@ -206,8 +206,6 @@ export default function ContactPage() {
                         border: "1px solid #e0e4ef",
                         boxShadow: "0 1px 6px rgba(0,0,0,0.06)",
                         alignSelf: "start",
-                        marginLeft: "16px",
-
                     }}>
                         {submitted ? (
                             <div style={{ textAlign: "center", padding: "60px 20px" }}>
