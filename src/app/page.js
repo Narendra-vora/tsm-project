@@ -89,7 +89,7 @@ export default function HomePage() {
 
       {/* ── 1. TRADITIONAL vs PURPOSE BUILT ── */}
       <section style={{ background: C.offWhite, padding: "48px 24px" }}>
-        <div style={{ maxWidth: 1300, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+        <div className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* LEFT SIDE */}
           <div style={{ padding: "0 40px 0 0" }}>
@@ -123,7 +123,7 @@ export default function HomePage() {
               Every component and architecture is selected with a deep<br /> understanding of clinical applications and how<br /> hospital plant rooms actually operate.
             </p>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px 24px" }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
                 {
                   icon: (
@@ -214,7 +214,7 @@ export default function HomePage() {
       <section style={{ background: C.white, padding: "60px 0" }}>
         <div style={{ maxWidth: 1300, margin: "0 auto" }}>
           <FadeUp>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 32 }}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 px-6 gap-4">
               <div>
                 <div style={{ fontSize: 32, fontWeight: 700, color: "#0b477b", letterSpacing: 1, marginBottom: 6 }}>Our Medical Gas Systems</div>
                 <h2 style={{ fontSize: 19, fontWeight: 500, color: "#565758ff", marginBottom: 20 }}>Smart solutions for systems of every size and speciality</h2>
@@ -225,7 +225,7 @@ export default function HomePage() {
             </div>
           </FadeUp>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28 }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
             {[
               {
                 name: "Medical Air\nCompressor System",
@@ -460,7 +460,7 @@ export default function HomePage() {
             </div>
           </FadeUp>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 26 }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: (
@@ -575,7 +575,7 @@ export default function HomePage() {
               From hospital promoters to plant room operators, every Technik Spirits system is designed<br /> around the needs of the people who plan, specify, operate, and maintain hospital <br />infrastructure.
             </p>
           </FadeUp>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: (
@@ -765,7 +765,7 @@ export default function HomePage() {
               </div>
 
               {/* 3 Standards */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1px 1fr 1px 1fr", alignItems: "center", gap: 0 }}>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-start">
                 {[
                   {
                     icon: (
@@ -814,9 +814,7 @@ export default function HomePage() {
                         <div style={{ fontSize: 14, fontWeight: 300, color: C.white, letterSpacing: 0.8, marginTop: 2, marginBottom: 24 }}>{std.sub}</div>
                       </div>
                     </div>
-                    {i < 2 && (
-                      <div style={{ width: 1, height: 40, background: "rgba(255,255,255,0.15)" }} />
-                    )}
+
                   </React.Fragment>
                 ))}
               </div>
@@ -835,7 +833,7 @@ export default function HomePage() {
             </div>
           </FadeUp>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, alignItems: "stretch" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {[
               {
                 stars: 5,
@@ -937,7 +935,7 @@ export default function HomePage() {
 
       {/* ── 7. HAVE A QUESTION ── */}
       <section style={{ background: C.offWhite, padding: "60px 24px" }}>
-        <div style={{ maxWidth: 1300, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 40, alignItems: "start" }}>
+        <div className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
 
           {/* LEFT */}
           <div style={{ paddingTop: 8 }}>
@@ -1026,7 +1024,7 @@ export default function HomePage() {
           }}>
 
             {/* Name + Phone */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 18 }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4" style={{ marginBottom: 18 }}>
               <div>
                 <div style={labelStyle}>Full Name</div>
                 <input type="text" placeholder="John Doe" style={inputStyle} />

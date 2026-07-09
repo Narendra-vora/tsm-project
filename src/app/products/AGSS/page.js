@@ -30,25 +30,16 @@ export default function AGSSPage() {
     <main className="bg-white min-h-screen">
 
       {/* ── HERO ── */}
-      <section className="relative w-full min-h-[420px] lg:min-h-[500px] flex items-center overflow-hidden">
-        {/* Background ambient image (hospital interior blur) */}
-        <div className="height:500px w-full absolute inset-0 z-0">
-          <Image
-            src="/Agss.webp"
-            alt=""
-            fill
-            className="object-cover object-center opacity-80"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#eef5fc] via-[#eef5fc]/70 to-transparent" />
-        </div>
+      <section className="relative w-full min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] overflow-hidden bg-[#eef5fc]">
+        <div className="max-w-[1360px] mx-auto flex flex-col lg:flex-row items-center min-h-[320px] sm:min-h-[420px] lg:min-h-[500px]">
 
-        <div className="relative z-10 max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div>
+          {/* Left — text */}
+          <div className="relative z-10 flex-1 pl-5 sm:pl-14 lg:pl-20 pr-5 sm:pr-10 py-10 sm:py-14">
             <span className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0b477b] px-4 py-1.5 rounded-full uppercase tracking-widest mb-5 bg-white/70 border border-[#0b477b]/10">
               <span className="w-1.5 h-1.5 rounded-full bg-[#0b477b]" />
               Precision Engineering
             </span>
-            <h1 className="text-5xl sm:text-6xl font-semibold text-[#0b2d4e] mb-5 leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#0b477b] mb-4 sm:mb-5 leading-tight">
               Anaesthetic Gas<br />Scavenging System<br />(AGSS)
             </h1>
             <p className="text-lg text-[#3d5570] leading-relaxed mb-8 max-w-xl">
@@ -75,16 +66,30 @@ export default function AGSSPage() {
               </FadeUp>
             </div>
           </div>
+
+          {/* Right — product image, contained, no zoom */}
+          <div className="hidden lg:flex flex-1 h-full items-end justify-center pr-8 pt-1">
+            <div className="relative w-full max-w-[800px] h-[600px]">
+              <Image
+                src="/Agss.webp"
+                alt="AGSS Anaesthetic Gas Scavenging System"
+                fill
+                priority
+                className="object-contain object-center "
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* ── HOW THE SYSTEM WORKS ── */}
-      <section className="max-w-[1360px] mx-auto px-6 py-14">
-        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-3">How the System Works</h2></FadeUp>
-        <p className="text-md text-gray-500 text-center mb-16 max-w-xl mx-auto leading-relaxed">
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <FadeUp><h2 className="text-2xl sm:text-3xl font-semibold text-[#0b477b] text-center mb-3">How the System Works</h2></FadeUp>
+        <p className="text-md text-gray-500 text-center mb-10 sm:mb-16 max-w-xl mx-auto leading-relaxed">
           A centralized safety ecosystem designed to remove waste anaesthetic gases (WAGs) directly from the source.
         </p>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {[
             {
               num: "01",
@@ -141,9 +146,9 @@ export default function AGSSPage() {
         </div>
       </section>
       {/* ── WHY HOSPITALS NEED AGSS ── */}
-      <section className="max-w-[1360px] mx-auto px-8 py-14">
-        <div className="grid grid-cols-2 gap-10 items-center">
-          <div className="rounded-2xl overflow-hidden relative" style={{ height: "300px" }}>
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-8 py-10 sm:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+          <div className="rounded-2xl overflow-hidden relative" style={{ height: "280px" }}>
             <Image src="/product-agss.png" alt="AGSS" fill className="object-contain object-center" />
           </div>
           <div>
@@ -158,11 +163,11 @@ export default function AGSSPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 px-6 py-16">
+      <section className="bg-gray-50 px-4 sm:px-6 py-12 sm:py-16">
         <div className="max-w-[1360px] mx-auto">
-          <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-14">Key Features & Benefits</h2></FadeUp>
+          <FadeUp> <h2 className="text-2xl sm:text-3xl font-semibold text-[#0b477b] text-center mb-10 sm:mb-14">Key Features & Benefits</h2></FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Card 1: International Standards (col-span-2) */}
             <div className="md:col-span-2 bg-white border border-gray-200 hover:scale-103 transition-all duration-300 rounded-3xl p-8 flex flex-col justify-center gap-5 min-h-[220px]">
               <div className="flex items-center gap-3">
@@ -245,8 +250,8 @@ export default function AGSSPage() {
       </section>
 
       {/* ── STANDARD SCOPE OF SUPPLY ── */}
-      <section className="max-w-[1360px] mx-auto px-6 py-14">
-        <div className="grid grid-cols-3 gap-8 items-start">
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div>
             <FadeUp>  <h2 className="text-4xl font-bold text-[#1a2a3a] mb-3 leading-tight">
               Standard Scope<br />of <span className="text-[#0b477b]">Supply</span>
@@ -298,7 +303,7 @@ export default function AGSSPage() {
       </section>
 
       {/* ── TECHNICAL FAQ ── */}
-      <section className="bg-gray-50 px-6 py-14">
+      <section className="bg-gray-50 px-4 sm:px-6 py-10 sm:py-14">
         <div className="max-w-[1360px] mx-auto">
           <FadeUp>  <h2 className="text-2xl font-bold text-[#0b477b] text-center mb-10">Technical FAQ</h2></FadeUp>
           <div className="flex flex-col gap-4">
@@ -341,8 +346,8 @@ export default function AGSSPage() {
       </section>
 
       {/* ── TECHNICAL SPECIFICATIONS ── */}
-      <section className="max-w-[1360px] mx-auto px-6 py-16">
-        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] text-center mb-8">Technical Specifications</h2></FadeUp>
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <FadeUp><h2 className="text-2xl sm:text-3xl font-semibold text-[#0b477b] text-center mb-8">Technical Specifications</h2></FadeUp>
         <div className="border border-gray-200 rounded-2xl overflow-hidden">
           <table className="w-full">
             <thead>
@@ -371,7 +376,7 @@ export default function AGSSPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gray-50 px-6 py-14">
+      <section className="bg-gray-50 px-4 sm:px-6 py-10 sm:py-14">
         <div className="max-w-[1360px] mx-auto text-center">
           <FadeUp> <h2 className="text-3xl font-semibold text-[#0b477b] mb-6 max-w-[850px] mx-auto">Let's find the right AGSS configuration for your hospital's OT complex.</h2></FadeUp>
           <FadeUp><p className="text-lg text-gray-500 mb-10 max-w-[650px] mx-auto">

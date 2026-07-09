@@ -38,16 +38,16 @@ export default function OxygenGeneratorPage() {
                     }} />
                 </div>
 
-                <div style={{
-                    position: "relative",
-                    zIndex: 1,
-                    maxWidth: 1360,
-                    margin: "0 auto",
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: 40,
-                    alignItems: "center",
-                }}>
+                <div 
+                    style={{
+                        position: "relative",
+                        zIndex: 1,
+                        maxWidth: 1360,
+                        margin: "0 auto",
+                        alignItems: "center",
+                    }}
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-10"
+                >
 
                     {/* Left */}
                     <div>
@@ -55,7 +55,7 @@ export default function OxygenGeneratorPage() {
                             ISO 13485 & ISO 9001 CERTIFIED
                         </div>
 
-                        <h1 style={{ fontSize: 40, fontWeight: 600, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.25 }}>
+                        <h1 style={{ fontWeight: 600, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.25 }} className="text-3xl sm:text-4xl lg:text-5xl">
                             Medical Oxygen Generator:<br />
                             On-Site Life Support <br />Engineering.
                         </h1>
@@ -129,9 +129,11 @@ export default function OxygenGeneratorPage() {
             </section>
 
             {/* ── WHY ON-SITE OXYGEN GENERATION ── */}
-            {/* <section style={{ background: C.white, padding: "56px 16px" }}> */}
             <section style={{ background: "#eef0f3", padding: "56px 16px" }}>
-                <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 50, alignItems: "center" }}>
+                <div 
+                    style={{ maxWidth: 1360, margin: "0 auto", alignItems: "center" }}
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+                >
 
                     {/* Left text */}
                     <div>
@@ -152,7 +154,6 @@ export default function OxygenGeneratorPage() {
 
                     {/* Right — bordered card with 3 features */}
                     <div style={{
-                        height: 330,
                         background: "white",
                         border: `1px solid ${C.cardBorder}`,
                         borderRadius: 16,
@@ -205,7 +206,10 @@ export default function OxygenGeneratorPage() {
 
             {/* ── PSA TECHNOLOGY ── */}
             <section style={{ background: C.White, padding: "56px 16px" }}>
-                <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 50, alignItems: "start" }}>
+                <div 
+                    style={{ maxWidth: 1360, margin: "0 auto", alignItems: "start" }}
+                    className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12"
+                >
 
                     {/* Left — image */}
                     <div>
@@ -255,7 +259,7 @@ export default function OxygenGeneratorPage() {
                         </p>
                     </div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20h16" /><path d="M7 20V8l5-4 5 4v12" /><path d="M10 20v-5h4v5" /><path d="M12 8v4" /></svg>, title: "On-Site, On-Demand Oxygen Production", desc: "Generates medical-grade oxygen directly from ambient air, reducing dependence on external cylinder or liquid oxygen supply and removing supply instability for the hospital." },
                             { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M7 9h4" /><path d="M7 13h10" /><path d="M15 9h2" /></svg>, title: "Reduced Oxygen Cost", desc: "Produces oxygen in-house at a fraction of the recurring cost. Hospitals typically see active 50% reduction in total oxygen expenditure." },
@@ -306,7 +310,10 @@ export default function OxygenGeneratorPage() {
 
             {/* ── ENGINEERED FOR PERFORMANCE + TECHNICAL SPECS ── */}
             <section style={{ background: "#eef0f3", padding: "56px 16px" }}>
-                <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, alignItems: "start" }}>
+                <div 
+                    style={{ maxWidth: 1360, margin: "0 auto", alignItems: "start" }}
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+                >
 
                     {/* Left — Technical Specifications table */}
                     <div style={{
@@ -347,7 +354,7 @@ export default function OxygenGeneratorPage() {
                         <FadeUp><h2 style={{ fontSize: 26, fontWeight: 700, color: "#1a2a3a", margin: "0 0 20px" }}>Engineered for Performance</h2></FadeUp>
 
                         {/* Top 2 small cards */}
-                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 16 }}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <HoverCard>
                                 <div style={{ background: C.white, border: `1px solid ${C.cardBorder}`, borderRadius: 12, padding: "18px 18px" }}>
                                     <div style={{ width: 24, height: 24, borderRadius: 6, background: "#eef5fc", border: "1px solid #d0e4f5", display: "flex", alignItems: "center", justifyContent: "center", color: C.navy, marginBottom: 8 }}>
@@ -384,7 +391,7 @@ export default function OxygenGeneratorPage() {
                         {/* Complete Scope of Supply — navy box */}
                         <div style={{ background: C.navy, borderRadius: 14, padding: "24px 26px", marginBottom: 16 }}>
                             <h3 style={{ fontSize: 18, fontWeight: 600, color: C.white, margin: "0 0 16px" }}>Complete Scope of Supply</h3>
-                            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 20px" }}>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {/* Left column */}
                                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                                     {[

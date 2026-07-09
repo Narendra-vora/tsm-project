@@ -36,30 +36,24 @@ export default function ConverterPage() {
         <main className="font-sans bg-gray-50 min-h-screen">
 
             {/* ── HERO ── */}
-            <section className="relative bg-white overflow-hidden min-h-[420px] flex items-center">
+            <section className="relative w-full min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] flex items-center overflow-hidden">
 
-                {/* Right — image, no dark overlay */}
-                <div className="absolute right-0 top-0 h-full w-[55%]">
-                    {/* Left fade — white se transparent */}
-                    <div
-                        className="absolute left-0 top-0 h-full w-48 z-10"
-                        style={{ background: "linear-gradient(to right, white, transparent)" }}
-                    />
+                {/* Background image with overlay */}
+                <div className="absolute inset-0 z-0">
                     <img
                         src="/mguc.png"
                         alt="Medical Gas Unit Converter"
-                        className="w-full h-full object-cover object-left"
+                        className="w-full h-full object-cover object-right"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
                 </div>
 
-                {/* Left — text content */}
-                {/* <div className="relative z-10 max-w-5xl mx-auto px-4 py-14 w-full"> */}
-                {/* <div className="relative z-10 w-[1280px] px-8 py-14"> */}
-                <div className="relative z-10 max-w-[1360px] mx-auto pl-0 pr-4 py-14 w-full">
+                {/* Text content */}
+                <div className="relative z-10 w-full pl-5 sm:pl-14 lg:pl-20 pr-5 sm:pr-6 py-10 sm:py-14">
                     <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-semibold tracking-wider mb-6 border border-[#e0ecf8]">
                         ENGINEERING TOOLS
                     </div>
-                    <h1 className="text-5xl font-bold text-[#0b477b] leading-tight mb-4">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0b477b] leading-tight mb-4">
                         Medical Gas Unit<br />Converters
                     </h1>
                     <p className="text-md text-gray-500 leading-relaxed max-w-lg mb-10">
@@ -67,7 +61,7 @@ export default function ConverterPage() {
                     </p>
 
                     {/* 3 badges */}
-                    <div className="flex gap-10 flex-wrap mt-4">
+                    <div className="flex gap-6 sm:gap-10 flex-wrap mt-4">
                         {[
                             {
                                 icon: (
@@ -117,7 +111,7 @@ export default function ConverterPage() {
             {/* ── 3 CONVERTER CARDS ── */}
             <section className="max-w-[1360px] mx-auto px-4 py-10">
 
-                <div className="grid grid-cols-3 gap-13">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-13">
 
                     {/* Pressure */}
                     <HoverCard>
@@ -205,35 +199,34 @@ export default function ConverterPage() {
 
             {/* ── MEDICAL OXYGEN CONVERSIONS ── */}
             <section className="max-w-[1360px] mx-auto px-4 pb-10">
-                <div className="grid grid-cols-2 gap-5 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start justify-items-center md:justify-items-stretch">
 
                     {/* Left */}
-                    <div className="bg-white rounded-2xl p-5 pb-8 border border-gray-200 shadow-sm">
-                        <h2 className="text-3xl text-navy-400 mb-2">Medical Oxygen Conversions</h2>
+                    <div className="bg-white rounded-2xl p-5 pb-8 border border-gray-200 shadow-sm w-full">
+                        <h2 className="text-2xl sm:text-3xl text-[#0b477b] mb-2 font-semibold">Medical Oxygen Conversions</h2>
                         <p className="text-sm text-gray-500 leading-relaxed mb-6">
                             Critical formulas for estimating daily liquid volume and cylinder requirements for hospital oxygen supply planning.
                         </p>
                         <div className="space-y-3">
-                            {/* Row 1 */}
                             <div className="space-y-3">
                                 {/* Row 1 */}
-                                <div className="bg-[#0b477b] rounded-xl px-5 py-4 flex justify-between items-center">
+                                <div className="bg-[#0b477b] rounded-xl px-5 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                                     <div>
-                                        <div className="text-md  text-white/60">Liquid Consumption Estimate</div>
-                                        <div className="text-md text-white/60 mt-0.5">Nm³/h to Liquid Litres/Day</div>
+                                        <div className="text-md text-white/95 font-semibold">Liquid Consumption Estimate</div>
+                                        <div className="text-xs text-white/70 mt-0.5">Nm³/h to Liquid Litres/Day</div>
                                     </div>
-                                    <div className="text-white text-sm  font-mono">
+                                    <div className="text-white text-sm font-mono bg-white/10 px-3 py-1 rounded w-full sm:w-auto text-center">
                                         (Nm³/h × 24) × 1.251
                                     </div>
                                 </div>
 
                                 {/* Row 2 */}
-                                <div className="bg-[#0b477b] rounded-xl px-5 py-4 flex justify-between items-center">
+                                <div className="bg-[#0b477b] rounded-xl px-5 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                                     <div>
-                                        <div className="text-sm font-semibold text-white/90">Storage Logistics Estimate</div>
-                                        <div className="text-xs text-white/60 mt-0.5">Nm³/h to Cylinders/Day</div>
+                                        <div className="text-md text-white/95 font-semibold">Storage Logistics Estimate</div>
+                                        <div className="text-xs text-white/70 mt-0.5">Nm³/h to Cylinders/Day</div>
                                     </div>
-                                    <div className="text-white text-sm font-bold font-mono">
+                                    <div className="text-white text-sm font-mono bg-white/10 px-3 py-1 rounded w-full sm:w-auto text-center">
                                         (Nm³/h × 24) / 6.8
                                     </div>
                                 </div>
@@ -242,12 +235,12 @@ export default function ConverterPage() {
                     </div>
 
                     {/* Right — photo same height */}
-                    <div className="rounded-xl overflow-hidden " style={{ maxHeight: "320px", maxWidth: "480px" }}>
+                    <div className="rounded-xl overflow-hidden w-full max-w-[480px]">
                         <img
                             src="/products_hero.png"
                             alt="Medical Gas Pressure Gauges"
-                            className="w-full h-full object-cover"
-                            style={{ minHeight: "200px" }}
+                            className="w-full h-full object-cover rounded-xl"
+                            style={{ minHeight: "200px", maxHeight: "320px" }}
                         />
                     </div>
                 </div>

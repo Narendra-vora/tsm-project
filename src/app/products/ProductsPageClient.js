@@ -140,48 +140,39 @@ export default function ProductsPageClient() {
     <main className="min-h-screen flex flex-col bg-white">
 
       {/* ══════════════════════════════ HERO ══════════════════════════════ */}
-      <section className="relative w-full min-h-[1280px] lg:min-h-[480px] overflow-hidden flex items-center bg-white">
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] h-full">
+      <section className="relative w-full min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <Image
             src="/products.png"
             alt="Hospital medical gas pipeline system"
             fill
             priority
-            sizes="(max-width: 1024px) 100vw, 55vw"
-            className="object-cover object-center"
+            sizes="100vw"
+            className="object-cover object-right"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent lg:from-white lg:via-white/40 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-[1360px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-16">
-          {/* <p className="text-[#0b477b] text-xs font-bold tracking-widest uppercase mb-4 flex items-center gap-2">
-            <span className="w-5 h-[2px] bg-[#0b477b] inline-block" />
-            MEDICAL GAS SOLUTIONS
-          </p> */}
+        <div className="relative z-10 w-full pl-5 sm:pl-14 lg:pl-20 pr-5 sm:pr-6 py-10 sm:py-14">
           <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-6 border border-[#e0ecf8]">
             MEDICAL GAS SOLUTIONS
           </div>
-          <h1 className="text-3sxl sm:text-5xl lg:text-[58px] font-semibold text-[#1a2a3a] leading-[1.05] tracking-tight mb-5">
+          <h1 className="text-3xl sm:text-5xl lg:text-[58px] font-semibold text-[#1a2a3a] leading-[1.05] tracking-tight mb-5">
             Our <span className="text-[#0b477b]">Products</span>
           </h1>
           <div className="w-14 h-[3px] bg-[#0b477b] rounded-full mb-5" />
           <p className="text-gray-600 text-base max-w-lg leading-relaxed mb-10">
             Delivering reliable, high-performance medical gas pipeline systems designed to exceed industry standards and ensure absolute patient safety.
           </p>
-          <div className="flex items-start gap-6">
+          <div className="flex flex-wrap items-start gap-4">
             {heroFeatures.map((f, i) => (
-              <div key={i} className="flex items-center gap-6">
-                <div className="flex flex-col items-center gap-2">
-                  <div className="w-11 h-11 rounded-xl bg-[#eef5fc] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#0b477b]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d={f.icon} />
-                    </svg>
-                  </div>
-                  <span className="text-xs font-semibold text-gray-600 whitespace-nowrap">{f.label}</span>
+              <div key={i} className="flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-gray-100 px-4 py-2.5 rounded-2xl shadow-sm">
+                <div className="w-8 h-8 rounded-lg bg-[#eef5fc] flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-[#0b477b]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d={f.icon} />
+                  </svg>
                 </div>
-                {i !== heroFeatures.length - 1 && (
-                  <div className="w-px h-10 bg-gray-200" />
-                )}
+                <span className="text-xs font-semibold text-gray-600 whitespace-nowrap">{f.label}</span>
               </div>
             ))}
           </div>
@@ -249,7 +240,7 @@ export default function ProductsPageClient() {
       </section>
 
       {/* ════════════════════════ CONTACT SECTION ════════════════════════ */}
-      <section id="contact" className="py-20 lg:py-28 bg-[#f0f6fc]">
+      <section id="contact" className="py-12 sm:py-20 lg:py-28 bg-[#f0f6fc]">
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 

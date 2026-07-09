@@ -8,7 +8,7 @@ export default function CPSage() {
     <main className="bg-white min-h-screen">
 
       {/* ── HERO ── */}
-      <section className="relative w-full min-h-[420px] lg:min-h-[500px] flex items-center overflow-hidden">
+      <section className="relative w-full min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] flex items-center overflow-hidden">
         {/* Full-bleed background image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -23,12 +23,12 @@ export default function CPSage() {
         </div>
 
         {/* Text content placed directly at left edge with padding */}
-        <div className="relative z-10 w-full pl-8 sm:pl-14 lg:pl-20 pr-6 py-14">
+        <div className="relative z-10 w-full pl-5 sm:pl-14 lg:pl-20 pr-5 sm:pr-6 py-10 sm:py-14">
           <span className="inline-flex items-center gap-2 text-[11px] font-bold text-[#0b477b] px-4 py-1.5 rounded-full uppercase tracking-widest mb-5 bg-white/80 border border-[#e0ecf8]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#0b477b]" />
             Engineering Excellence
           </span>
-          <h1 className="text-5xl font-semibold text-[#0b477b] mb-4 leading-tight max-w-[520px]">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0b477b] mb-4 leading-tight max-w-[520px]">
             Compressors, Pumps &amp; <br /> Spares
           </h1>
           <div className="w-20 h-1 bg-[#0b477b] mt-2 mb-6 rounded-full" />
@@ -42,12 +42,12 @@ export default function CPSage() {
       </section>
 
       {/* ── SUPPLY OF COMPRESSORS ── */}
-      <section className="bg-gray-50 py-16 px-6">
+      <section className="bg-gray-50 py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-[1360px] mx-auto">
-          <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] mb-3">Supply of Compressors and Pumps</h2></FadeUp>
-          <div className="w-16 h-1 bg-[#0b477b] mb-10" />
+          <FadeUp><h2 className="text-2xl sm:text-3xl font-semibold text-[#0b477b] mb-3">Supply of Compressors and Pumps</h2></FadeUp>
+          <div className="w-16 h-1 bg-[#0b477b] mb-8 sm:mb-10" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Left card — 2 cols */}
             <div className="lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-8 flex flex-col justify-between gap-6 shadow-sm">
               <div>
@@ -110,8 +110,8 @@ export default function CPSage() {
       </section>
 
       {/* ── SPARE PARTS ── */}
-      <section className="  max-w-[1350px] mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+      <section className="max-w-[1350px] mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 items-start">
           {/* Left */}
           <div className="flex flex-col gap-6">
             <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] leading-tight">Spare Parts and Service Kits</h2></FadeUp>
@@ -170,16 +170,16 @@ export default function CPSage() {
       </section>
 
       {/* ── REPAIRING & OVERHAULING ── */}
-      <section className="bg-gray-50 px-6 py-14">
+      <section className="bg-gray-50 px-4 sm:px-6 py-10 sm:py-14">
         <div className="max-w-[1360px] mx-auto">
-          <div className="text-center mb-10">
-            <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] mb-4">Repairing and Overhauling Services</h2></FadeUp>
+          <div className="text-center mb-8 sm:mb-10">
+            <FadeUp><h2 className="text-2xl sm:text-3xl font-semibold text-[#0b477b] mb-4">Repairing and Overhauling Services</h2></FadeUp>
             <p className="text-md text-gray-500 max-w-[570px] mx-auto leading-relaxed ">
               Restoring your Thomas & Gast equipment to reliable operating conditions with manufacturer-approved precision.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {[
               {
                 icon: (
@@ -227,9 +227,9 @@ export default function CPSage() {
         </div>
       </section>
       {/* ── FINAL CTA ── */}
-      <section className="bg-gray-100 px-6 py-14">
+      <section className="bg-gray-100 px-4 sm:px-6 py-10 sm:py-14">
         <div className="max-w-[1360px] mx-auto text-center">
-          <FadeUp><h2 className="text-4xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Looking for Thomas & Gast Spares?</h2></FadeUp>
+          <FadeUp><h2 className="text-3xl sm:text-4xl font-semibold text-[#0b477b] mb-5 max-w-[800px] mx-auto">Looking for Thomas & Gast Spares?</h2></FadeUp>
           <p className="text-md text-gray-500 mb-8 max-w-[650px] mx-auto">
             Whether you need a replacement compressor, a service kit, or ongoing AMC coverage for your equipment, our team is ready to assist.
           </p>

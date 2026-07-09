@@ -55,7 +55,7 @@ function BlogPage() {
                     ))}
                 </div>
 
-                <div style={{ maxWidth: 1360, margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 50, alignItems: "center", position: "relative", zIndex: 2 }}>
+                <div style={{ maxWidth: 1360, margin: "0 auto", position: "relative", zIndex: 2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[50px] items-center">
 
                     {/* Left Column: Text Content */}
                     <div>
@@ -70,7 +70,7 @@ function BlogPage() {
                             EXPERTS IN MEDICAL GAS SYSTEMS
                         </div>
 
-                        <h1 style={{ fontSize: 60, fontWeight: 700, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.19, maxWidth: 500 }}>
+                        <h1 style={{ fontWeight: 700, color: "#0b477b", margin: "0 0 20px", lineHeight: 1.19, maxWidth: 500 }} className="text-4xl sm:text-5xl lg:text-6xl">
                             MEDICAL GAS<br />
                             <span style={{ color: "#0b477b", maxWidth: 320 }}>BLOG & GUIDES</span>
                         </h1>
@@ -90,7 +90,7 @@ function BlogPage() {
                                 fontSize: 13, fontWeight: 700, textDecoration: "none",
                                 boxShadow: "0 4px 14px rgba(11, 71, 123, 0.25)",
                                 transition: "all 0.2s"
-                            }}>
+                             }}>
                                 📖 EXPLORE THE GUIDES
 
                             </a>
@@ -164,30 +164,30 @@ function BlogPage() {
             </section>
 
             {/* Floating Stats Bar */}
-            <div style={{
-                maxWidth: 1360,
-                margin: "-28px auto 40px",
-                background: C.white,
-                borderRadius: 24,
-                border: `1px solid ${C.cardBorder}`,
-                boxShadow: "0 10px 30px rgba(11, 71, 123, 0.04)",
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
-                overflow: "hidden",
-                position: "relative",
-                zIndex: 10
-            }}>
+            <div 
+                style={{
+                    maxWidth: 1360,
+                    margin: "-28px auto 40px",
+                    background: C.white,
+                    borderRadius: 24,
+                    border: `1px solid ${C.cardBorder}`,
+                    boxShadow: "0 10px 30px rgba(11, 71, 123, 0.04)",
+                    overflow: "hidden",
+                    position: "relative",
+                    zIndex: 10
+                }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-100 mx-4 sm:mx-6 lg:mx-auto"
+            >
                 {stats.map((s, i) => (
                     <div key={i} style={{
                         display: "flex",
                         alignItems: "center",
                         gap: 16,
-                        padding: "20px 24px",
-                        borderRight: i < 3 ? `1px solid ${C.lightGrey}` : "none"
+                        padding: "20px 24px"
                     }}>
                         <div style={{
                             width: 48,
-                            height: 54,
+                            height: 48,
                             borderRadius: "50%",
                             background: s.color,
                             display: "flex",
@@ -199,7 +199,7 @@ function BlogPage() {
                             {s.icon}
                         </div>
                         <div>
-                            <div style={{ fontSize: 20, fontWeight: 700, color: C.navy600, lineHeight: 1.2 }}>{s.value}</div>
+                            <div style={{ fontSize: 20, fontWeight: 700, color: C.navy, lineHeight: 1.2 }}>{s.value}</div>
                             <div style={{ fontSize: 12, color: C.grey, marginTop: 4, lineHeight: 1.2 }}>{s.label}</div>
                         </div>
                     </div>

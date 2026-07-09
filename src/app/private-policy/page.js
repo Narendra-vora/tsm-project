@@ -22,19 +22,21 @@ export default function PrivacyPolicyPage() {
                     <p style={{ color: "#5a6280", fontSize: 14, margin: "0 0 20px" }}>Technik Spirits MedTech Private Limited</p>
 
                     {/* Info Bar */}
-                    <div style={{
-                        display: "inline-flex",
-                        background: "#1a3a5c",
-                        borderRadius: 8,
-                        overflow: "hidden",
-                        fontSize: 12,
-                        color: "#fff"
-                    }}>
-                        <div style={{ padding: "10px 20px", borderRight: "1px solid rgba(255,255,255,0.15)" }}>
+                    <div 
+                        style={{
+                            background: "#1a3a5c",
+                            borderRadius: 8,
+                            overflow: "hidden",
+                            fontSize: 12,
+                            color: "#fff"
+                        }}
+                        className="flex flex-col sm:inline-flex sm:flex-row"
+                    >
+                        <div style={{ padding: "10px 20px" }} className="border-b sm:border-b-0 sm:border-r border-white/15">
                             <div style={{ opacity: 0.7, marginBottom: 2, textTransform: "uppercase", letterSpacing: 0.5 }}>Website</div>
                             <div style={{ fontWeight: 600 }}>https://tsmtech.in</div>
                         </div>
-                        <div style={{ padding: "10px 20px", borderRight: "1px solid rgba(255,255,255,0.15)" }}>
+                        <div style={{ padding: "10px 20px" }} className="border-b sm:border-b-0 sm:border-r border-white/15">
                             <div style={{ opacity: 0.7, marginBottom: 2, textTransform: "uppercase", letterSpacing: 0.5 }}>Effective Date</div>
                             <div style={{ fontWeight: 600 }}>1 June 2026</div>
                         </div>
@@ -56,7 +58,7 @@ export default function PrivacyPolicyPage() {
 
                 {/* Section 2 */}
                 <Section icon="🗄️" number="2" title="Information We Collect">
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginTop: 12 }}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3">
                         <InfoCard
                             icon="👤"
                             title="Directly Provided"
@@ -73,7 +75,7 @@ export default function PrivacyPolicyPage() {
                 {/* Section 3 */}
                 <Section icon="🔧" number="3" title="How We Use Your Information">
                     <p style={{ ...p, marginBottom: 14 }}>We use the information we collect to:</p>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {[
                             "Respond to your enquiries and provide product information.",
                             "Analyse website usage to improve our content and user experience.",
@@ -93,7 +95,7 @@ export default function PrivacyPolicyPage() {
                     <p style={p}>
                         We use Google Analytics and Zoho PageSense to analyse website traffic. These tools collect anonymised data subject to their respective privacy policies:
                     </p>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 14 }}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3.5">
                         {[
                             { name: "Google Analytics", url: "https://policies.google.com/privacy" },
                             { name: "Zoho PageSense", url: "https://www.zoho.com/privacy.html" },
@@ -159,14 +161,14 @@ export default function PrivacyPolicyPage() {
                         </p>
 
                         {/* Dark Blue Box */}
-                        <div style={{
-                            background: "#1a3a5c",
-                            borderRadius: 10,
-                            padding: "22px 24px",
-                            display: "flex",
-                            gap: 20,
-                            alignItems: "flex-start"
-                        }}>
+                        <div 
+                            style={{
+                                background: "#1a3a5c",
+                                borderRadius: 10,
+                                padding: "22px 24px"
+                            }}
+                            className="flex flex-col md:flex-row gap-5 items-start"
+                        >
                             {/* Left - Company Info */}
                             <div style={{ flex: 1 }}>
                                 <div style={{ fontWeight: 700, fontSize: 16, color: "#fff", marginBottom: 14 }}>
@@ -182,7 +184,7 @@ export default function PrivacyPolicyPage() {
                             </div>
 
                             {/* Right - Email + Support cards */}
-                            <div style={{ display: "flex", flexDirection: "column", gap: 10, minWidth: 260 }}>
+                            <div className="flex flex-col gap-3 w-full md:w-auto md:min-w-[260px]">
                                 <a href="mailto:info@tsmtech.in" style={{
                                     display: "flex", alignItems: "center", gap: 12,
                                     background: "#224d73", borderRadius: 8, padding: "12px 16px",

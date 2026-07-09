@@ -7,27 +7,24 @@ export default function PressMediaPage() {
         <main className="font-sans bg-gray-50 min-h-screen">
 
             {/* ── HERO ── */}
-            <section className="relative bg-white overflow-hidden min-h-[420px] flex items-center">
+            <section className="relative w-full min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] flex items-center overflow-hidden">
 
-                {/* Right — image with left fade */}
-                <div className="absolute right-0 top-0 h-full w-[75%]">
-                    <div
-                        className="absolute left-0 top-0 h-full w-48 z-10"
-                        style={{ background: "linear-gradient(to right, white, transparent)" }}
-                    />
+                {/* Background image with overlay */}
+                <div className="absolute inset-0 z-0">
                     <img
                         src="/press-media.png"
                         alt="Media"
-                        className="w-full h-full object-cover object-left"
+                        className="w-full h-full object-cover object-right"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
                 </div>
 
-                {/* Left — text */}
-                <div className="relative z-10 max-w-[1360px] mx-auto px-6 py-16 w-full">
+                {/* Text */}
+                <div className="relative z-10 w-full pl-5 sm:pl-14 lg:pl-20 pr-5 sm:pr-6 py-10 sm:py-14">
                     <div className="inline-block bg-[#eef5fc] text-[#0d4c82] px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase mb-6 border border-[#e0ecf8]">
                         TECHNIK SPIRITS MEDIA RESOURCE
                     </div>
-                    <h1 className="text-4xl font-bold text-[#0b477b] leading-tight mb-4">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0b477b] leading-tight mb-4">
                         Press & Media Center
                     </h1>
                     <p className="text-md text-gray-500 leading-relaxed max-w-lg">
@@ -40,12 +37,12 @@ export default function PressMediaPage() {
 
 
             {/* ── ABOUT SECTION ── */}
-            <section className="max-w-[1360px] mx-auto px-6 py-14">
-                <div className="grid grid-cols-2 gap-12 items-start">
+            <section className="max-w-[1360px] mx-auto px-4 sm:px-6 py-10 sm:py-14">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
                     {/* Left */}
                     <div>
-                        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b] mb-6">About Technik Spirits MedTech</h2></FadeUp>
+                        <FadeUp><h2 className="text-2xl sm:text-3xl font-semibold text-[#0b477b] mb-6">About Technik Spirits MedTech</h2></FadeUp>
                         <div className="w-12 h-1 bg-[#0b477b] rounded mb-7" />
 
                         <p className="text-sm text-gray-700 leading-relaxed mb-4">
@@ -61,7 +58,6 @@ export default function PressMediaPage() {
                         </p>
                     </div>
 
-                    {/* Right — image with 20+ card overlapping bottom-right */}
                     {/* Right — image with 20+ card overlapping bottom-right */}
                     <div className="relative w-full">
                         {/* Full image */}
@@ -93,22 +89,22 @@ export default function PressMediaPage() {
             </section>
 
             {/* ── IN THE NEWS ── */}
-            <section className="max-w-[1360px] mx-auto px-6 pb-14">
-                <div className="flex items-center justify-between mb-9">
+            <section className="max-w-[1360px] mx-auto px-4 sm:px-6 pb-14">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-9 gap-4">
                     <div>
-                        <FadeUp><h2 className="text-3xl font-semibold text-[#0b477b]">In the News</h2></FadeUp>
+                        <FadeUp><h2 className="text-2xl sm:text-3xl font-semibold text-[#0b477b]">In the News</h2></FadeUp>
 
                         <p className="text-md text-gray-500 mt-1">
                             Stay updated with our latest technical breakthroughs and corporate announcements.
                         </p>
 
                     </div>
-                    <Link href="#" className="text-md text-[#0b477b] font-semibold flex items-center gap-1" style={{ textDecoration: "none" }}>
+                    <Link href="#" className="text-md text-[#0b477b] font-semibold flex items-center gap-1 w-fit" style={{ textDecoration: "none" }}>
                         View Archive →
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-4 h-[380px] gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
                     {/* Card 1 — with image, red tag */}
                     <div className="rounded-xl border border-gray-100 shadow-sm overflow-hidden flex flex-col bg-white">
@@ -124,7 +120,7 @@ export default function PressMediaPage() {
                         </div>
                         <div className="p-4 flex flex-col flex-1">
                             <div className="text-[10px] text-blue-500 font-semibold mb-1.5">ANI News</div>
-                            <h3 className="text-xl font-semibold text-gray-900 leading-snug mb-3">
+                            <h3 className="text-lg font-semibold text-gray-900 leading-snug mb-3">
                                 Securing Patent for Oxygen Concentrator Valve
                             </h3>
                             <p className="text-md text-gray-500 leading-relaxed mb-3 flex-1">
@@ -202,7 +198,7 @@ export default function PressMediaPage() {
             </section>
 
             {/* ── MEDIA CONTACT ── */}
-            <section className="max-w-[1360px] mx-auto px-6 pb-14">
+            <section className="max-w-[1360px] mx-auto px-4 sm:px-6 pb-14">
                 <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
                     {/* Header */}
                     <div className="bg-gray-50 border-b border-gray-200 px-8 py-8 text-center">

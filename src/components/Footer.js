@@ -4,34 +4,32 @@ export default function Footer() {
 
     return (
         <footer className="bg-[#0b477b] text-white w-full">
-            <div className="w-full mx-auto px-14 py-6">
+            <div className="w-full mx-auto px-6 sm:px-10 lg:px-16 py-10">
 
-                {/* Top grid */}
-                <div className="grid grid-cols-[230px_1fr_1fr_1fr] gap-8 items-start">
+                {/* Top grid — 1 col mobile, 2 col tablet, 4 col desktop */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[230px_1fr_1fr_1fr] gap-8 items-start">
 
                     {/* Col 1 — Logo + tagline */}
                     <div>
                         <div className="flex items-center gap-3 mb-0">
                             <Link href="/" className="flex items-center gap-3 group">
-
                                 <img
                                     src="/Technik-Spirit-logo.png"
                                     alt="Technik Spirits MedTech"
-                                    style={{ height: 135, width: "auto" }}
+                                    style={{ height: 110, width: "auto" }}
                                 />
                             </Link>
-
                         </div>
-                        <p className="text-md text-blue-200 leading-relaxed max-w-[280px] ">
-                            Manufacturers of MGPS equipment for hospitals since 1971. Delivering precision- engineered medical air and gas solutions worldwide.
+                        <p className="text-base text-blue-200 leading-relaxed max-w-[280px]">
+                            Manufacturers of MGPS equipment for hospitals since 1971. Delivering precision-engineered medical air and gas solutions worldwide.
                         </p>
                     </div>
 
                     {/* Col 2 — Products */}
-                    <div className="mt-9">
-                        <h3 className="text-3xl font-semibold text-[#E05A36] mb-1.5 tracking-wide">Products</h3>
+                    <div className="mt-0 lg:mt-9">
+                        <h3 className="text-2xl lg:text-3xl font-semibold text-[#E05A36] mb-1.5 tracking-wide">Products</h3>
                         <div className="w-24 h-[1px] bg-white/25 mb-3 rounded-full" />
-                        <ul className="space-y-4.5">
+                        <ul className="space-y-3">
                             {[
                                 "integrex Medical Air Compressor",
                                 "Medical Vacuum Pump System — Rotary Vane",
@@ -41,7 +39,7 @@ export default function Footer() {
                                 <li key={item}>
                                     <Link
                                         href="/products"
-                                        className="text-lg text-blue-200 hover:text-white max-w-[210px] transition-colors leading-snug"
+                                        className="text-base text-blue-200 hover:text-white max-w-[210px] transition-colors leading-snug"
                                         style={{ textDecoration: "none" }}
                                     >
                                         {item}
@@ -52,10 +50,10 @@ export default function Footer() {
                     </div>
 
                     {/* Col 3 — Also in Our Portfolio */}
-                    <div className="mt-9">
-                        <h3 className="text-3xl font-semibold text-[#E05A36] mb-1.5 tracking-wide">Also in Our Portfolio</h3>
+                    <div className="mt-0 lg:mt-9">
+                        <h3 className="text-2xl lg:text-3xl font-semibold text-[#E05A36] mb-1.5 tracking-wide">Also in Our Portfolio</h3>
                         <div className="w-24 h-[1px] bg-white/25 mb-3 rounded-full" />
-                        <ul className="space-y-4.5">
+                        <ul className="space-y-3">
                             {[
                                 "Medical Vacuum Pump System — Reciprocating",
                                 "Medical Oxygen Generator",
@@ -65,7 +63,7 @@ export default function Footer() {
                                 <li key={item}>
                                     <Link
                                         href="/products"
-                                        className="text-lg text-blue-200  hover:text-white transition-colors leading-snug"
+                                        className="text-base text-blue-200 hover:text-white transition-colors leading-snug"
                                         style={{ textDecoration: "none" }}
                                     >
                                         {item}
@@ -76,19 +74,19 @@ export default function Footer() {
                     </div>
 
                     {/* Col 4 — Contact & Location */}
-                    <div className="mt-9">
-                        <h3 className="text-3xl font-semibold text-[#E05A36] mb-1.5 tracking-wide">Contact & Location</h3>
+                    <div className="mt-0 lg:mt-9">
+                        <h3 className="text-2xl lg:text-3xl font-semibold text-[#E05A36] mb-1.5 tracking-wide">Contact & Location</h3>
                         <div className="w-24 h-[1px] bg-white/25 mb-3 rounded-full" />
-                        <ul className="space-y-4.5">
+                        <ul className="space-y-3">
                             <li className="flex items-start gap-2">
                                 <span className="text-blue-300 mt-0.5 text-sm">📍</span>
-                                <span className="text-lg text-blue-200 leading-snug">Ahmedabad, Gujarat, India</span>
+                                <span className="text-base text-blue-200 leading-snug">Ahmedabad, Gujarat, India</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="text-blue-300 mt-0.5 text-sm">✉️</span>
                                 <a
                                     href="mailto:sales@ts11.in"
-                                    className="text-lg text-blue-200 hover:text-white transition-colors"
+                                    className="text-base text-blue-200 hover:text-white transition-colors"
                                     style={{ textDecoration: "none" }}
                                 >
                                     sales@ts11.in
@@ -98,7 +96,7 @@ export default function Footer() {
                                 <span className="text-blue-300 mt-0.5 text-sm">📞</span>
                                 <a
                                     href="tel:+919033009328"
-                                    className="text-lg text-blue-200 hover:text-white transition-colors"
+                                    className="text-base text-blue-200 hover:text-white transition-colors"
                                     style={{ textDecoration: "none" }}
                                 >
                                     +91 90330 09328
@@ -107,7 +105,7 @@ export default function Footer() {
                         </ul>
 
                         {/* Social icons */}
-                        <div className="flex gap-2.5 mt-7">
+                        <div className="flex gap-2.5 mt-6">
                             {[
                                 {
                                     href: "https://wa.me/919033009328",
@@ -120,7 +118,7 @@ export default function Footer() {
                                     ),
                                 },
                                 {
-                                    href: "#",
+                                    href: "https://www.facebook.com/TechnikSpiritsInc",
                                     label: "Facebook",
                                     color: "#1877F2",
                                     svg: (
@@ -130,7 +128,7 @@ export default function Footer() {
                                     ),
                                 },
                                 {
-                                    href: "#",
+                                    href: "https://in.linkedin.com/company/technikspiritsmedtech",
                                     label: "LinkedIn",
                                     color: "#0A66C2",
                                     svg: (
@@ -160,24 +158,24 @@ export default function Footer() {
 
             {/* Bottom bar — lighter strip */}
             <div className="bg-[#1e5a94] w-full">
-                <div className="w-full mx-auto px-8 py-3 flex items-center justify-between">
+                <div className="w-full mx-auto px-6 sm:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
                     <div className="flex gap-5">
                         <Link
                             href="/privacy-policy"
-                            className="text-base text-blue-200 hover:text-white transition-colors"
+                            className="text-sm text-blue-200 hover:text-white transition-colors"
                             style={{ textDecoration: "none" }}
                         >
                             Privacy Policy
                         </Link>
                         <Link
                             href="/sitemap"
-                            className="text-base text-blue-200 hover:text-white transition-colors"
+                            className="text-sm text-blue-200 hover:text-white transition-colors"
                             style={{ textDecoration: "none" }}
                         >
                             Sitemap
                         </Link>
                     </div>
-                    <p className="text-base text-blue-200">
+                    <p className="text-sm text-blue-200">
                         © 2024 Technik Spirits. ISO Certified Medical Engineering.
                     </p>
                 </div>
